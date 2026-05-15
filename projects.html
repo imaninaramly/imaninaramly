@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ImaninaRamly | Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&amp;family=Quicksand:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e4e2e2",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "on-primary-fixed": "#00210b",
+                    "inverse-primary": "#96d5a0",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#605a7c",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#b2f2bb",
+                    "surface": "#fbf9f8",
+                    "background": "#fbf9f8",
+                    "primary-fixed-dim": "#96d5a0",
+                    "on-background": "#1b1c1c",
+                    "primary-fixed": "#b2f2bb",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5b3f47",
+                    "secondary-container": "#fed5df",
+                    "outline-variant": "#c0c9be",
+                    "on-tertiary-fixed-variant": "#484263",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#75565f",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#1c1735",
+                    "surface-bright": "#fbf9f8",
+                    "tertiary-fixed": "#e6deff",
+                    "on-secondary-container": "#795a63",
+                    "inverse-on-surface": "#f2f0f0",
+                    "tertiary-container": "#e6deff",
+                    "primary": "#2f6a3f",
+                    "on-tertiary-container": "#666082",
+                    "on-primary-fixed-variant": "#145129",
+                    "secondary-fixed": "#ffd9e2",
+                    "surface-tint": "#2f6a3f",
+                    "surface-container": "#efeded",
+                    "on-primary-container": "#367044",
+                    "on-secondary-fixed": "#2b151c",
+                    "secondary-fixed-dim": "#e4bcc6",
+                    "tertiary-fixed-dim": "#cac1e8",
+                    "surface-dim": "#dbd9d9",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-surface-variant": "#414940",
+                    "surface-container-low": "#f5f3f3",
+                    "surface-container-high": "#eae8e7",
+                    "on-error-container": "#93000a",
+                    "outline": "#717970"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "container-margin": "32px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "sm": "12px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Quicksand"],
+                    "body-md": ["Quicksand"],
+                    "headline-sm": ["Comfortaa"],
+                    "headline-md": ["Comfortaa"],
+                    "display-lg": ["Comfortaa"],
+                    "display-lg-mobile": ["Comfortaa"],
+                    "label-md": ["Quicksand"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "500"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f8;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shadow {
+            box-shadow: 0 20px 40px -15px rgba(47, 106, 63, 0.1);
+        }
+        .card-border {
+            border: 2px solid rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-container-margin h-20 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-primary">ImaninaRamly</div>
+<div class="hidden md:flex items-center gap-base">
+<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="index.html">Home</a>
+<a class="text-primary font-bold bg-primary-container rounded-full px-4 py-2 transition-transform duration-200 ease-out hover:scale-105" href="projects.html">Projects</a>
+<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="gallery.html">Gallery</a>
+<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="contact.html">Contact</a>
+</div>
+<a href="NUR IMANINA RESUME.pdf" 
+           download="NUR_IMANINA_RESUME.pdf" 
+            class="bg-primary text-on-primary font-body-lg text-body-lg px-lg py-sm rounded-full hover:scale-105 active:scale-95 transition-all duration-200 ease-out shadow-lg shadow-primary/20">
+            Download Resume
+        </a>
+</div>
+</nav>
+<main class="pt-32 pb-xl px-container-margin max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="text-center mb-xl">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-md">Creative Playground</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                A collection of tiny wonders and digital experiments. Where pixels meet playfulness and every design tells a cozy story.
+            </p>
+</header>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Project Card 1: Mint/UI -->
+<a href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener" class="block">
+  <div class="group relative bg-primary-container rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+
+    <div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
+      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        alt="A minimalist productivity timer interface design with a cute pet character, displaying focus and break session timers in soft mint green and white colors." src="project1.png" />
+    </div>
+
+    <div class="flex flex-wrap gap-xs mb-sm">
+      <span class="bg-primary text-on-primary font-label-md text-label-md px-sm py-xs rounded-full">UI Design</span>
+      <span class="bg-white/60 text-primary font-label-md text-label-md px-sm py-xs rounded-full">Mobile</span>
+    </div>
+
+    <h3 class="font-headline-sm text-headline-sm text-on-primary-container mb-xs">
+      Pomodoro Timer
+    </h3>
+
+    <p class="font-body-md text-body-md text-on-primary-container/80">
+      A productivity timer built using React to help focus and manage study sessions.
+    </p>
+
+  </div>
+</a>
+<!-- Project Card 2: Lavender/Illustration -->
+<div class="group relative bg-tertiary-container rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A collection of stylized, cute character illustrations in a flat vector style. The characters include a friendly round cat and a tiny sprout, rendered in a palette of soft lavender, butter yellow, and sage green. The lighting is flat and cheerful, perfect for a children's book or a friendly brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"/>
+</div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-tertiary text-on-tertiary font-label-md text-label-md px-sm py-xs rounded-full">Illustration</span>
+<span class="bg-white/60 text-tertiary font-label-md text-label-md px-sm py-xs rounded-full">Vector Art</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-tertiary-container mb-xs">Forest Friends</h3>
+<p class="font-body-md text-body-md text-on-tertiary-container/80">Character designs for a brand identity that values kindness and nature.</p>
+</div>
+<!-- Project Card 3: Pink/Branding -->
+<div class="group relative bg-secondary-container rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A minimalist brand identity mockup featuring a logo for a bakery. The scene includes a business card and a coffee cup with a circular logo of a smiling croissant. Colors are soft blush pink and deep cocoa brown. The lighting is warm and domestic, evoking the feeling of a cozy morning in a local cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5YzfR6ImqV4qqiKEuagLSqnlQWCRVn5wTxzyfXHFmz-rljO-NPb1g-FBr_IjMTtquWpf4tvJXFT0nxCnMRbIe5f22t2zjnQ3J_3Y2U5Sl4ukBXB80L7doYyC7lR-Ab7r90rh1U3rX5E6IXwulGTx5Aes-zi71hEfLV41jK4gyA_h3PtDFR3nwWSNEzMS5oXobA91fyFITLzrXpABqhmMoPfE6OkQHNYslAwA2Q0RyqXdVhD2P-5x9OuO0tJiGS0A0WfY-rA9L9_Tt"/>
+</div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-secondary text-on-secondary font-label-md text-label-md px-sm py-xs rounded-full">Branding</span>
+<span class="bg-white/60 text-secondary font-label-md text-label-md px-sm py-xs rounded-full">Logo</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-secondary-container mb-xs">Sweet Crumb</h3>
+<p class="font-body-md text-body-md text-on-secondary-container/80">Crafting a visual identity for a neighborhood bakery that feels like home.</p>
+</div>
+<!-- Project Card 4: Light Green/Web -->
+<div class="group relative bg-primary-fixed rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A professional yet playful desktop website layout for a creative agency. The design uses large, exaggerated rounded corners for sections and features high-quality photography framed in organic shapes. The color scheme is dominated by mint green and off-white, lit with soft natural daylight through a window effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOItS7GyVAFL2SQCkiYeLYgFirkCe9Vudc3dDn98s0tp_Bv6TZX_gYDWN8IhkefSZ1EXfyRL5osiazV886tnKaueWvzoH4zw5YrCZu5p1DwE7MoecQ6Po5nJzfd56KcHxRsSzYh_SfTZECB8bIjRB00HcGOvJHUYKZ9_GaqGxgyTfglJLqKXPqndXGhYApciukbhkvorSEZ2mW--sWROi9slkU7NFWFIi_S7PKFYiE0NUE8fGqVCpMns2_NO_b6P_eKiWtz8L_I0Ra"/>
+</div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-primary-fixed-dim text-on-primary-fixed-variant font-label-md text-label-md px-sm py-xs rounded-full">Web Design</span>
+<span class="bg-white/60 text-primary font-label-md text-label-md px-sm py-xs rounded-full">Portfolio</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary-fixed-variant mb-xs">Pixel Garden</h3>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant/80">An interactive playground where users can grow digital plants through clicks.</p>
+</div>
+<!-- Project Card 5: Soft Blue/App -->
+<div class="group relative bg-tertiary-fixed rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A vibrant data visualization dashboard designed with a playful twist. Graphs are rendered as colorful rounded bars and soft blobs of light. The primary colors are soft periwinkle and lavender. The scene is presented on a tablet device lying on a desk with several colorful pens nearby, suggesting a creative workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_XXhZmSIeq4EvHequjSYYrS4YmXvmHVxG1hf16-KFrppWwTYiApUrrtxbnBPh6X4HCG7fD-o9CkmyugSu17Lu0rT88BXcS5mFBoqOTSIzvQdBJni863to55O-UkGO5C_bxllV-0ZpdwWNeldQVuzl-glA94AIkGg1kEquowmV5DhiPAISmzsMeuohAcbAKoftZu2go7wNgk7QAA77Kp1b9bmKkq1lbM7W9m6Gso5kp1jIlmXZVRqVjzDEiSk5M9u5SDu23dJr4cgK"/>
+</div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed-variant font-label-md text-label-md px-sm py-xs rounded-full">App Design</span>
+<span class="bg-white/60 text-tertiary font-label-md text-label-md px-sm py-xs rounded-full">Dashboard</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-tertiary-fixed-variant mb-xs">Mood Bloom</h3>
+<p class="font-body-md text-body-md text-on-tertiary-fixed-variant/80">Tracking daily emotions through a vibrant, evolving digital bouquet.</p>
+</div>
+<!-- Project Card 6: Warm Yellow/Icon -->
+<div class="group relative bg-secondary-fixed rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A grid of custom-designed icons for a lifestyle app. Icons include a steaming coffee cup, a small heart, a bicycle, and a camera, all drawn with thick, consistent strokes and rounded ends. The icons are pastel yellow and coral, placed against a background of soft cream paper with subtle texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUSu7Go3fQ7w-sqrdfqR0nNIdiWlBFtJFa0McZwCg8Ue5daZoSkjL6uZR8ftdXWpsDUNdaFNel6iTMlxUIjgxKiB4VRbQj4QEaxdH0Ngaw98lWwkzKTXykiafkXFiPxcfJnJpXOw7uy_NLGKLkkfA652NjJB0CikNvI0ESYLsFMbmjXU75pCIOTBT-KcSsZliSpEhyiL7J9dP2x5O0FfH8leMmq8nM--mENQdiLbmhCW9Nk9pQTLclrPSHJ8tZ24gSjVHR6Q-GRSAM"/>
+</div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="bg-secondary-fixed-dim text-on-secondary-fixed-variant font-label-md text-label-md px-sm py-xs rounded-full">Iconography</span>
+<span class="bg-white/60 text-secondary font-label-md text-label-md px-sm py-xs rounded-full">Graphic</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-secondary-fixed-variant mb-xs">Daily Doodles</h3>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant/80">A set of 100+ handcrafted icons for lifestyle and wellness applications.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full rounded-t-lg mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-container-margin py-xl gap-md max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary">ImaninaRamly</span>
+<span class="font-body-md text-body-md text-on-surface-variant">© 2026 ImaninaRamly. All rights reserved.</span>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Process</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Connect</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Studio</a>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-container-margin right-container-margin w-16 h-16 bg-primary text-on-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ImaninaRamly | Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&amp;family=Quicksand:wght@300..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e4e2e2",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed": "#00210b",
+                        "inverse-primary": "#96d5a0",
+                        "on-surface": "#1b1c1c",
+                        "tertiary": "#605a7c",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#b2f2bb",
+                        "surface": "#fbf9f8",
+                        "background": "#fbf9f8",
+                        "primary-fixed-dim": "#96d5a0",
+                        "on-background": "#1b1c1c",
+                        "primary-fixed": "#b2f2bb",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#5b3f47",
+                        "secondary-container": "#fed5df",
+                        "outline-variant": "#c0c9be",
+                        "on-tertiary-fixed-variant": "#484263",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#75565f",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#1c1735",
+                        "surface-bright": "#fbf9f8",
+                        "tertiary-fixed": "#e6deff",
+                        "on-secondary-container": "#795a63",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-container": "#e6deff",
+                        "primary": "#2f6a3f",
+                        "on-tertiary-container": "#666082",
+                        "on-primary-fixed-variant": "#145129",
+                        "secondary-fixed": "#ffd9e2",
+                        "surface-tint": "#2f6a3f",
+                        "surface-container": "#efeded",
+                        "on-primary-container": "#367044",
+                        "on-secondary-fixed": "#2b151c",
+                        "secondary-fixed-dim": "#e4bcc6",
+                        "tertiary-fixed-dim": "#cac1e8",
+                        "surface-dim": "#dbd9d9",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-surface-variant": "#414940",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container-high": "#eae8e7",
+                        "on-error-container": "#93000a",
+                        "outline": "#717970"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "container-margin": "32px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Quicksand"],
+                        "body-md": ["Quicksand"],
+                        "headline-sm": ["Comfortaa"],
+                        "headline-md": ["Comfortaa"],
+                        "display-lg": ["Comfortaa"],
+                        "display-lg-mobile": ["Comfortaa"],
+                        "label-md": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shadow {
+            box-shadow: 0 20px 40px -15px rgba(47, 106, 63, 0.12);
+        }
+        .card-border {
+            border: 2px solid rgba(113, 121, 112, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-container-margin h-20 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-primary">ImaninaRamly</div>
+<div class="hidden md:flex items-center gap-base">
+<a class="text-primary font-bold bg-primary-container rounded-full px-4 py-2 transition-transform duration-200 ease-out hover:scale-105" href="index.html">Home</a>
+<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="projects.html">Projects</a>
+<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="gallery.html">Gallery</a>
+<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="contact.html">Contact</a>
+</div>
+<a href="NUR IMANINA RESUME.pdf" 
+           download="NUR_IMANINA_RESUME.pdf" 
+            class="bg-primary text-on-primary font-body-lg text-body-lg px-lg py-sm rounded-full hover:scale-105 active:scale-95 transition-all duration-200 ease-out shadow-lg shadow-primary/20">
+            Download Resume
+        </a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-container-margin py-xl flex flex-col md:flex-row items-center gap-xl">
+<div class="flex-1 space-y-md text-center md:text-left">
+<div class="inline-flex items-center gap-xs bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+                    HELLO THERE!
+                </div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-surface">
+                    Hi, I'm <span class="text-primary">Imanina</span>! <br/>
+                    I craft digital magic with heart.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+    A Computer Science student at Universiti Sultan Zainal Abidin (UniSZA) specializing in Internet Computing. 
+    I am a passionate developer focused on building efficient, user-friendly applications and creating 
+    joyful digital experiences.                </p>
+<div class="flex flex-wrap gap-md justify-center md:justify-start pt-sm">
+<a href="contact.html"
+class="bg-primary text-on-primary font-label-md text-label-md px-lg py-md rounded-full hover:scale-105 active:scale-95 transition-all duration-200 tonal-shadow flex items-center gap-sm">
+                        Let's Talk <span class="material-symbols-outlined">chat_bubble</span>
+</a>
+<a href="projects.html"
+class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-lg py-md rounded-full hover:scale-105 active:scale-95 transition-all duration-200 flex items-center gap-sm">
+                        View Portfolio <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square rounded-xl overflow-hidden tonal-shadow card-border bg-tertiary-container relative">
+<img alt="Imanina Portrait" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="img1.jpeg"/>
+</div>
+</div>
+</section>
+<!-- Quick Glimpse Section -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-7xl mx-auto px-container-margin">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Quick Glimpse</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Selected treasures from my creative workshop.</p>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-xs hover:underline" href="#">
+                        Explore all projects <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+<!-- Bento-style Project Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Project 1 -->
+<div class="group bg-surface-container-highest rounded-lg p-md card-border hover:scale-[1.02] transition-transform duration-300 flex flex-col gap-md">
+<div class="aspect-video rounded-lg overflow-hidden bg-primary-container">
+<img alt="Pet Adoption App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A playful UI design concept for a pet adoption app, featuring soft rounded buttons in mint and lavender colors. The interface shows cute illustrated dog icons and large, friendly typography. The overall composition is clean and minimalist with a tactile marshmallow-like feel and soft tonal shadows on a light neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPGoUNM9WHjMZ5ffcxzED-ogbWhMHyN6mlJpj_jU3-MWms91gaQ41G8DPudVQRromBDZ0dcDDC6tBnGAHIZOfS2ee4gVu711-9LgF9EgZrFaqPWsVo0Ok0_trK-0QiQskZWyf6b89L6HfslTTkq_i0gTD7jqrJukrQB03TEWT9mtxGjmB_9j4Z6seBB_aN8RTJeAQ58FKPa0WS77CARfcvNe7CJBEE-vRBAzHBIfJPBvmkVNWL7FHg2UQuDYntkXAO7mA3GQ5dh-5v"/>
+</div>
+<div class="space-y-xs">
+<div class="flex gap-xs">
+<span class="px-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-[12px]">UI DESIGN</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pawfect Match</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A whimsical mobile experience for finding your new best friend.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-surface-container-highest rounded-lg p-md card-border hover:scale-[1.02] transition-transform duration-300 flex flex-col gap-md">
+<div class="aspect-video rounded-lg overflow-hidden bg-secondary-container">
+<img alt="Brand Identity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A vibrant digital illustration featuring abstract organic shapes in lavender, blush pink, and butter yellow. The art style is soft and minimalist with smooth gradients and playful compositions. It feels high-end and modern, designed to evoke feelings of creativity and calm in a professional portfolio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPKLGP9ORE6C4qzvbtjX1r2zEGJBnhDju7HwtOXsZiTOr2UdirFHlYho6wioDGqZjOraMNJXFwtTjSPpwyHOQtjWYpWawLRl18vbQkXijXTWBXf5jX1incmM-W4E-RkX7ftF7Al1Cu2IUbSpouwptJevnn7KopjBqn2FWJRQk8XQh-JiOhDHLAACUwKOs8oYyR7cewTeynqQDwMMA0d_GknlDHAAlgAoU6fLkB0Qdi6ekBrWdKwlDqCpcyxGmNPTasnG0lHc_yyOG"/>
+</div>
+<div class="space-y-xs">
+<div class="flex gap-xs">
+<span class="px-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[12px]">BRANDING</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dreamy Days</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Identity design for a boutique stationery brand with soft textures.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group bg-surface-container-highest rounded-lg p-md card-border hover:scale-[1.02] transition-transform duration-300 flex flex-col gap-md">
+<div class="aspect-video rounded-lg overflow-hidden bg-tertiary-container">
+<img alt="Web Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A clean and modern website layout showcasing large, friendly headlines and generous whitespace. The design uses the Whimsical Professional palette with soft lavender accents and rounded card elements. The lighting is bright and even, emphasizing a sense of clarity and professional warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM-hYmjs9FVhWvK__1ZRuRrnu0SmPyC4lWWkj3Dej_DZKaSSEzFL66DUdxrPz_PIBKLoMh1Kbi4s_roGvpj_bYAwN1zH3k-SS0tW8XGr4MSi_jbimvwdWCrThAt2w72E8434fUAVb45hiaAf8j0hG8KTvtIm62M-QoCss8LCoisOPCAhe1kGdkcXFVWDXmx_NvE6AoF7auBDQ4ieA5w2Ad1BkvlRTOIAM-Iizr748kGTmoIKDowiAp-pRl-o5HHt_vUHLDtY-GzNdY"/>
+</div>
+<div class="space-y-xs">
+<div class="flex gap-xs">
+<span class="px-sm py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-[12px]">WEB</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Studio Bloom</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Responsive portfolio site for a collective of creative gardeners.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats/Badges Section -->
+<section class="max-w-7xl mx-auto px-container-margin py-xl">
+<div class="bg-primary text-on-primary rounded-xl p-lg flex flex-col md:flex-row justify-around items-center text-center gap-lg tonal-shadow">
+<div class="space-y-xs">
+<div class="font-display-lg text-display-lg">5+</div>
+<div class="font-label-md text-label-md opacity-80 uppercase tracking-widest">Years Experience</div>
+</div>
+<div class="w-px h-12 bg-on-primary/20 hidden md:block"></div>
+<div class="space-y-xs">
+<div class="font-display-lg text-display-lg">42</div>
+<div class="font-label-md text-label-md opacity-80 uppercase tracking-widest">Happy Clients</div>
+</div>
+<div class="w-px h-12 bg-on-primary/20 hidden md:block"></div>
+<div class="space-y-xs">
+<div class="font-display-lg text-display-lg">100%</div>
+<div class="font-label-md text-label-md opacity-80 uppercase tracking-widest">Made with Love</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full rounded-t-lg mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-container-margin py-xl gap-md max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary">ImaninaRamly</span>
+<span class="font-body-md text-body-md text-on-surface-variant">© 2026 ImaninaRamly. All rights reserved.</span>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Process</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Connect</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Studio</a>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-md right-md bg-primary text-on-primary p-md rounded-full tonal-shadow hover:scale-110 active:scale-95 transition-all duration-200 z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</body></html>
