@@ -420,9 +420,20 @@ body {
 function setActiveNav() {
   const current = location.pathname.split("/").pop();
 
+  if (current === "") {
+    current = "index.html";
+  }
+
   document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === current) {
-      link.classList.add("bg-purple-100", "text-purple-800", "font-semibold");
+
+    const href = link.getAttribute("href");
+
+    if (href === current) {
+      link.classList.add(
+        "bg-purple-100",
+        "text-purple-800",
+        "font-semibold"
+      );
     }
   });
 }
