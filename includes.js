@@ -16,7 +16,6 @@ function initNav() {
 
 async function loadComponents() {
   await Promise.all([
-    includeHTML("header", "header.html"),
     includeHTML("navbar", "navbar.html"),
     includeHTML("footer", "footer.html")
   ]);
