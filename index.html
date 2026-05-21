@@ -229,6 +229,19 @@ body {
 <footer class="text-center py-10 text-gray-500">
   © 2026 ImaninaRamly
 </footer>
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const current = location.pathname.split("/").pop();
 
+  document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("bg-purple-100", "text-purple-800", "font-semibold");
+    }
+  });
+});
+</script>
+<script src="includes.js"></script>
+  
 </body>
 </html>
