@@ -46,55 +46,102 @@ body {
 <!-- NAVBAR -->
 <div id="navbar"></div>
       
-<main class="pt-24 pb-16">
+<main class="pt-28 pb-24 relative overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-[#f6f7fb]"></div>
+
+    <div class="absolute top-[-120px] left-[-100px] w-[500px] h-[500px]
+                bg-purple-200/25 blur-[120px] rounded-full"></div>
+
+    <div class="absolute bottom-[-160px] right-[-120px] w-[600px] h-[600px]
+                bg-pink-200/20 blur-[140px] rounded-full"></div>
+  </div>
+
   <div class="max-w-7xl mx-auto px-6 md:px-8">
 
     <!-- HERO -->
-    <header class="text-center mb-12">
-      <h1 class="text-4xl md:text-[54px] font-bold text-gray-900">
-        Creative <span class="text-purple-700">Playground</span>
+    <header class="text-center mb-14">
+      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
+        Creative <span class="text-gray-500">Playground</span>
       </h1>
-      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-        A collection of tiny wonders and digital experiments.
+
+      <p class="mt-4 text-gray-500 max-w-xl mx-auto leading-relaxed">
+        A collection of tiny experiments, UI ideas, and digital creations.
       </p>
     </header>
 
     <!-- GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
 
       <!-- CARD -->
       <a href="https://pomodoro-pet-timer.netlify.app" target="_blank"
-         class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 hover:scale-[1.02] transition block">
+         class="group rounded-3xl overflow-hidden
+                bg-white/60 backdrop-blur-xl
+                border border-white/40
+                shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+                hover:scale-[1.02] transition block">
 
-        <img src="project1.png" class="h-48 w-full object-cover"/>
+        <div class="overflow-hidden">
+          <img src="project1.png"
+               class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"/>
+        </div>
 
-        <div class="p-5">
-          <div class="flex gap-2 mb-2">
-            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">UI</span>
-            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Mobile</span>
+        <div class="p-5 space-y-3">
+
+          <div class="flex gap-2">
+            <span class="text-xs px-3 py-1 rounded-full
+                         bg-white/70 border border-white/40 text-gray-600">
+              UI
+            </span>
+
+            <span class="text-xs px-3 py-1 rounded-full
+                         bg-white/70 border border-white/40 text-gray-600">
+              Mobile
+            </span>
           </div>
 
-          <h3 class="font-bold">Pomodoro Timer</h3>
-          <p class="text-gray-500 text-sm mt-1">
+          <h3 class="font-medium text-gray-800">
+            Pomodoro Timer
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-relaxed">
             React productivity timer for focus sessions.
           </p>
+
         </div>
       </a>
 
       <!-- CARD 2 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 hover:scale-[1.02] transition">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"
-             class="h-48 w-full object-cover"/>
+      <div class="group rounded-3xl overflow-hidden
+                  bg-white/60 backdrop-blur-xl
+                  border border-white/40
+                  shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+                  hover:scale-[1.02] transition">
 
-        <div class="p-5">
-          <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded">Illustration</span>
-          <h3 class="font-bold mt-2">Forest Friends</h3>
-          <p class="text-gray-500 text-sm">Character design exploration</p>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"
+             class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"/>
+
+        <div class="p-5 space-y-2">
+
+          <span class="text-xs px-3 py-1 rounded-full
+                       bg-white/70 border border-white/40 text-gray-600">
+            Illustration
+          </span>
+
+          <h3 class="font-medium text-gray-800">
+            Forest Friends
+          </h3>
+
+          <p class="text-sm text-gray-500">
+            Character design exploration
+          </p>
+
         </div>
       </div>
 
     </div>
-
   </div>
 </main>
       
