@@ -70,31 +70,45 @@ body {
 
  <!-- BLOG LIST -->
     <div class="max-w-4xl mx-auto space-y-6">
+      
+<!-- BLOG CARD -->
+<div onclick="openBlog('blog1')"
+     class="cursor-pointer group rounded-3xl overflow-hidden
+            bg-white/60 backdrop-blur-xl
+            border border-white/40
+            shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+            hover:scale-[1.02] transition block">
 
-      <!-- BLOG CARD -->
-      <div onclick="openBlog('blog1')"
-           class="cursor-pointer rounded-3xl p-6
-                  bg-white/60 backdrop-blur-xl
-                  border border-white/40
-                  shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-                  hover:scale-[1.01] transition">
+  <div class="p-6 space-y-4">
 
-        <div class="flex justify-between items-center mb-3">
-          <span class="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-700">
-            Dev Story
-          </span>
-          <span class="text-xs text-gray-400">22 May 2026</span>
-        </div>
+    <!-- TAG + DATE -->
+    <div class="flex items-center justify-between">
 
-        <h3 class="text-xl font-semibold text-gray-900">
-          Learning Laravel Routes
-        </h3>
-
-        <p class="mt-2 text-gray-500 text-sm">
-          A story about how I finally understood web.php in Laravel...
-        </p>
-
+      <div class="flex gap-2">
+        <span class="text-xs px-3 py-1 rounded-full
+                     bg-white/70 border border-white/40 text-gray-600">
+          Dev Story
+        </span>
       </div>
+
+      <span class="text-xs text-gray-400">
+        22 May 2026
+      </span>
+
+    </div>
+
+    <!-- TITLE -->
+    <h3 class="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition">
+      Learning Laravel Routes
+    </h3>
+
+    <!-- DESCRIPTION -->
+    <p class="text-sm text-gray-500 leading-relaxed">
+      A story about how I finally understood web.php in Laravel and how routing actually works behind the scenes.
+    </p>
+
+  </div>
+</div>
 
     </div>
   </div>
