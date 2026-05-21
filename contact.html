@@ -78,14 +78,17 @@ body {
 
         <form action="https://formspree.io/f/xpqbgnop" class="flex flex-col gap-md" method="POST">
 
-          <input placeholder="Name"
-                 class="w-full border rounded-full px-4 py-3"/>
+          <input name="name" placeholder="Name"
+       class="w-full border rounded-full px-4 py-3"/>
 
-          <input placeholder="Email"
-                 class="w-full border rounded-full px-4 py-3"/>
+<input name="email" placeholder="Email"
+       class="w-full border rounded-full px-4 py-3"/>
 
-          <textarea placeholder="Message"
-                    class="w-full border rounded-xl px-4 py-3 h-40"></textarea>
+<input name="subject" placeholder="Subject"
+       class="w-full border rounded-full px-4 py-3"/>
+
+<textarea name="message" placeholder="Message"
+          class="w-full border rounded-xl px-4 py-3 h-40"></textarea>
 
           <button class="bg-purple-700 text-white px-6 py-3 rounded-full hover:scale-105 transition">
             Send Message
