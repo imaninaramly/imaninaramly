@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ImaninaRamly | Home</title>
+<title>ImaninaRamly | Gallery</title>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
@@ -43,23 +43,9 @@ body {
 
 <body class="bg-white">
       
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
-<div class="flex justify-between items-center px-container-margin h-20 max-w-7xl mx-auto">
-<div class="font-headline-md text-headline-md text-primary">ImaninaRamly</div>
-<div class="hidden md:flex items-center gap-base">
-<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="index.html">Home</a>
-<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="projects.html">Projects</a>
-<a class="text-primary font-bold bg-primary-container rounded-full px-4 py-2 transition-transform duration-200 ease-out hover:scale-105" href="gallery.html">Gallery</a>
-<a class="text-on-surface-variant px-4 py-2 rounded-full hover:bg-secondary-container/50 transition-transform duration-200 ease-out hover:scale-105" href="contact.html">Contact</a>
-</div>
-<a href="NUR IMANINA RESUME.pdf" 
-           download="NUR_IMANINA_RESUME.pdf" 
-            class="bg-primary text-on-primary font-body-lg text-body-lg px-lg py-sm rounded-full hover:scale-105 active:scale-95 transition-all duration-200 ease-out shadow-lg shadow-primary/20">
-            Download Resume
-        </a>
-</div>
-</nav>
+<!-- NAVBAR -->
+<div id="navbar"></div>
+  
 <!-- Main Content Area -->
 <main class="pt-xl pb-xl px-container-margin max-w-7xl mx-auto mt-20">
 <!-- Page Header -->
@@ -152,18 +138,26 @@ body {
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-surface-container-low w-full rounded-t-lg mt-xl">
-<div class="flex flex-col md:flex-row justify-between items-center px-container-margin py-xl gap-md max-w-7xl mx-auto">
-<div class="flex flex-col items-center md:items-start gap-xs">
-<span class="font-headline-sm text-headline-sm text-tertiary">ImaninaRamly</span>
-<span class="font-body-md text-body-md text-on-surface-variant">© 2026 ImaninaRamly. All rights reserved.</span>
-</div>
-<div class="flex gap-lg">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Process</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Connect</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Studio</a>
-</div>
-</div>
-</footer>
-</body></html>
+  
+<!-- FOOTER -->
+<div id="footer"></div>
+  
+<script>
+function setActiveNav() {
+  const current = location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("bg-purple-100", "text-purple-800", "font-semibold");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(setActiveNav, 100);
+});
+</script>
+<script src="includes.js"></script>
+  
+</body>
+</html>
