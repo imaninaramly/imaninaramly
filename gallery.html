@@ -46,31 +46,55 @@ body {
 <!-- NAVBAR -->
 <div id="navbar"></div>
   
-<main class="pt-24 pb-16">
+<main class="pt-28 pb-24 relative overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-[#f6f7fb]"></div>
+    <div class="absolute top-[-120px] left-[-80px] w-[500px] h-[500px] bg-purple-200/25 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-[-150px] right-[-100px] w-[600px] h-[600px] bg-pink-200/20 blur-[140px] rounded-full"></div>
+  </div>
+
   <div class="max-w-7xl mx-auto px-6 md:px-8">
 
     <!-- HEADER -->
-    <header class="text-center mb-12">
-      <h1 class="text-4xl md:text-[54px] font-bold text-gray-900">
-        Creative <span class="text-purple-700">Scrapbook</span>
+    <header class="text-center mb-14">
+      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
+        Creative <span class="text-gray-500">Scrapbook</span>
       </h1>
-      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-        Weekend doodles, photography, and small creative sparks.
+
+      <p class="mt-4 text-gray-500 max-w-xl mx-auto leading-relaxed">
+        Weekend doodles, photography, and small creative sparks captured softly.
       </p>
     </header>
 
-    <!-- GRID (REPLACE MASONRY) -->
+    <!-- GRID (MASONRY STYLE CLEAN) -->
     <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
 
       <!-- ITEM -->
-      <div class="break-inside-avoid bg-white rounded-xl shadow-soft border border-gray-100 overflow-hidden">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-YSUNQUr-hh8qwdzfUOej5kAxhhQIDOCrpu_CkakAI1DEPM3tQmW6M1kiQRfcgEuB2wuo1QKzeR-sTnQ3k8mO0a7mvmoRUOPrHoCrEgkXxdFIZmdaZQs3jxea6rhJ4UDzcU5KDcl3eAUQY1wH09UpWe5TUNPvixSPgU1LnrqHg6Lt0gEm5MHdSCY52TDxajpQt00BVCujeERXrM1dhW59iVhv8FWa_uTXTsuMY3oV2_uT2MotUwH9cSiStQY6c6YJYzZBv9Tu7MEt"
-             class="w-full h-56 object-cover"/>
+      <div class="break-inside-avoid group">
+        <div class="rounded-3xl overflow-hidden
+                    bg-white/60 backdrop-blur-xl
+                    border border-white/40
+                    shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+                    hover:scale-[1.02] transition">
 
-        <div class="p-5">
-          <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Doodle</span>
-          <h3 class="font-bold mt-2">Morning Clouds</h3>
-          <p class="text-gray-500 text-sm">Soft sky study sketch</p>
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-YSUNQUr-hh8qwdzfUOej5kAxhhQIDOCrpu_CkakAI1DEPM3tQmW6M1kiQRfcgEuB2wuo1QKzeR-sTnQ3k8mO0a7mvmoRUOPrHoCrEgkXxdFIZmdaZQs3jxea6rhJ4UDzcU5KDcl3eAUQY1wH09UpWe5TUNPvixSPgU1LnrqHg6Lt0gEm5MHdSCY52TDxajpQt00BVCujeERXrM1dhW59iVhv8FWa_uTXTsuMY3oV2_uT2MotUwH9cSiStQY6c6YJYzZBv9Tu7MEt"
+               class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"/>
+
+          <div class="p-5 space-y-2">
+            <span class="inline-block text-xs px-3 py-1 rounded-full
+                         bg-white/70 border border-white/40 text-gray-600">
+              Doodle
+            </span>
+
+            <h3 class="font-medium text-gray-800">Morning Clouds</h3>
+
+            <p class="text-sm text-gray-500">
+              Soft sky study sketch
+            </p>
+          </div>
+
         </div>
       </div>
 
