@@ -147,8 +147,6 @@ function setActiveNav() {
 
   let current = location.pathname.split("/").pop();
 
-  // kalau buka domain root
-  // contoh: yoursite.com/
   if (current === "") {
     current = "index.html";
   }
@@ -238,15 +236,17 @@ function openBlog(id) {
         And this experience taught me that even something small in a framework can have a big meaning once you understand it.
       </p>
       </div>
-    `;
+     `;
   }
 
   content.innerHTML = blogData;
   modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
 }
 
 function closeBlog() {
   document.getElementById("blogModal").classList.add("hidden");
+  document.body.style.overflow = "auto";
 }
 </script>
   
