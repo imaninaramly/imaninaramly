@@ -5,22 +5,27 @@ async function includeHTML(id, file) {
 }
 
 function initNav() {
-  const current = location.pathname.split("/").pop();
+  const current = location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === current) {
-      link.classList.add("bg-purple-100", "text-purple-800", "font-semibold");
+    const href = link.getAttribute("href");
+
+    if (href === current) {
+      link.classList.add(
+        "bg-purple-100",
+        "text-purple-800",
+        "font-semibold"
+      );
     }
   });
 }
 
 async function loadComponents() {
-  await Promise.all([
-    includeHTML("navbar", "navbar.html"),
-    includeHTML("footer", "footer.html")
-  ]);
+  await includeHTML("navbar", "navbar.html");
+  await includeHTML("footer", "footer.html");
 
-  initNav(); // run after all loaded
+  // 🔥 delay kecil WAJIB sebab DOM injection
+  setTimeout(initNav, 50);
 }
 
 document.addEventListener("DOMContentLoaded", loadComponents);
