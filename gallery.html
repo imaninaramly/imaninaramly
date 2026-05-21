@@ -72,26 +72,35 @@ body {
 <div class="max-w-4xl mx-auto space-y-6">
 
   <!-- BLOG CARD -->
-  <div onclick="openBlog('blog1')" 
-       class="cursor-pointer rounded-3xl p-6
-              bg-white/60 backdrop-blur-xl
-              border border-white/40
-              shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-              hover:scale-[1.01] transition">
+<div onclick="openBlog('blog1')" 
+     class="cursor-pointer rounded-3xl p-6
+            bg-white/60 backdrop-blur-xl
+            border border-white/40
+            shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+            hover:scale-[1.01] transition">
 
+  <div class="flex items-center justify-between mb-3">
+    
     <span class="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-700">
       Dev Story
     </span>
 
-    <h3 class="mt-3 text-xl font-semibold text-gray-900">
-      Learning Laravel Routes: My First Confusing Moment
-    </h3>
-
-    <p class="mt-2 text-gray-500 text-sm">
-      A story about how I finally understood web.php in Laravel...
-    </p>
+    <!-- DATE -->
+    <span class="text-xs text-gray-400">
+      22 May 2026
+    </span>
 
   </div>
+
+  <h3 class="text-xl font-semibold text-gray-900">
+    Learning Laravel Routes: My First Confusing Moment
+  </h3>
+
+  <p class="mt-2 text-gray-500 text-sm leading-relaxed">
+    A story about how I finally understood web.php in Laravel...
+  </p>
+
+</div>
 
 </div>
 
@@ -181,25 +190,54 @@ function openBlog(id) {
         Dev Story
       </span>
 
-      <h2 class="text-2xl font-semibold text-gray-900 mt-3">
-        Learning Laravel Routes: My First Confusing But Eye-Opening Moment
-      </h2>
+       <span class="text-xs text-gray-400">
+        Laravel Learning Journey
+      </span>
+
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug">
+      Learning Laravel Routes: My First Confusing But Eye-Opening Moment
+    </h2>
+
+    <div class="mt-6 space-y-4 text-gray-600 leading-relaxed text-sm md:text-[15px]">
 
       <p>
         When I first started learning Laravel, I honestly didn’t understand what was going on with routes/web.php.
       </p>
 
       <p>
-        I remember seeing <code>Route::get('/', function () { return view('welcome'); });</code> and thinking it was magic.
+        I remember opening the file for the first time and seeing something like:
+        <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">Route::get('/', function () { return view('welcome'); });</code>
       </p>
 
       <p>
-        But everything changed when I created my first /about route and it actually worked.
+        And my first thought was: <span class="italic text-gray-700">“Okay… but how does this actually control my website?”</span>
       </p>
 
       <p>
-        That moment made me realize: web.php is basically the “map” of a Laravel application.
+        At that time, routing felt like magic. I could type a URL in the browser, and Laravel just knew what page to show.
       </p>
+
+      <p>
+        Things started to make sense when I experimented and created my own route:
+        <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">/about</code>.
+      </p>
+
+      <p>
+        When it worked, I realized something important, every URL is being matched inside web.php.
+      </p>
+
+      <p>
+        Later, I learned about controllers, and everything became more structured. Instead of putting everything in web.php, I could organize logic properly.
+      </p>
+
+      <p class="font-medium text-gray-800">
+        Now I see routes/web.php as a “map” of my application, simple, but very powerful.
+      </p>
+
+      <p class="text-gray-700">
+        And this experience taught me that even something small in a framework can have a big meaning once you understand it.
+      </p>
+      </div>
     `;
   }
 
