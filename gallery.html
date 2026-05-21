@@ -68,179 +68,76 @@ body {
       </p>
     </header>
 
-    <!-- BLOG LIST -->
-<div class="max-w-4xl mx-auto space-y-6">
+ <!-- BLOG LIST -->
+    <div class="max-w-4xl mx-auto space-y-6">
 
-  <!-- BLOG CARD -->
-<div onclick="openBlog('blog1')" 
-     class="cursor-pointer rounded-3xl p-6
-            bg-white/60 backdrop-blur-xl
-            border border-white/40
-            shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-            hover:scale-[1.01] transition">
+      <!-- BLOG CARD -->
+      <div onclick="openBlog('blog1')"
+           class="cursor-pointer rounded-3xl p-6
+                  bg-white/60 backdrop-blur-xl
+                  border border-white/40
+                  shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+                  hover:scale-[1.01] transition">
 
-  <div class="flex items-center justify-between mb-3">
-    
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-700">
+            Dev Story
+          </span>
+          <span class="text-xs text-gray-400">22 May 2026</span>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900">
+          Learning Laravel Routes
+        </h3>
+
+        <p class="mt-2 text-gray-500 text-sm">
+          A story about how I finally understood web.php in Laravel...
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div id="blogModal"
+     class="hidden fixed inset-0 z-50 bg-black/30 backdrop-blur-xl flex items-center justify-center p-6">
+
+  <div class="w-full max-w-6xl h-[85vh] flex gap-6">
+
+    <!-- ARTICLE -->
+    <div class="flex-1 bg-white/70 backdrop-blur-2xl
+                border border-white/40 rounded-3xl shadow-2xl
+                p-8 relative overflow-y-auto">
+
+      <button onclick="closeBlog()"
+              class="absolute top-5 right-5 text-gray-500 hover:text-black">
+        ✕
+      </button>
+
+      <div id="blogContent" class="space-y-4 text-gray-700 leading-relaxed"></div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const blogs = {
+  blog1: `
     <span class="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-700">
       Dev Story
     </span>
 
-    <!-- DATE -->
-    <span class="text-xs text-gray-400">
-      22 May 2026
-    </span>
+    <span class="text-xs text-gray-400 block mt-2">22 May 2026</span>
 
-  </div>
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug"> Learning Laravel Routes: My First Confusing But Eye-Opening Moment </h2> <div class="mt-6 space-y-4 text-gray-600 leading-relaxed text-sm md:text-[15px]"> <p> When I first started learning Laravel, I honestly didn’t understand what was going on with routes/web.php. </p> <p> I remember opening the file for the first time and seeing something like: <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">Route::get('/', function () { return view('welcome'); });</code> </p> <p> And my first thought was: <span class="italic text-gray-700">“Okay… but how does this actually control my website?”</span> </p> <p> At that time, routing felt like magic. I could type a URL in the browser, and Laravel just knew what page to show. </p> <p> Things started to make sense when I experimented and created my own route: <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">/about</code>. </p> <p> When it worked, I realized something important, every URL is being matched inside web.php. </p> <p> Later, I learned about controllers, and everything became more structured. Instead of putting everything in web.php, I could organize logic properly. </p> <p class="font-medium text-gray-800"> Now I see routes/web.php as a “map” of my application, simple, but very powerful. </p> <p class="text-gray-700"> And this experience taught me that even something small in a framework can have a big meaning once you understand it. </p> </div>
+  `
+};
 
-  <h3 class="text-xl font-semibold text-gray-900">
-    Learning Laravel Routes: My First Confusing Moment
-  </h3>
-
-  <p class="mt-2 text-gray-500 text-sm leading-relaxed">
-    A story about how I finally understood web.php in Laravel...
-  </p>
-
-</div>
-
-</div>
-
-    <!-- GRID (MASONRY STYLE CLEAN) -->
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-
-      <!-- ITEM -->
-      <div class="break-inside-avoid group">
-        <div class="rounded-3xl overflow-hidden
-                    bg-white/60 backdrop-blur-xl
-                    border border-white/40
-                    shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-                    hover:scale-[1.02] transition">
-
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-YSUNQUr-hh8qwdzfUOej5kAxhhQIDOCrpu_CkakAI1DEPM3tQmW6M1kiQRfcgEuB2wuo1QKzeR-sTnQ3k8mO0a7mvmoRUOPrHoCrEgkXxdFIZmdaZQs3jxea6rhJ4UDzcU5KDcl3eAUQY1wH09UpWe5TUNPvixSPgU1LnrqHg6Lt0gEm5MHdSCY52TDxajpQt00BVCujeERXrM1dhW59iVhv8FWa_uTXTsuMY3oV2_uT2MotUwH9cSiStQY6c6YJYzZBv9Tu7MEt"
-               class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"/>
-
-          <div class="p-5 space-y-2">
-            <span class="inline-block text-xs px-3 py-1 rounded-full
-                         bg-white/70 border border-white/40 text-gray-600">
-              Doodle
-            </span>
-
-            <h3 class="font-medium text-gray-800">Morning Clouds</h3>
-
-            <p class="text-sm text-gray-500">
-              Soft sky study sketch
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</main>
-  
-<!-- FOOTER -->
-<div id="footer"></div>
-  
-<script>
-function setActiveNav() {
-
-  let current = location.pathname.split("/").pop();
-
-  if (current === "") {
-    current = "index.html";
-  }
-
-  document.querySelectorAll(".nav-link").forEach(link => {
-
-    const href = link.getAttribute("href");
-
-    if (href === current) {
-
-      link.classList.add(
-        "bg-purple-100",
-        "text-purple-800",
-        "font-semibold"
-      );
-
-    }
-
-  });
-
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(setActiveNav, 100);
-});
-</script>
-<script src="includes.js"></script>
-
-  <script>
 function openBlog(id) {
-  const modal = document.getElementById("blogModal");
-  const content = document.getElementById("blogContent");
-
-  let blogData = "";
-
-  if (id === "blog1") {
-    blogData = `
-      <span class="text-xs px-3 py-1 rounded-full bg-purple-100 text-purple-700">
-        Dev Story
-      </span>
-
-       <span class="text-xs text-gray-400">
-        Laravel Learning Journey
-      </span>
-
-    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug">
-      Learning Laravel Routes: My First Confusing But Eye-Opening Moment
-    </h2>
-
-    <div class="mt-6 space-y-4 text-gray-600 leading-relaxed text-sm md:text-[15px]">
-
-      <p>
-        When I first started learning Laravel, I honestly didn’t understand what was going on with routes/web.php.
-      </p>
-
-      <p>
-        I remember opening the file for the first time and seeing something like:
-        <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">Route::get('/', function () { return view('welcome'); });</code>
-      </p>
-
-      <p>
-        And my first thought was: <span class="italic text-gray-700">“Okay… but how does this actually control my website?”</span>
-      </p>
-
-      <p>
-        At that time, routing felt like magic. I could type a URL in the browser, and Laravel just knew what page to show.
-      </p>
-
-      <p>
-        Things started to make sense when I experimented and created my own route:
-        <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">/about</code>.
-      </p>
-
-      <p>
-        When it worked, I realized something important, every URL is being matched inside web.php.
-      </p>
-
-      <p>
-        Later, I learned about controllers, and everything became more structured. Instead of putting everything in web.php, I could organize logic properly.
-      </p>
-
-      <p class="font-medium text-gray-800">
-        Now I see routes/web.php as a “map” of my application, simple, but very powerful.
-      </p>
-
-      <p class="text-gray-700">
-        And this experience taught me that even something small in a framework can have a big meaning once you understand it.
-      </p>
-      </div>
-     `;
-  }
-
-  content.innerHTML = blogData;
-  modal.classList.remove("hidden");
+  document.getElementById("blogContent").innerHTML = blogs[id];
+  document.getElementById("blogModal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
 }
 
@@ -249,71 +146,5 @@ function closeBlog() {
   document.body.style.overflow = "auto";
 }
 </script>
-  
-<!-- BLOG READER MODAL (APPLE STYLE + SIDE SLIDER) -->
-<div id="blogModal"
-     class="hidden fixed inset-0 z-50 bg-black/30 backdrop-blur-xl flex items-center justify-center p-6">
-
-  <div class="w-full max-w-6xl h-[85vh] flex gap-6">
-
-    <!-- MAIN ARTICLE -->
-    <div class="flex-1 bg-white/70 backdrop-blur-2xl
-                border border-white/40 rounded-3xl shadow-2xl
-                p-8 relative overflow-y-auto">
-
-      <!-- CLOSE -->
-      <button onclick="closeBlog()"
-              class="absolute top-5 right-5 text-gray-500 hover:text-black text-xl">
-        ✕
-      </button>
-
-      <!-- CONTENT -->
-      <div id="blogContent" class="space-y-4 text-gray-700 leading-relaxed">
-      </div>
-
-    </div>
-
-    <!-- RIGHT SLIDER (OTHER BLOGS) -->
-    <aside class="w-[320px] hidden md:block">
-
-      <div class="h-full overflow-y-auto space-y-4 pr-2">
-
-        <h3 class="text-sm font-semibold text-gray-500 px-2">
-          More Posts
-        </h3>
-
-        <!-- CARD 1 -->
-        <div class="cursor-pointer bg-white/60 backdrop-blur-xl
-                    border border-white/40 rounded-2xl p-4 hover:scale-[1.02] transition">
-          <p class="text-xs text-gray-400">22 May 2026</p>
-          <p class="font-medium text-gray-800 text-sm mt-1">
-            Understanding Laravel Routes
-          </p>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="cursor-pointer bg-white/60 backdrop-blur-xl
-                    border border-white/40 rounded-2xl p-4 hover:scale-[1.02] transition">
-          <p class="text-xs text-gray-400">18 May 2026</p>
-          <p class="font-medium text-gray-800 text-sm mt-1">
-            Fixing .htaccess Issue in Laravel
-          </p>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="cursor-pointer bg-white/60 backdrop-blur-xl
-                    border border-white/40 rounded-2xl p-4 hover:scale-[1.02] transition">
-          <p class="text-xs text-gray-400">10 May 2026</p>
-          <p class="font-medium text-gray-800 text-sm mt-1">
-            CI4 Project Structure Explained
-          </p>
-        </div>
-
-      </div>
-
-    </aside>
-
-  </div>
-</div>
 </body>
 </html>
