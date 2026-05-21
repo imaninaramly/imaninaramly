@@ -46,101 +46,56 @@ body {
 <!-- NAVBAR -->
 <div id="navbar"></div>
       
-<main class="pt-32 pb-xl px-container-margin max-w-7xl mx-auto">
-<!-- Hero Section -->
-<header class="text-center mb-xl">
-<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-md">Creative Playground</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                A collection of tiny wonders and digital experiments. Where pixels meet playfulness and every design tells a cozy story.
-            </p>
-</header>
-<!-- Projects Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
-<!-- Project Card 1: Mint/UI -->
-<a href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener" class="block">
-  <div class="group relative bg-primary-container rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
+<main class="pt-24 pb-16">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
 
-    <div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
-      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        alt="A minimalist productivity timer interface design with a cute pet character, displaying focus and break session timers in soft mint green and white colors." src="project1.png" />
+    <!-- HERO -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-[54px] font-bold text-gray-900">
+        Creative <span class="text-purple-700">Playground</span>
+      </h1>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        A collection of tiny wonders and digital experiments.
+      </p>
+    </header>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- CARD -->
+      <a href="https://pomodoro-pet-timer.netlify.app" target="_blank"
+         class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 hover:scale-[1.02] transition block">
+
+        <img src="project1.png" class="h-48 w-full object-cover"/>
+
+        <div class="p-5">
+          <div class="flex gap-2 mb-2">
+            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">UI</span>
+            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Mobile</span>
+          </div>
+
+          <h3 class="font-bold">Pomodoro Timer</h3>
+          <p class="text-gray-500 text-sm mt-1">
+            React productivity timer for focus sessions.
+          </p>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 hover:scale-[1.02] transition">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"
+             class="h-48 w-full object-cover"/>
+
+        <div class="p-5">
+          <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded">Illustration</span>
+          <h3 class="font-bold mt-2">Forest Friends</h3>
+          <p class="text-gray-500 text-sm">Character design exploration</p>
+        </div>
+      </div>
+
     </div>
-
-    <div class="flex flex-wrap gap-xs mb-sm">
-      <span class="bg-primary text-on-primary font-label-md text-label-md px-sm py-xs rounded-full">UI Design</span>
-      <span class="bg-white/60 text-primary font-label-md text-label-md px-sm py-xs rounded-full">Mobile</span>
-    </div>
-
-    <h3 class="font-headline-sm text-headline-sm text-on-primary-container mb-xs">
-      Pomodoro Timer
-    </h3>
-
-    <p class="font-body-md text-body-md text-on-primary-container/80">
-      A productivity timer built using React to help focus and manage study sessions.
-    </p>
 
   </div>
-</a>
-<!-- Project Card 2: Lavender/Illustration -->
-<div class="group relative bg-tertiary-container rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A collection of stylized, cute character illustrations in a flat vector style. The characters include a friendly round cat and a tiny sprout, rendered in a palette of soft lavender, butter yellow, and sage green. The lighting is flat and cheerful, perfect for a children's book or a friendly brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"/>
-</div>
-<div class="flex flex-wrap gap-xs mb-sm">
-<span class="bg-tertiary text-on-tertiary font-label-md text-label-md px-sm py-xs rounded-full">Illustration</span>
-<span class="bg-white/60 text-tertiary font-label-md text-label-md px-sm py-xs rounded-full">Vector Art</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-tertiary-container mb-xs">Forest Friends</h3>
-<p class="font-body-md text-body-md text-on-tertiary-container/80">Character designs for a brand identity that values kindness and nature.</p>
-</div>
-<!-- Project Card 3: Pink/Branding -->
-<div class="group relative bg-secondary-container rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A minimalist brand identity mockup featuring a logo for a bakery. The scene includes a business card and a coffee cup with a circular logo of a smiling croissant. Colors are soft blush pink and deep cocoa brown. The lighting is warm and domestic, evoking the feeling of a cozy morning in a local cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5YzfR6ImqV4qqiKEuagLSqnlQWCRVn5wTxzyfXHFmz-rljO-NPb1g-FBr_IjMTtquWpf4tvJXFT0nxCnMRbIe5f22t2zjnQ3J_3Y2U5Sl4ukBXB80L7doYyC7lR-Ab7r90rh1U3rX5E6IXwulGTx5Aes-zi71hEfLV41jK4gyA_h3PtDFR3nwWSNEzMS5oXobA91fyFITLzrXpABqhmMoPfE6OkQHNYslAwA2Q0RyqXdVhD2P-5x9OuO0tJiGS0A0WfY-rA9L9_Tt"/>
-</div>
-<div class="flex flex-wrap gap-xs mb-sm">
-<span class="bg-secondary text-on-secondary font-label-md text-label-md px-sm py-xs rounded-full">Branding</span>
-<span class="bg-white/60 text-secondary font-label-md text-label-md px-sm py-xs rounded-full">Logo</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-secondary-container mb-xs">Sweet Crumb</h3>
-<p class="font-body-md text-body-md text-on-secondary-container/80">Crafting a visual identity for a neighborhood bakery that feels like home.</p>
-</div>
-<!-- Project Card 4: Light Green/Web -->
-<div class="group relative bg-primary-fixed rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A professional yet playful desktop website layout for a creative agency. The design uses large, exaggerated rounded corners for sections and features high-quality photography framed in organic shapes. The color scheme is dominated by mint green and off-white, lit with soft natural daylight through a window effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOItS7GyVAFL2SQCkiYeLYgFirkCe9Vudc3dDn98s0tp_Bv6TZX_gYDWN8IhkefSZ1EXfyRL5osiazV886tnKaueWvzoH4zw5YrCZu5p1DwE7MoecQ6Po5nJzfd56KcHxRsSzYh_SfTZECB8bIjRB00HcGOvJHUYKZ9_GaqGxgyTfglJLqKXPqndXGhYApciukbhkvorSEZ2mW--sWROi9slkU7NFWFIi_S7PKFYiE0NUE8fGqVCpMns2_NO_b6P_eKiWtz8L_I0Ra"/>
-</div>
-<div class="flex flex-wrap gap-xs mb-sm">
-<span class="bg-primary-fixed-dim text-on-primary-fixed-variant font-label-md text-label-md px-sm py-xs rounded-full">Web Design</span>
-<span class="bg-white/60 text-primary font-label-md text-label-md px-sm py-xs rounded-full">Portfolio</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-primary-fixed-variant mb-xs">Pixel Garden</h3>
-<p class="font-body-md text-body-md text-on-primary-fixed-variant/80">An interactive playground where users can grow digital plants through clicks.</p>
-</div>
-<!-- Project Card 5: Soft Blue/App -->
-<div class="group relative bg-tertiary-fixed rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A vibrant data visualization dashboard designed with a playful twist. Graphs are rendered as colorful rounded bars and soft blobs of light. The primary colors are soft periwinkle and lavender. The scene is presented on a tablet device lying on a desk with several colorful pens nearby, suggesting a creative workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_XXhZmSIeq4EvHequjSYYrS4YmXvmHVxG1hf16-KFrppWwTYiApUrrtxbnBPh6X4HCG7fD-o9CkmyugSu17Lu0rT88BXcS5mFBoqOTSIzvQdBJni863to55O-UkGO5C_bxllV-0ZpdwWNeldQVuzl-glA94AIkGg1kEquowmV5DhiPAISmzsMeuohAcbAKoftZu2go7wNgk7QAA77Kp1b9bmKkq1lbM7W9m6Gso5kp1jIlmXZVRqVjzDEiSk5M9u5SDu23dJr4cgK"/>
-</div>
-<div class="flex flex-wrap gap-xs mb-sm">
-<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed-variant font-label-md text-label-md px-sm py-xs rounded-full">App Design</span>
-<span class="bg-white/60 text-tertiary font-label-md text-label-md px-sm py-xs rounded-full">Dashboard</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-tertiary-fixed-variant mb-xs">Mood Bloom</h3>
-<p class="font-body-md text-body-md text-on-tertiary-fixed-variant/80">Tracking daily emotions through a vibrant, evolving digital bouquet.</p>
-</div>
-<!-- Project Card 6: Warm Yellow/Icon -->
-<div class="group relative bg-secondary-fixed rounded-lg p-md card-border tonal-shadow transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-square rounded-lg mb-md overflow-hidden bg-white/50">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="A grid of custom-designed icons for a lifestyle app. Icons include a steaming coffee cup, a small heart, a bicycle, and a camera, all drawn with thick, consistent strokes and rounded ends. The icons are pastel yellow and coral, placed against a background of soft cream paper with subtle texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUSu7Go3fQ7w-sqrdfqR0nNIdiWlBFtJFa0McZwCg8Ue5daZoSkjL6uZR8ftdXWpsDUNdaFNel6iTMlxUIjgxKiB4VRbQj4QEaxdH0Ngaw98lWwkzKTXykiafkXFiPxcfJnJpXOw7uy_NLGKLkkfA652NjJB0CikNvI0ESYLsFMbmjXU75pCIOTBT-KcSsZliSpEhyiL7J9dP2x5O0FfH8leMmq8nM--mENQdiLbmhCW9Nk9pQTLclrPSHJ8tZ24gSjVHR6Q-GRSAM"/>
-</div>
-<div class="flex flex-wrap gap-xs mb-sm">
-<span class="bg-secondary-fixed-dim text-on-secondary-fixed-variant font-label-md text-label-md px-sm py-xs rounded-full">Iconography</span>
-<span class="bg-white/60 text-secondary font-label-md text-label-md px-sm py-xs rounded-full">Graphic</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-secondary-fixed-variant mb-xs">Daily Doodles</h3>
-<p class="font-body-md text-body-md text-on-secondary-fixed-variant/80">A set of 100+ handcrafted icons for lifestyle and wellness applications.</p>
-</div>
-</div>
 </main>
       
 <!-- FOOTER -->
