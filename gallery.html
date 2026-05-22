@@ -69,43 +69,64 @@ body {
     </header>
 
  <!-- BLOG LIST -->
-    <div class="max-w-4xl mx-auto space-y-6">
+    <div class="max-w-5xl mx-auto space-y-8">
       
 <!-- BLOG CARD -->
 <div onclick="openBlog('blog1')"
-     class="cursor-pointer group rounded-3xl overflow-hidden
+     class="cursor-pointer group block rounded-3xl
             bg-white/60 backdrop-blur-xl
             border border-white/40
             shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-            hover:scale-[1.02] transition block">
+            hover:scale-[1.02]
+            transition-all duration-300
+            overflow-hidden">
 
-  <div class="p-6 space-y-4">
+  <div class="p-7 md:p-8 flex flex-col justify-between min-h-[240px]">
 
-    <!-- TAG + DATE -->
-    <div class="flex items-center justify-between">
+    <!-- TOP -->
+    <div>
 
-      <div class="flex gap-2">
+      <!-- TAG + DATE -->
+      <div class="flex items-center justify-between mb-6">
+
         <span class="text-xs px-3 py-1 rounded-full
                      bg-white/70 border border-white/40 text-gray-600">
           Dev Story
         </span>
+
+        <span class="text-xs text-gray-400">
+          16 May 2026
+        </span>
+
       </div>
 
-      <span class="text-xs text-gray-400">
-        22 May 2026
-      </span>
+      <!-- TITLE -->
+      <h3 class="text-2xl font-semibold text-gray-900
+                 leading-snug group-hover:text-purple-700 transition">
+
+        Learning Laravel Routes
+
+      </h3>
+
+      <!-- DESC -->
+      <p class="mt-4 text-gray-500 leading-relaxed text-sm md:text-[15px]">
+
+        A story about how I finally understood web.php in Laravel and how routing actually works behind the scenes.
+
+      </p>
 
     </div>
 
-    <!-- TITLE -->
-    <h3 class="text-lg md:text-xl font-medium text-gray-800 group-hover:text-gray-900 transition">
-      Learning Laravel Routes
-    </h3>
+    <!-- BOTTOM -->
+      <div class="flex items-center gap-2 text-purple-600 text-sm font-medium">
 
-    <!-- DESCRIPTION -->
-    <p class="text-sm text-gray-500 leading-relaxed">
-      A story about how I finally understood web.php in Laravel and how routing actually works behind the scenes.
-    </p>
+        Read Article
+
+        <span class="group-hover:translate-x-1 transition">
+          →
+        </span>
+
+      </div>
 
   </div>
 </div>
