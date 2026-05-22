@@ -201,7 +201,52 @@ const blogs = {
 
     <span class="text-xs text-gray-400 block mt-2">22 May 2026</span>
 
-    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug"> Learning Laravel Routes: My First Confusing But Eye-Opening Moment </h2> <div class="mt-6 space-y-4 text-gray-600 leading-relaxed text-sm md:text-[15px]"> <p> When I first started learning Laravel, I honestly didn’t understand what was going on with routes/web.php. </p> <p> I remember opening the file for the first time and seeing something like: <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">Route::get('/', function () { return view('welcome'); });</code> </p> <p> And my first thought was: <span class="italic text-gray-700">“Okay… but how does this actually control my website?”</span> </p> <p> At that time, routing felt like magic. I could type a URL in the browser, and Laravel just knew what page to show. </p> <p> Things started to make sense when I experimented and created my own route: <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">/about</code>. </p> <p> When it worked, I realized something important, every URL is being matched inside web.php. </p> <p> Later, I learned about controllers, and everything became more structured. Instead of putting everything in web.php, I could organize logic properly. </p> <p class="font-medium text-gray-800"> Now I see routes/web.php as a “map” of my application, simple, but very powerful. </p> <p class="text-gray-700"> And this experience taught me that even something small in a framework can have a big meaning once you understand it. </p> </div>
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug">
+  Experience of Confusion and Enlightenment in Laravel Routes Studying
+</h2>
+
+<div class="mt-6 space-y-4 text-gray-600 leading-relaxed text-sm md:text-[15px]">
+
+  <p>
+    When I first started learning Laravel, I simply did not understand anything about its routes/web.php files.
+  </p>
+
+  <p>
+    As an example, I remember having something like this for the first time:
+    <code class="bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">
+      Route::get('/', function () { return view('welcome'); });
+    </code>
+  </p>
+
+  <p>
+    And I thought to myself: "Okay... But how does this actually manage my site?"
+  </p>
+
+  <p>
+    That way, the whole thing seemed quite magical at the moment: I had entered some URL into the address bar, and Laravel showed me the required page automatically.
+  </p>
+
+  <p>
+    Then I decided to try my hand and create my first route – /about.
+  </p>
+
+  <p>
+    It worked, and I understood that each and every URL of my site corresponds to something inside web.php.
+  </p>
+
+  <p>
+    The other amazing thing I found out about was controllers; thanks to them I was able to organize my code better, placing it not only in web.php.
+  </p>
+
+  <p class="font-medium text-gray-800">
+    Today, when I look through routes/web.php, all I can see there is a "map" of my application – very simple but extremely powerful.
+  </p>
+
+  <p>
+    And such a small thing in a framework can actually become very important indeed.
+  </p>
+
+</div>
   `
 };
 
