@@ -17,8 +17,7 @@ function initNav() {
   "pb-1",
   "font-label-md",
   "text-label-md",
-  "transition-colors",
-  "hover:text-primary"
+  "transition-colors"
 );
     }
   });
