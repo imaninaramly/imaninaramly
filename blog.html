@@ -117,93 +117,71 @@
 <!-- TopNavBar -->
 <div id="navbar"></div>
   
-<main class="pt-28 pb-24 relative overflow-hidden">
+<main class="pt-32 pb-24 px-6 md:px-16 max-w-6xl mx-auto space-y-16">
 
-  <!-- BACKGROUND GLOW -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-[#f6f7fb]"></div>
-    <div class="absolute top-[-120px] left-[-80px] w-[500px] h-[500px] bg-purple-200/25 blur-[120px] rounded-full"></div>
-    <div class="absolute bottom-[-150px] right-[-100px] w-[600px] h-[600px] bg-pink-200/20 blur-[140px] rounded-full"></div>
-  </div>
+<!-- HERO -->
 
-  <div class="max-w-7xl mx-auto px-6 md:px-8">
+<section class="text-center space-y-4">
 
-    <!-- HEADER -->
-    <header class="text-center mb-14">
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
-        Dev <span class="text-gray-500">Diary</span>
-      </h1>
+  <h1 class="font-headline-lg text-4xl md:text-5xl">
 
-      <p class="mt-4 text-gray-500 max-w-xl mx-auto leading-relaxed">
-        A collection of thoughts, experiments, and things I build along the way.
-      </p>
-    </header>
+    Dev <span class="text-primary">Diary</span>
 
- <!-- BLOG LIST -->
-    <div class="max-w-5xl mx-auto space-y-8">
-      
-<!-- BLOG CARD -->
-<div onclick="openBlog('blog1')"
-     class="cursor-pointer group block rounded-3xl
-            bg-white/60 backdrop-blur-xl
-            border border-white/40
-            shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-            hover:scale-[1.02]
-            transition-all duration-300
-            overflow-hidden">
+  </h1>
 
-  <div class="p-7 md:p-8 flex flex-col justify-between min-h-[240px]">
+  <p class="text-on-surface-variant max-w-xl mx-auto">
 
-    <!-- TOP -->
-    <div>
+    A collection of thoughts, experiments, and things I build along the way.
 
-      <!-- TAG + DATE -->
-      <div class="flex items-center justify-between mb-6">
+  </p>
 
-        <span class="text-xs px-3 py-1 rounded-full
-                     bg-white/70 border border-white/40 text-gray-600">
-          Dev Story
-        </span>
+</section>
 
-        <span class="text-xs text-gray-400">
-          16 May 2026
-        </span>
+<!-- BLOG LIST -->
 
-      </div>
+<section class="space-y-8">
 
-      <!-- TITLE -->
-      <h3 class="text-2xl font-semibold text-gray-900
-                 leading-snug group-hover:text-purple-700 transition">
+  <!-- BLOG CARD -->
 
-        Learning Laravel Routes
+  <div onclick="openBlog('blog1')"
 
-      </h3>
+       class="glass-card soft-glow-hover cursor-pointer rounded-3xl p-8">
 
-      <!-- DESC -->
-      <p class="mt-4 text-gray-500 leading-relaxed text-sm md:text-[15px]">
+    <div class="flex justify-between items-center mb-4">
 
-        A story about how I finally understood web.php in Laravel and how routing actually works behind the scenes.
+      <span class="text-xs px-3 py-1 rounded-full bg-secondary-container text-on-surface">
 
-      </p>
+        Dev Story
+
+      </span>
+
+      <span class="text-xs text-on-surface-variant">16 May 2026</span>
 
     </div>
 
-    <!-- BOTTOM -->
-      <div class="flex items-center gap-2 text-purple-600 text-sm font-medium">
+    <h2 class="text-2xl font-headline-lg mb-3">
 
-        Read Article
+      Learning Laravel Routes
 
-        <span class="group-hover:translate-x-1 transition">
-          →
-        </span>
+    </h2>
 
-      </div>
+    <p class="text-on-surface-variant">
 
-  </div>
-</div>
+      A story about how I finally understood web.php in Laravel and routing system.
+
+    </p>
+
+    <div class="mt-6 text-primary font-medium flex items-center gap-2">
+
+      Read Article
+
+      <span class="material-symbols-outlined text-sm">arrow_forward</span>
 
     </div>
+
   </div>
+
+</section>
 </main>
 
 <!-- FOOTER -->
