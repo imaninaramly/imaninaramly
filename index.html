@@ -1,453 +1,301 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
-<head>
+
+<html lang="en"><head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ImaninaRamly | Home</title>
-
-<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ["Quicksand", "sans-serif"]
-      }
-    }
-  }
-}
-</script>
-
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fdd0ea",
+                        "surface": "#f9f9ff",
+                        "primary-fixed-dim": "#ffaeda",
+                        "tertiary": "#41682c",
+                        "surface-container-highest": "#d9e3f7",
+                        "on-surface": "#121c2a",
+                        "primary-fixed": "#ffd8ea",
+                        "on-background": "#121c2a",
+                        "on-tertiary-fixed-variant": "#2a5016",
+                        "on-primary-fixed": "#3a0329",
+                        "surface-container-low": "#eff3ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffd8ed",
+                        "on-secondary-fixed": "#2c1325",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d0daef",
+                        "error": "#ba1a1a",
+                        "primary-container": "#f9a8d4",
+                        "secondary": "#765469",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#e6eeff",
+                        "surface-variant": "#d9e3f7",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#514349",
+                        "on-secondary-container": "#79576c",
+                        "on-primary-fixed-variant": "#6f3157",
+                        "tertiary-fixed": "#c1f0a4",
+                        "on-secondary-fixed-variant": "#5c3d51",
+                        "primary": "#8a486f",
+                        "surface-container-high": "#dee9fd",
+                        "inverse-on-surface": "#ebf1ff",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffaeda",
+                        "outline": "#83737a",
+                        "inverse-surface": "#273140",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-fixed-dim": "#e5bad3",
+                        "tertiary-fixed-dim": "#a6d38b",
+                        "on-tertiary-fixed": "#072100",
+                        "on-tertiary-container": "#31581d",
+                        "on-primary-container": "#78395f",
+                        "surface-tint": "#8a486f",
+                        "background": "#f9f9ff",
+                        "tertiary-container": "#a0cd85",
+                        "outline-variant": "#d5c1c9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "code-sm": ["Courier Prime"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "code-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
 <style>
-body {
-  background-color: #fbf9f8;
-  color: #1b1c1c;
-  font-family: 'Quicksand', sans-serif;
-}
-
-.glass {
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(20px);
-}
-
-.shadow-soft {
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.12);
-}
-</style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid theme('colors.secondary-container');
+        }
+        .soft-glow-hover:hover {
+            box-shadow: 0 0 20px rgba(249, 168, 212, 0.4);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-
-<body class="bg-white">
-
-<!-- NAVBAR -->
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
 <div id="navbar"></div>
-
-<main class="pt-24 pb-20 relative overflow-hidden">
-
-  <div class="absolute inset-0 -z-10 overflow-hidden">
-    <div class="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-purple-200/30 rounded-full blur-3xl"></div>
-
-    <div class="absolute bottom-[-140px] right-[-120px] w-[420px] h-[420px] bg-pink-200/30 rounded-full blur-3xl"></div>
-
-    <div class="absolute inset-0 bg-gradient-to-b from-white via-[#fcfbff] to-[#f8f8fb]"></div>
-  </div>
-
-  <!-- HERO -->
-  <section class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center gap-10 pt-4 pb-10">
-
-    <!-- LEFT -->
-    <div class="flex-1 text-center md:text-left">
-
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full
-                  bg-white/40 backdrop-blur-xl border border-white/40
-                  shadow-lg shadow-black/5 text-sm text-gray-700 mb-5">
-
-        ✨ Hello There
-      </div>
-
-      <h1 class="text-4xl md:text-[58px] font-bold leading-[1.1] tracking-tight text-gray-900">
-        Hi, I'm
-        <span class="text-purple-600">ImaninaRamly</span><br/>
-        I craft digital experiences.
-      </h1>
-
-      <p class="mt-6 text-gray-600 text-lg leading-relaxed max-w-2xl">
-        Computer Science student focused on building clean, efficient and user-friendly applications.
-      </p>
-
-      <!-- BUTTONS -->
-      <div class="mt-8 flex gap-4 justify-center md:justify-start flex-wrap">
-
-        <a href="contact.html"
-           class="px-6 py-3 rounded-full
-                  bg-gradient-to-r from-purple-600 to-pink-500
-                  text-white font-medium
-                  shadow-xl shadow-purple-500/20
-                  hover:scale-105 active:scale-95 transition-all duration-300">
-
-          Let's Talk
-        </a>
-
-        <a href="projects.html"
-           class="px-6 py-3 rounded-full
-                  bg-white/40 backdrop-blur-xl
-                  border border-white/40
-                  shadow-lg shadow-black/5
-                  hover:bg-white/60
-                  transition-all duration-300">
-
-          View Projects
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="flex-1 w-full max-w-md md:max-w-full mx-auto">
-
-      <div class="rounded-[32px] overflow-hidden
-                  bg-white/40 backdrop-blur-2xl
-                  border border-white/40
-                  shadow-2xl shadow-black/10 p-3">
-
-        <img src="img1.jpeg"
-             class="w-full object-cover aspect-[4/3] md:aspect-square rounded-[24px]"/>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT / RESUME -->
-  <section class="max-w-7xl mx-auto px-6 md:px-8 py-14">
-
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <!-- ABOUT -->
-      <div class="rounded-[30px]
-                  bg-white/40 backdrop-blur-2xl
-                  border border-white/40
-                  shadow-2xl shadow-black/5
-                  p-8">
-
-        <h2 class="text-2xl font-bold mb-5 text-gray-900">
-          About Me
-        </h2>
-
-        <p class="text-gray-600 leading-relaxed">
-          Computer Science student with strong foundation in Internet Computing and software development.
-          Passionate about building efficient, user-friendly applications and continuously improving technical skills.
-        </p>
-
-        <div class="mt-7 space-y-3 text-gray-700">
-
-          <p>
-            <span class="font-semibold text-gray-900">Languages:</span>
-            Malay (Native), English (Proficient)
-          </p>
-
-          <p>
-            <span class="font-semibold text-gray-900">Soft Skills:</span>
-            Problem-solving, communication, teamwork, adaptability
-          </p>
-
-          <p>
-            <span class="font-semibold text-gray-900">Interest:</span>
-            Web development, UI/UX design
-          </p>
-
-          <p>
-            <span class="font-semibold text-gray-900">Availability:</span>
-            Internship / Junior Developer
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT SIDE -->
-      <div class="space-y-8">
-
-        <!-- SKILLS -->
-        <div class="rounded-[30px]
-                    bg-white/40 backdrop-blur-2xl
-                    border border-white/40
-                    shadow-2xl shadow-black/5
-                    p-8">
-
-          <h3 class="font-bold text-xl mb-5 text-gray-900">
-            Skills
-          </h3>
-
-          <div class="space-y-4 text-gray-700">
-
-            <div>
-              <p class="font-semibold text-gray-900 mb-1">Frontend</p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">HTML</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">CSS</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">JavaScript</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">Bootstrap</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">Tailwind CSS</span>
-              </div>
-            </div>
-
-            <div>
-              <p class="font-semibold text-gray-900 mb-1">Backend</p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-full bg-purple-100/70 text-purple-700 border border-purple-200/50 text-sm">
-                  Laravel
-                </span>
-
-                <span class="px-3 py-1 rounded-full bg-pink-100/70 text-pink-700 border border-pink-200/50 text-sm">
-                  CodeIgniter 4
-                </span>
-
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">
-                  PHP
-                </span>
-              </div>
-            </div>
-
-            <div>
-              <p class="font-semibold text-gray-900 mb-1">Database & Tools</p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">MySQL</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">Git</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">GitHub</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">VS Code</span>
-                <span class="px-3 py-1 rounded-full bg-white/50 border border-white/50 text-sm">XAMPP</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="rounded-[30px]
-                    bg-white/40 backdrop-blur-2xl
-                    border border-white/40
-                    shadow-2xl shadow-black/5
-                    p-8">
-
-          <h3 class="font-bold text-xl mb-6 text-gray-900">
-            Education
-          </h3>
-
-          <div class="space-y-6 text-gray-700">
-
-            <div class="border-l-2 border-purple-300 pl-5">
-              <p class="font-semibold text-gray-900">
-                Universiti Sultan Zainal Abidin
-              </p>
-
-              <p class="text-sm text-gray-500">
-                2023 - Present
-              </p>
-
-              <p class="mt-2">
-                Bachelor of Computer Science (Internet Computing)
-              </p>
-
-              <p class="text-purple-700 font-medium mt-1">
-                GPA: 3.84 | Semester 5
-              </p>
-            </div>
-
-            <div class="border-l-2 border-pink-300 pl-5">
-              <p class="font-semibold text-gray-900">
-                Kolej Matrikulasi Pulau Pinang
-              </p>
-
-              <p class="text-sm text-gray-500">
-                2021 - 2023
-              </p>
-
-              <p class="mt-2">
-                Sains Komputer
-              </p>
-
-              <p class="text-pink-600 font-medium mt-1">
-                PNGK: 3.29
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="mt-8 pb-10">
-
-    <div class="max-w-7xl mx-auto px-6 md:px-8">
-
-      <!-- TITLE -->
-      <div class="flex justify-between items-end mb-10">
-
-        <div>
-          <div class="inline-flex px-4 py-2 rounded-full
-                      bg-white/40 backdrop-blur-xl border border-white/40
-                      shadow-lg shadow-black/5 text-sm text-gray-600 mb-4">
-
-            Selected Works ✨
-          </div>
-
-          <h2 class="text-3xl font-bold text-gray-900">
-            Quick Glimpse
-          </h2>
-
-          <p class="text-gray-500 mt-2">
-            Selected works and creative explorations.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- GRID -->
-      <div class="grid md:grid-cols-3 gap-7">
-
-        <!-- CARD 1 -->
-        <div class="rounded-[28px]
-                    overflow-hidden
-                    bg-white/40 backdrop-blur-2xl
-                    border border-white/40
-                    shadow-2xl shadow-black/5
-                    hover:scale-[1.02]
-                    transition-all duration-300">
-
-          <img class="h-52 w-full object-cover"
-               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPGoUNM9WHjMZ5ffcxzED-ogbWhMHyN6mlJpj_jU3-MWms91gaQ41G8DPudVQRromBDZ0dcDDC6tBnGAHIZOfS2ee4gVu711-9LgF9EgZrFaqPWsVo0Ok0_trK-0QiQskZWyf6b89L6HfslTTkq_i0gTD7jqrJukrQB03TEWT9mtxGjmB_9j4Z6seBB_aN8RTJeAQ58FKPa0WS77CARfcvNe7CJBEE-vRBAzHBIfJPBvmkVNWL7FHg2UQuDYntkXAO7mA3GQ5dh-5v"/>
-
-          <div class="p-6">
-            <span class="text-xs bg-purple-100/70 text-purple-700 px-3 py-1 rounded-full border border-purple-200/50">
-              UI
-            </span>
-
-            <h3 class="font-semibold mt-4 text-lg text-gray-900">
-              Pawfect Match
-            </h3>
-
-            <p class="text-gray-500 text-sm mt-2">
-              Pet adoption UI concept
-            </p>
-          </div>
-
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="rounded-[28px]
-                    overflow-hidden
-                    bg-white/40 backdrop-blur-2xl
-                    border border-white/40
-                    shadow-2xl shadow-black/5
-                    hover:scale-[1.02]
-                    transition-all duration-300">
-
-          <img class="h-52 w-full object-cover"
-               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPKLGP9ORE6C4qzvbtjX1r2zEGJBnhDju7HwtOXsZiTOr2UdirFHlYho6wioDGqZjOraMNJXFwtTjSPpwyHOQtjWYpWawLRl18vbQkXijXTWBXf5jX1incmM-W4E-RkX7ftF7Al1Cu2IUbSpouwptJevnn7KopjBqn2FWJRQk8XQh-JiOhDHLAACUwKOs8oYyR7cewTeynqQDwMMA0d_GknlDHAAlgAoU6fLkB0Qdi6ekBrWdKwlDqCpcyxGmNPTasnG0lHc_yyOG"/>
-
-          <div class="p-6">
-            <span class="text-xs bg-pink-100/70 text-pink-700 px-3 py-1 rounded-full border border-pink-200/50">
-              Brand
-            </span>
-
-            <h3 class="font-semibold mt-4 text-lg text-gray-900">
-              Dreamy Days
-            </h3>
-
-            <p class="text-gray-500 text-sm mt-2">
-              Brand identity design
-            </p>
-          </div>
-
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="rounded-[28px]
-                    overflow-hidden
-                    bg-white/40 backdrop-blur-2xl
-                    border border-white/40
-                    shadow-2xl shadow-black/5
-                    hover:scale-[1.02]
-                    transition-all duration-300">
-
-          <img class="h-52 w-full object-cover"
-               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM-hYmjs9FVhWvK__1ZRuRrnu0SmPyC4lWWkj3Dej_DZKaSSEzFL66DUdxrPz_PIBKLoMh1Kbi4s_roGvpj_bYAwN1zH3k-SS0tW8XGr4MSi_jbimvwdWCrThAt2w72E8434fUAVb45hiaAf8j0hG8KTvtIm62M-QoCss8LCoisOPCAhe1kGdkcXFVWDXmx_NvE6AoF7auBDQ4ieA5w2Ad1BkvlRTOIAM-Iizr748kGTmoIKDowiAp-pRl-o5HHt_vUHLDtY-GzNdY"/>
-
-          <div class="p-6">
-            <span class="text-xs bg-gray-100/80 text-gray-700 px-3 py-1 rounded-full border border-gray-200/50">
-              Web
-            </span>
-
-            <h3 class="font-semibold mt-4 text-lg text-gray-900">
-              Studio Bloom
-            </h3>
-
-            <p class="text-gray-500 text-sm mt-2">
-              Responsive portfolio site
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto space-y-32">
+<!-- Hero Section -->
+<section class="flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+<div class="flex-1 space-y-8">
+<div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-secondary-container/30 border border-secondary-container text-primary font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Available for Hire</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface md:text-display-lg text-headline-lg-mobile">
+                    Hi, I'm Imanina Ramly. <br/>
+<span class="text-primary italic">Science Computer Internet Computing Undergraduate.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    A passionate full-stack developer dedicated to building elegant, functional, and user-centric web applications. Blending technical rigor with a soft, sophisticated aesthetic.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-4 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:shadow-[0_0_20px_rgba(249,168,212,0.5)] transition-all duration-300 flex items-center gap-2" href="projects.html">
+                        View Projects
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="px-8 py-4 rounded-full border border-primary text-primary font-label-md text-label-md hover:bg-primary/5 transition-all duration-300" href="contact.html">
+                        Get in Touch
+                    </a>
+</div>
+</div>
+<div class="flex-1 relative flex justify-center">
+<div class="relative w-72 h-[400px] md:w-96 md:h-[500px] rounded-full overflow-hidden border-4 border-surface p-2 shadow-[0_0_40px_rgba(249,168,212,0.3)] bg-gradient-to-b from-primary-container/20 to-transparent">
+<img alt="Imanina Ramly Portrait" class="w-full h-full object-cover rounded-full" src="img1.jpeg"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-10 -left-10 w-24 h-24 bg-primary-container/30 rounded-full blur-2xl"></div>
+<div class="absolute bottom-10 -right-10 w-32 h-32 bg-secondary-container/40 rounded-full blur-2xl"></div>
+</div>
+</section>
+<!-- Technical Arsenal -->
+<section class="space-y-12">
+<div class="text-center space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">Technical Arsenal</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Tools and technologies I use to bring ideas to life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Frontend -->
+<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">code_blocks</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">React</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Vue.js</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Tailwind CSS</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">TypeScript</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">dns</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Node.js</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Python</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Express</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">GraphQL</span>
+</div>
+</div>
+<!-- Database & Ops -->
+<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">database</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Data &amp; Cloud</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">PostgreSQL</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">MongoDB</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">AWS</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Docker</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Journey -->
+<section class="space-y-12 max-w-4xl mx-auto">
+<div class="text-center space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">Journey</h2>
+</div>
+<div class="relative border-l-2 border-primary-container/30 ml-4 md:ml-8 space-y-12">
+<!-- Timeline Item 1 -->
+<div class="relative pl-8">
+<div class="absolute w-4 h-4 rounded-full bg-primary -left-[9px] top-1.5 shadow-[0_0_10px_rgba(138,72,111,0.5)]"></div>
+<div class="glass-card p-6 rounded-[24px]">
+<span class="font-code-sm text-code-sm text-primary mb-2 block">2021 - Present</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Senior Full-Stack Developer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">TechFlow Innovations</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 text-sm">Leading a team of 5 in architecting scalable microservices and implementing a comprehensive design system.</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-8">
+<div class="absolute w-4 h-4 rounded-full bg-secondary-container border-2 border-primary -left-[9px] top-1.5"></div>
+<div class="glass-card p-6 rounded-[24px]">
+<span class="font-code-sm text-code-sm text-primary mb-2 block">2018 - 2021</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Frontend Engineer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Creative Digital Agency</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 text-sm">Developed award-winning marketing sites and interactive web experiences for global brands.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-8">
+<div class="absolute w-4 h-4 rounded-full bg-surface-variant border-2 border-outline-variant -left-[9px] top-1.5"></div>
+<div class="glass-card p-6 rounded-[24px] bg-surface/40">
+<span class="font-code-sm text-code-sm text-outline mb-2 block">2014 - 2018</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">BSc Computer Science</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">University of Technology</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Glimpse (Projects) -->
+<section class="space-y-12" id="projects">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">Selected Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">A curated glimpse into my recent projects.</p>
+</div>
+<a class="hidden md:inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors font-label-md text-label-md" href="#">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-[24px] mb-6 aspect-video bg-surface-variant">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+<img alt="Pawfect Match App UI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A modern, clean user interface design for a pet adoption app displayed on a soft pink background. The design features soft rounded corners, playful illustrations of dogs and cats, and a warm color palette of pinks, soft oranges, and creamy whites. The aesthetic is cute, friendly, and accessible, fitting a 'soft-tech chic' vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTAeEMUN3vKSCgR43bkS9Nj1XfTORdlXwfqnZISbA6kQiD5cUCNorDoLaMwRKHPz3-1lzL5IHdydvUJzf-84xL1nDONUKmEoDo4XJO-d91kx4eKW49EVCqMCXBbF4cQkqW1CRle5MFYhe2hT6Lbc94V5n7vQ34szOWWg77WO1FYlLUOO4bNG3LytnAPi5Cj3X2ILyUEEtcF98alM1nBLJvQG_wOrNXgFtDXiGfNxn-LK5xbiDfv_RckJsNqkXq6oN7qYsGmXDU89s"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-2">Pawfect Match</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Pet adoption platform connecting shelters with loving homes.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">React Native</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">Firebase</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer md:mt-16">
+<div class="relative overflow-hidden rounded-[24px] mb-6 aspect-video bg-surface-variant">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+<img alt="Studio Bloom Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A minimalist, high-end e-commerce website design for a boutique floral studio. The interface is clean with lots of whitespace, featuring elegant serif typography and soft, romantic photography of floral arrangements. The color scheme is predominantly cream, soft sage green, and dusty rose. The overall mood is serene and editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk_mFVrAlY8F4wdvfndh2y_KDeZbROm840iCiguEUvcrzntIXGqo6XDkAhQkY_K5Wc1eoIAskrAp_-y7zXMzRtggKPz4B6syBuBhuySOALPE4ivTRbjR-2KJNE_j47_OEUz8K7QNclxlRwispDyAy_ceDqJUzeqmy-73Cpf-ILDSSoHS6vnpeFUtf1uyX9Czifksfj5ILWf7QduCOk0jdTuMYyGovJP0zXdS13AwEqkCimNUmkljEXlaPcK3fyRhn3LyY4fUyRBZM"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-2">Studio Bloom</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Bespoke e-commerce experience for a boutique florist.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">Next.js</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">Stripe</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:hidden flex justify-center mt-8">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary font-label-md text-label-md" href="#">
+                    View All Works
+                </a>
+</div>
+</section>
 </main>
-
 <!-- FOOTER -->
 <div id="footer"></div>
-  
-<script>
-function setActiveNav() {
-
-  let current = location.pathname.split("/").pop();
-
-  if (current === "") {
-    current = "index.html";
-  }
-
-  document.querySelectorAll(".nav-link").forEach(link => {
-
-    const href = link.getAttribute("href");
-
-    if (href === current) {
-
-      link.classList.add(
-        "bg-purple-100",
-        "text-purple-800",
-        "font-semibold"
-      );
-
-    }
-
-  });
-
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(setActiveNav, 100);
-});
-</script>
 <script src="includes.js"></script>
-  
-</body>
-</html>
+</body></html>
