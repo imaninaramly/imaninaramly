@@ -9,7 +9,17 @@ function initNav() {
 
   document.querySelectorAll(".nav-link").forEach(link => {
     if (link.getAttribute("href") === current) {
-      link.classList.add("bg-purple-100", "text-purple-800", "font-semibold");
+      link.classList.add(
+  "text-primary",
+  "font-bold",
+  "border-b-2",
+  "border-primary",
+  "pb-1",
+  "font-label-md",
+  "text-label-md",
+  "transition-colors",
+  "hover:text-primary"
+);
     }
   });
 }
