@@ -117,108 +117,115 @@
 <!-- TopNavBar -->
 <div id="navbar"></div>
       
-<main class="pt-28 pb-24 relative overflow-hidden">
+<main class="pt-32 pb-24 px-6 md:px-16 max-w-7xl mx-auto space-y-14">
 
-  <!-- BACKGROUND GLOW -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-[#f6f7fb]"></div>
+<!-- HERO -->
 
-    <div class="absolute top-[-120px] left-[-100px] w-[500px] h-[500px]
-                bg-purple-200/25 blur-[120px] rounded-full"></div>
+<section class="text-center space-y-4">
 
-    <div class="absolute bottom-[-160px] right-[-120px] w-[600px] h-[600px]
-                bg-pink-200/20 blur-[140px] rounded-full"></div>
-  </div>
+  <h1 class="font-headline-lg text-4xl md:text-5xl">
 
-  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    My <span class="text-primary">Projects</span>
 
-    <!-- HERO -->
-    <header class="text-center mb-14">
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
-        My <span class="text-gray-500">Projects</span>
-      </h1>
+  </h1>
 
-      <p class="mt-4 text-gray-500 max-w-xl mx-auto leading-relaxed">
-        A showcase of projects built through continuous learning and experimentation.
+  <p class="text-on-surface-variant max-w-xl mx-auto">
+
+    A showcase of projects built through continuous learning and experimentation.
+
+  </p>
+
+</section>
+
+<!-- GRID -->
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+  <!-- CARD 1 -->
+
+  <a href="https://pomodoro-pet-timer.netlify.app" target="_blank"
+
+     class="glass-card soft-glow-hover rounded-3xl overflow-hidden block">
+
+    <img src="project1.png"
+
+         class="h-52 w-full object-cover"/>
+
+    <div class="p-6 space-y-3">
+
+      <div class="flex flex-wrap gap-2">
+
+        <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
+
+          React
+
+        </span>
+
+        <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
+
+          UI
+
+        </span>
+
+      </div>
+
+      <h3 class="font-headline-lg text-xl">
+
+        Pomodoro Pet Timer
+
+      </h3>
+
+      <p class="text-on-surface-variant text-sm">
+
+        React productivity timer for focus sessions.
+
       </p>
-    </header>
 
-    <!-- GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="text-primary font-medium flex items-center gap-2 pt-2">
 
-      <!-- CARD -->
-      <a href="https://pomodoro-pet-timer.netlify.app" target="_blank"
-         class="group rounded-3xl overflow-hidden
-                bg-white/60 backdrop-blur-xl
-                border border-white/40
-                shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-                hover:scale-[1.02] transition block">
+        View Project
 
-        <div class="overflow-hidden">
-          <img src="project1.png"
-               class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"/>
-        </div>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
 
-        <div class="p-5 space-y-3">
-
-          <div class="flex gap-2">
-            <span class="text-xs px-3 py-1 rounded-full
-                         bg-white/70 border border-white/40 text-gray-600">
-              UI
-            </span>
-
-            <span class="text-xs px-3 py-1 rounded-full
-                         bg-white/70 border border-white/40 text-gray-600">
-              Mobile
-            </span>
-
-            <span class="text-xs px-3 py-1 rounded-full
-                         bg-white/70 border border-white/40 text-gray-600">
-              Simple project
-            </span>
-          </div>
-
-          <h3 class="font-medium text-gray-800">
-            Pomodoro Pet Timer
-          </h3>
-
-          <p class="text-sm text-gray-500 leading-relaxed">
-            React productivity timer for focus sessions.
-          </p>
-
-        </div>
-      </a>
-
-      <!-- CARD 2 -->
-      <div class="group rounded-3xl overflow-hidden
-                  bg-white/60 backdrop-blur-xl
-                  border border-white/40
-                  shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-                  hover:scale-[1.02] transition">
-
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"
-             class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"/>
-
-        <div class="p-5 space-y-2">
-
-          <span class="text-xs px-3 py-1 rounded-full
-                       bg-white/70 border border-white/40 text-gray-600">
-            E-Commerce
-          </span>
-
-          <h3 class="font-medium text-gray-800">
-            E-Commerce Website using CodeIgniter4 Framework
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            Full-stack implementation with database integration and authentication flow.
-          </p>
-
-        </div>
       </div>
 
     </div>
+
+  </a>
+
+  <!-- CARD 2 -->
+
+  <div class="glass-card soft-glow-hover rounded-3xl overflow-hidden">
+
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlh2NL_z4nAcMQZ0_Um1J8_sBKM0x5cMqOZ1q2eh1-9I5PjfHcfKnEI1qSpXl54h74PVz-OeS1-9Tng9VkSchiaLhjeEFv6SOhTVqXY2E6NG9xm9ZP5rdnnMyVW77KSotiCIv79PpoAILOqZymtjG_BfH3isuWpQ0tHOzHo2IuDh7OxdtbctlkLB5APWSff5Cd1KSfLDPcIpBG2VSkraoQoPNXH6rQmAipm50UHNrd5HC06s_UsedVW-iNepJamQZZviOj2x_A_mhk"
+
+         class="h-52 w-full object-cover"/>
+
+    <div class="p-6 space-y-3">
+
+      <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
+
+        Full Stack
+
+      </span>
+
+      <h3 class="font-headline-lg text-xl">
+
+        CodeIgniter E-Commerce System
+
+      </h3>
+
+      <p class="text-on-surface-variant text-sm">
+
+        Full-stack system with authentication and database integration.
+
+      </p>
+
+    </div>
+
   </div>
+
+</section>
 </main>
       
 <!-- FOOTER -->
