@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ImaninaRamly | About</title>
 
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@100..900&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        surface: "#f9f9ff",
+        primary: "#8a486f",
+        secondary: "#765469",
+        "secondary-container": "#fdd0ea",
+        "on-surface": "#121c2a",
+        "on-surface-variant": "#514349"
+      },
+      fontFamily: {
+        headline: ["Playfair Display"],
+        body: ["Inter"],
+        code: ["Courier Prime"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.glass-card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.soft-glow-hover:hover {
+  box-shadow: 0 0 20px rgba(249,168,212,0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+</style>
+
+</head>
+
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- NAV -->
+<div id="navbar"></div>
+
+<main class="pt-32 pb-24 px-6 md:px-16 max-w-6xl mx-auto space-y-20">
+
+<!-- HERO -->
+<section class="text-center space-y-4">
+  <h1 class="text-4xl md:text-5xl font-bold font-headline">
+    About <span class="text-primary">Me</span>
+  </h1>
+  <p class="text-on-surface-variant max-w-2xl mx-auto">
+    A short introduction about my journey, passion, and what I do in web development.
+  </p>
+</section>
+
+<!-- INTRO -->
+<section class="glass-card p-10 rounded-3xl space-y-6 soft-glow-hover">
+  <h2 class="text-2xl font-headline text-primary">Who I Am</h2>
+
+  <p class="text-on-surface-variant leading-relaxed">
+    I am a Computer Science (Internet Computing) undergraduate who enjoys building web applications
+    from front-end to back-end. I focus on creating clean, functional, and user-friendly systems.
+  </p>
+
+  <p class="text-on-surface-variant leading-relaxed">
+    My interest lies in full-stack development, UI/UX design, and learning how systems work behind the scenes.
+    I also enjoy experimenting with new technologies and improving my coding skills through projects.
+  </p>
+</section>
+
+<!-- SKILLS SHORT -->
+<section class="grid md:grid-cols-2 gap-8">
+
+  <div class="glass-card p-8 rounded-3xl soft-glow-hover">
+    <h3 class="text-xl font-headline text-primary mb-4">Frontend</h3>
+    <p class="text-on-surface-variant">
+      HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap
+    </p>
+  </div>
+
+  <div class="glass-card p-8 rounded-3xl soft-glow-hover">
+    <h3 class="text-xl font-headline text-primary mb-4">Backend</h3>
+    <p class="text-on-surface-variant">
+      CodeIgniter, Laravel, Node.js, REST API, Authentication, CRUD
+    </p>
+  </div>
+
+  <div class="glass-card p-8 rounded-3xl soft-glow-hover">
+    <h3 class="text-xl font-headline text-primary mb-4">Database</h3>
+    <p class="text-on-surface-variant">
+      MySQL, Firebase, Supabase
+    </p>
+  </div>
+
+  <div class="glass-card p-8 rounded-3xl soft-glow-hover">
+    <h3 class="text-xl font-headline text-primary mb-4">Tools</h3>
+    <p class="text-on-surface-variant">
+      Git, GitHub, VS Code, Docker, Netlify, Vercel
+    </p>
+  </div>
+
+</section>
+
+<!-- JOURNEY -->
+<section class="space-y-10">
+  <h2 class="text-3xl font-headline text-center">My Journey</h2>
+
+  <div class="space-y-8 border-l-2 border-secondary-container pl-6">
+
+    <div class="glass-card p-6 rounded-2xl">
+      <p class="text-sm text-primary font-code">2023 - Present</p>
+      <h3 class="font-headline text-xl">Universiti Sultan Zainal Abidin</h3>
+      <p class="text-on-surface-variant">Bachelor of Computer Science (Internet Computing)</p>
+    </div>
+
+    <div class="glass-card p-6 rounded-2xl">
+      <p class="text-sm text-primary font-code">2021 - 2023</p>
+      <h3 class="font-headline text-xl">Kolej Matrikulasi Pulau Pinang</h3>
+      <p class="text-on-surface-variant">Science (Computer Science stream)</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="text-center space-y-6">
+  <h2 class="text-3xl font-headline">Let’s Work Together</h2>
+  <p class="text-on-surface-variant max-w-xl mx-auto">
+    I am currently open for internship opportunities in web development and software engineering.
+  </p>
+
+  <a href="contact.html"
+     class="inline-flex px-8 py-4 rounded-full bg-primary text-white font-semibold hover:shadow-lg transition">
+    Contact Me
+  </a>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script src="includes.js"></script>
+
+</body>
+</html>
