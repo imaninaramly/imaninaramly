@@ -5,20 +5,27 @@ async function includeHTML(id, file) {
 }
 
 function initNav() {
-  const current = location.pathname.split("/").pop();
+  const current = location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === current) {
+    const href = link.getAttribute("href");
+
+    if (href === current) {
       link.classList.add(
-  "text-primary",
-  "font-bold",
-  "border-b-2",
-  "border-primary",
-  "pb-1",
-  "font-label-md",
-  "text-label-md",
-  "transition-colors"
-);
+        "text-primary",
+        "font-bold",
+        "border-b-2",
+        "border-primary",
+        "pb-1"
+      );
+    } else {
+      link.classList.remove(
+        "text-primary",
+        "font-bold",
+        "border-b-2",
+        "border-primary",
+        "pb-1"
+      );
     }
   });
 }
