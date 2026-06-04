@@ -227,41 +227,8 @@
       
 <!-- FOOTER -->
 <div id="footer"></div>
-  
-<script>
-function setActiveNav() {
 
-  let current = location.pathname.split("/").pop();
-
-  // kalau buka domain root
-  // contoh: yoursite.com/
-  if (current === "") {
-    current = "index.html";
-  }
-
-  document.querySelectorAll(".nav-link").forEach(link => {
-
-    const href = link.getAttribute("href");
-
-    if (href === current) {
-
-      link.classList.add(
-        "bg-purple-100",
-        "text-purple-800",
-        "font-semibold"
-      );
-
-    }
-
-  });
-
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(setActiveNav, 100);
-});
-</script>
 <script src="includes.js"></script>
-  
+
 </body>
 </html>
