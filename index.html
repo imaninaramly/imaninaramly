@@ -1,568 +1,806 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImaninaRamly | 2025 Retro Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Imanina Ramly | 2026 Portfolio</title>
+<meta name="description" content="Imanina Ramly — Computer Science (Internet Computing) undergraduate and web developer. Press START."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#110d2b;
+  --bg-dot:#2a2258;
+  --ink:#1b1433;
+  --text:#f3ecff;
+  --muted:#bfb3e6;
+  --cream:#fff5e4;
+  --lilac:#b9a3ff;
+  --lilac-2:#dcd0ff;
+  --shell:#a98cf2;
+  --shell-dark:#7f63d6;
+  --coral:#ff8f70;
+  --coral-2:#e8664a;
+  --butter:#ffd36e;
+  --aqua:#52e0c4;
+  --aqua-2:#2a9c86;
+  --plum:#5a2d7a;
+  --grass:#4fd1a5;
+  --grass-dark:#2b8f76;
+  --brick:#4a2f63;
+  --brick-dark:#35204a;
+  --pixel:"Press Start 2P", ui-monospace, monospace;
+  --body:"Pixelify Sans", ui-monospace, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--bg);
+  background-image:radial-gradient(var(--bg-dot) 1px, transparent 1.5px);
+  background-size:6px 6px;
+  color:var(--text);
+  font-family:var(--body);
+  font-size:18px;
+  line-height:1.5;
+  overflow-x:hidden;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
 
-        body {
-            font-family: 'VT323', monospace;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a0033 50%, #0f0a1f 100%);
-            color: #00f7ff;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
+/* ---------- sprites ---------- */
+.spr{
+  display:block;
+  image-rendering:pixelated;
+  width:calc(var(--w,0) * var(--px,4px));
+  height:calc(var(--h,0) * var(--px,4px));
+}
+.abs{position:absolute}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
+@keyframes twinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+@keyframes flap{0%,100%{transform:translateY(0) scaleX(1)}50%{transform:translateY(-6px) scaleX(.8)}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.bob{animation:bob 2.4s steps(4) infinite}
+.drift{animation:drift 9s ease-in-out infinite}
+.twinkle{animation:twinkle 2s steps(3) infinite}
+.flap{animation:flap .6s steps(2) infinite}
+.idle{animation:idle 1.6s steps(2) infinite}
 
-        /* Animated starfield background */
-        .starfield {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
+/* ---------- ground + ribbon ---------- */
+.ground{
+  position:absolute;left:0;right:0;bottom:0;height:52px;
+  border-top:4px solid var(--ink);
+  background:
+    repeating-linear-gradient(90deg,var(--grass-dark) 0 6px,transparent 6px 12px) 0 10px/100% 6px no-repeat,
+    linear-gradient(var(--grass) 0 16px,transparent 16px),
+    repeating-linear-gradient(90deg,transparent 0 30px,var(--brick-dark) 30px 34px) 0 16px/100% 18px no-repeat,
+    repeating-linear-gradient(90deg,var(--brick-dark) 0 4px,transparent 4px 34px) 17px 34px/100% 18px no-repeat,
+    linear-gradient(transparent 33px,var(--brick-dark) 33px 35px,transparent 35px),
+    var(--brick);
+}
+.ribbon{
+  position:relative;z-index:2;
+  background:var(--aqua);
+  color:var(--ink);
+  border-top:4px solid var(--ink);
+  border-bottom:4px solid var(--ink);
+  overflow:hidden;white-space:nowrap;
+  font-family:var(--pixel);font-size:clamp(14px,2.2vw,22px);
+  padding:14px 0 12px;
+}
+.ribbon-track{display:inline-flex;animation:marquee 26s linear infinite}
+.ribbon-track span{padding:0 28px;display:inline-flex;align-items:center;gap:28px}
+.ribbon-track b{color:var(--plum);font-weight:400}
 
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #ffd700;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:720px;padding:22px 0 0;overflow:hidden}
+.hud{
+  position:relative;z-index:3;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:0 clamp(16px,4vw,48px);
+  font-family:var(--pixel);font-size:11px;
+}
+.hud-xp{color:var(--coral)}
+.hud-clouds{display:flex;align-items:flex-end;gap:6px}
+.hud-player{display:flex;align-items:center;gap:10px;color:var(--coral)}
+.hp{width:96px;height:14px;border:3px solid var(--ink);background:var(--cream);box-shadow:0 0 0 2px var(--aqua)}
+.hp span{display:block;height:100%;width:74%;background:var(--aqua)}
 
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
+.screen-frame{
+  position:relative;z-index:1;
+  width:min(920px,calc(100% - 32px));
+  margin:34px auto 0;
+  min-height:390px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  padding:48px 24px 72px;
+  background:#07061a;
+  border:4px solid var(--aqua);
+  border-radius:28px;
+  box-shadow:0 0 0 4px var(--ink),0 0 28px rgba(82,224,196,.35),inset 0 0 40px rgba(82,224,196,.08);
+  text-align:center;
+}
+.year{
+  font-family:var(--pixel);font-size:clamp(22px,4.4vw,46px);
+  color:var(--butter);text-shadow:4px 4px 0 var(--coral-2);
+}
+.title{
+  font-family:var(--pixel);font-weight:400;
+  font-size:clamp(30px,8vw,84px);line-height:1.1;
+  color:var(--coral);
+  text-shadow:5px 5px 0 var(--plum),8px 8px 0 var(--ink);
+  letter-spacing:.02em;
+}
+.start{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--pixel);font-size:18px;text-decoration:none;
+  color:var(--ink);background:var(--aqua);
+  padding:14px 22px 12px;
+  border:4px solid var(--ink);
+  box-shadow:0 0 0 3px var(--aqua),6px 6px 0 3px var(--ink);
+  transition:transform .08s steps(1),box-shadow .08s steps(1);
+}
+.start::before{content:"▶";font-size:12px;animation:blink 1s steps(1) infinite}
+.start:hover,.start:focus-visible{background:var(--butter);box-shadow:0 0 0 3px var(--butter),6px 6px 0 3px var(--ink);outline:none}
+.start:active{transform:translate(4px,4px);box-shadow:0 0 0 3px var(--aqua),2px 2px 0 3px var(--ink)}
+.stage-select{
+  font-family:var(--pixel);font-size:10px;color:var(--muted);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:6px;
+}
+.stage-select a{color:var(--lilac);text-decoration:none;padding:4px 2px}
+.stage-select a:hover,.stage-select a:focus-visible{color:var(--butter);outline:none}
+.stage-select a:hover::before,.stage-select a:focus-visible::before{content:"▶ "}
 
-        /* Pixel clouds */
-        .cloud {
-            position: absolute;
-            font-size: 20px;
-            color: #ff69b4;
-            opacity: 0.6;
-            animation: float 20s infinite ease-in-out;
-        }
+.hero .lamp{left:clamp(4px,2.5vw,40px);bottom:52px;--px:5px;filter:drop-shadow(0 0 10px rgba(255,211,110,.35))}
+.hero .player{left:clamp(80px,13vw,210px);bottom:52px;z-index:2;--px:8px}
+.hero .tree{right:-10px;bottom:52px;--px:7px}
+.hero .cat{right:clamp(150px,22vw,320px);bottom:52px;--px:5px;z-index:2}
+.hero .c1{left:-12px;top:230px;--px:5px}
+.hero .c2{right:-10px;top:280px;--px:5px;animation-delay:-4s}
 
-        @keyframes float {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(20px); }
-        }
+/* ---------- level headings ---------- */
+.lvl-head{font-family:var(--pixel)}
+.lvl-head .lvl{font-size:clamp(34px,5.2vw,58px);line-height:1.05;color:var(--coral);text-shadow:4px 4px 0 var(--plum)}
+.lvl-head .sub{font-size:clamp(13px,1.5vw,16px);color:var(--butter);margin-top:18px;line-height:1.6}
+.lvl-head .name{font-size:clamp(22px,3vw,34px);color:var(--aqua);margin-top:22px;line-height:1.3;text-shadow:3px 3px 0 var(--ink)}
 
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+/* ---------- retro windows ---------- */
+.win{
+  position:relative;z-index:1;
+  background:var(--cream);color:var(--ink);
+  border:4px solid var(--ink);
+  box-shadow:8px 8px 0 rgba(0,0,0,.45);
+}
+.win-bar{
+  height:26px;background:var(--lilac);border-bottom:4px solid var(--ink);
+  display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 30px;
+}
+.win-bar::before{content:"";width:40%;height:6px;background:var(--lilac-2);border:2px solid var(--ink)}
+.win-dots{display:flex;gap:4px}
+.win-dots i{width:12px;height:12px;border:2px solid var(--ink);background:var(--lilac-2)}
+.win-dots i:last-child{background:var(--coral)}
+.win-body{display:flex;min-height:100%}
+.win-side{
+  flex:0 0 22px;border-right:4px solid var(--ink);
+  background:
+    linear-gradient(var(--ink),var(--ink)) 50% 8px/10px 10px no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 50% calc(100% - 8px)/10px 10px no-repeat,
+    linear-gradient(var(--shell),var(--shell)) 50% 30%/10px 40px no-repeat,
+    var(--lilac-2);
+}
+.win-main{padding:16px 18px 20px;flex:1;min-width:0}
+.chip{
+  display:inline-block;font-family:var(--pixel);font-weight:400;font-size:11px;
+  background:var(--butter);color:var(--ink);
+  border:3px solid var(--ink);padding:7px 10px 5px;margin-bottom:14px;
+}
+.win p{font-size:17px;line-height:1.45;margin-bottom:10px}
+.win p:last-child{margin-bottom:0}
+.win .k{color:var(--coral-2);font-weight:700}
+.win ul{list-style:none;font-size:17px;line-height:1.5}
+.win li::before{content:"▪ ";color:var(--coral-2)}
 
-        /* Main container */
-        .game-screen {
-            border: 8px solid #00f7ff;
-            background: #0a0e27;
-            margin: 20px auto;
-            position: relative;
-            box-shadow:
-                0 0 20px #9d00ff,
-                0 0 40px #ff00ff,
-                inset 0 0 20px rgba(157, 0, 255, 0.2);
-        }
+/* ---------- Level 01 stage ---------- */
+.level{position:relative;padding:90px clamp(16px,4vw,48px) 60px;overflow:hidden}
+.stage{
+  position:relative;max-width:1160px;margin:0 auto;
+  display:grid;gap:56px 48px;
+  grid-template-columns:1fr minmax(340px,400px) 1fr;
+  grid-template-areas:
+    "head console hello"
+    "weapons training skills";
+  align-items:start;
+}
+.stage .lvl-head{grid-area:head;padding-top:10px}
+.stage .console{grid-area:console}
+.stage .hello{grid-area:hello;margin-top:-10px}
+.stage .weapons{grid-area:weapons}
+.stage .training{grid-area:training;margin-top:30px}
+.stage .skills{grid-area:skills}
+.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible}
+.wires line{stroke:var(--lilac);stroke-width:3;stroke-dasharray:6 7}
 
-        /* Header */
-        .header {
-            background: linear-gradient(90deg, #9d00ff, #ff00ff);
-            color: #fff;
-            padding: 15px 20px;
-            border-bottom: 4px solid #00f7ff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Press Start 2P', monospace;
-            font-size: 14px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+/* handheld console */
+.console{position:relative;z-index:1;width:100%;max-width:400px;justify-self:center}
+.c-top{
+  position:relative;background:var(--shell);border:4px solid var(--ink);
+  border-radius:24px 24px 8px 8px;padding:24px 18px 20px;
+  box-shadow:inset -6px -6px 0 var(--shell-dark),inset 6px 6px 0 #c3adff;
+}
+.cam{position:absolute;top:7px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--ink);border:2px solid var(--lilac-2)}
+.bezel{
+  position:relative;background:#2a2244;border:4px solid var(--ink);border-radius:10px;
+  padding:16px 40px;display:flex;justify-content:center;
+}
+.spk{position:absolute;top:50%;width:16px;height:16px;margin-top:-8px;
+  background:radial-gradient(circle,var(--lilac) 1.5px,transparent 2px) 0 0/8px 8px}
+.spk.l{left:12px}.spk.r{right:12px}
+.screen{
+  position:relative;width:100%;aspect-ratio:5/4;
+  background:#1d5a55;border:4px solid var(--ink);
+  display:flex;align-items:flex-end;justify-content:center;overflow:hidden;
+  background-image:linear-gradient(transparent 50%,rgba(0,0,0,.08) 50%);background-size:100% 4px;
+}
+.photo{width:74%;height:auto;aspect-ratio:1;image-rendering:pixelated;display:block}
+.screen .s1{left:10%;top:16%;--px:3px}
+.screen .s2{right:9%;top:48%;--px:3px;animation-delay:-1s}
+.hinge{height:18px;margin:0 16px;background:var(--shell-dark);border-left:4px solid var(--ink);border-right:4px solid var(--ink);position:relative}
+.hinge::after{content:"";position:absolute;left:50%;bottom:-4px;width:18px;height:8px;margin-left:-9px;background:var(--ink)}
+.c-bot{
+  background:var(--shell);border:4px solid var(--ink);border-radius:8px 8px 30px 30px;
+  padding:20px 18px 18px;display:grid;grid-template-columns:64px 1fr 64px;gap:16px;align-items:center;
+  box-shadow:inset -6px -6px 0 var(--shell-dark),inset 6px 6px 0 #c3adff;
+}
+.c-left{display:flex;flex-direction:column;align-items:center;gap:14px}
+.stick{width:40px;height:40px;border-radius:50%;background:var(--shell-dark);border:4px solid var(--ink);box-shadow:inset 4px 4px 0 #c3adff}
+.dpad{position:relative;width:42px;height:42px}
+.dpad::before,.dpad::after{content:"";position:absolute;background:var(--ink)}
+.dpad::before{left:14px;top:0;width:14px;height:42px}
+.dpad::after{top:14px;left:0;width:42px;height:14px}
+.touch{
+  aspect-ratio:4/3;background:var(--lilac-2);border:4px solid var(--ink);
+  background-image:linear-gradient(90deg,rgba(27,20,51,.12) 2px,transparent 2px),linear-gradient(rgba(27,20,51,.12) 2px,transparent 2px);
+  background-size:33.4% 50%;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--pixel);font-size:8px;line-height:1.8;color:var(--plum);padding:6px;
+}
+.touch span{animation:blink 1.4s steps(1) infinite}
+.abxy{display:grid;grid-template:repeat(3,20px)/repeat(3,20px);justify-content:center}
+.abxy i{width:20px;height:20px;border-radius:50%;background:var(--coral);border:3px solid var(--ink);
+  font:400 7px/14px var(--pixel);text-align:center;font-style:normal;color:var(--ink)}
+.abxy i:nth-child(1){grid-area:1/2}.abxy i:nth-child(2){grid-area:2/1}
+.abxy i:nth-child(3){grid-area:2/3}.abxy i:nth-child(4){grid-area:3/2}
+.c-foot{grid-column:1/-1;display:flex;justify-content:center;gap:14px}
+.c-foot i{width:28px;height:8px;background:var(--ink);border-radius:2px}
 
-        .header-left {
-            display: flex;
-            gap: 30px;
-        }
+/* weapons */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:12px}
+.tile{
+  aspect-ratio:1;border:3px solid var(--ink);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--pixel);font-size:10px;color:var(--t,#fff);background:var(--b,#333);
+  box-shadow:inset -4px -4px 0 rgba(0,0,0,.25),inset 4px 4px 0 rgba(255,255,255,.25),3px 3px 0 var(--ink);
+  position:relative;cursor:default;
+}
+.tile::after{
+  content:attr(data-name);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);
+  background:var(--ink);color:var(--cream);font:400 14px var(--body);padding:3px 8px;white-space:nowrap;
+  opacity:0;pointer-events:none;transition:opacity .1s;z-index:5;
+}
+.tile:hover::after,.tile:focus-visible::after{opacity:1}
 
-        .level-display {
-            text-shadow: 0 0 10px #00f7ff;
-        }
+/* ---------- platformer scene ---------- */
+.scene{position:relative;height:230px;margin-top:40px}
+.scene .spr{position:absolute}
+.coin{--px:4px}
+.scene .pipe{left:calc(50% - 40px);bottom:52px;--px:4px}
+.scene .key{left:calc(50% - 20px);bottom:190px;--px:4px}
+.scene .flag{right:18%;bottom:52px;--px:4px}
+.scene .door{right:3%;bottom:52px;--px:5px}
+.scene .cat2{left:24%;bottom:52px;--px:4px;transform:scaleX(-1)}
+.scene .bat{--px:4px}
+.scene .cl{--px:4px}
 
-        .player-status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+/* ---------- missions ---------- */
+.missions,.save{position:relative;padding:90px clamp(16px,4vw,48px) 40px}
+.wrap{max-width:1160px;margin:0 auto}
+.missions .lvl-head,.save .lvl-head{margin-bottom:44px}
+.mission-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.mission .cover{border:4px solid var(--ink);aspect-ratio:16/9;overflow:hidden;background:var(--lilac-2);margin-bottom:16px}
+.mission .cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mission:hover .cover img{transform:scale(1.04)}
+.mission h3{font-family:var(--pixel);font-weight:400;font-size:15px;line-height:1.5;margin-bottom:10px;color:var(--plum)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.tags span{font-size:14px;border:2px solid var(--ink);background:var(--lilac-2);padding:1px 8px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  font-family:var(--pixel);font-size:11px;color:var(--ink);background:var(--coral);
+  border:3px solid var(--ink);padding:10px 14px 8px;box-shadow:4px 4px 0 var(--ink);
+}
+.btn:hover,.btn:focus-visible{background:var(--butter);outline:none}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.alt{background:var(--aqua)}
+.more{margin-top:44px;text-align:center}
 
-        .hp-bar {
-            width: 60px;
-            height: 8px;
-            background: #330033;
-            border: 2px solid #00f7ff;
-            position: relative;
-            overflow: hidden;
-        }
+/* ---------- save point ---------- */
+.save-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:start}
+.links{display:grid;gap:12px}
+.links a{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;
+  border:3px solid var(--ink);background:#fff;padding:10px 14px;font-size:18px;overflow-wrap:anywhere;
+  box-shadow:3px 3px 0 var(--ink);
+}
+.links a:hover,.links a:focus-visible{background:var(--butter);outline:none}
+.links a b{font-family:var(--pixel);font-weight:400;font-size:10px;color:var(--coral-2)}
+.gameover{
+  position:relative;text-align:center;padding:70px 16px 140px;overflow:hidden;
+  font-family:var(--pixel);
+}
+.gameover h2{font-weight:400;font-size:clamp(20px,3.4vw,34px);color:var(--butter);text-shadow:4px 4px 0 var(--coral-2);margin-bottom:28px}
+.gameover small{display:block;margin-top:32px;font-size:10px;color:var(--muted)}
 
-        .hp-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #00f7ff, #00ff00);
-            width: 100%;
-            box-shadow: 0 0 10px #00f7ff;
-        }
-
-        /* Main content area - two column */
-        .game-content {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Character portrait - Game Boy style */
-        .character-box {
-            flex: 0 0 300px;
-            border: 6px solid #ff00ff;
-            background: linear-gradient(135deg, #2d2d4f, #1a0033);
-            padding: 15px;
-            text-align: center;
-            box-shadow:
-                0 0 15px #ff00ff,
-                inset 0 0 15px rgba(255, 0, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .character-title {
-            font-family: 'Press Start 2P', monospace;
-            color: #9d00ff;
-            margin-bottom: 10px;
-            font-size: 11px;
-            text-shadow: 0 0 5px #ff00ff;
-        }
-
-        .character-portrait {
-            width: 200px;
-            height: 200px;
-            border: 4px solid #00f7ff;
-            margin: 10px auto;
-            overflow: hidden;
-            background: #1a0a33;
-            box-shadow: 0 0 10px #00f7ff;
-        }
-
-        .character-portrait img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .character-status {
-            font-size: 10px;
-            color: #00f7ff;
-            line-height: 1.8;
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        /* Info panels */
-        .info-panels {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .panel {
-            border: 4px solid;
-            padding: 15px;
-            background: #1a0a33;
-            font-size: 11px;
-            box-shadow: 0 0 15px;
-        }
-
-        .panel-header {
-            font-family: 'Press Start 2P', monospace;
-            font-size: 10px;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 2px dashed currentColor;
-        }
-
-        .panel-content {
-            line-height: 1.6;
-        }
-
-        /* Color variants for different panels */
-        .panel-hero {
-            border-color: #00f7ff;
-            box-shadow: 0 0 15px #00f7ff;
-        }
-
-        .panel-hero .panel-header {
-            color: #00f7ff;
-            text-shadow: 0 0 5px #00f7ff;
-        }
-
-        .panel-hero .panel-content {
-            color: #00f7ff;
-        }
-
-        .panel-skills {
-            border-color: #9d00ff;
-            box-shadow: 0 0 15px #9d00ff;
-        }
-
-        .panel-skills .panel-header {
-            color: #9d00ff;
-            text-shadow: 0 0 5px #9d00ff;
-        }
-
-        .panel-skills .panel-content {
-            color: #ff00ff;
-        }
-
-        .panel-projects {
-            border-color: #00ff00;
-            box-shadow: 0 0 15px #00ff00;
-        }
-
-        .panel-projects .panel-header {
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff00;
-        }
-
-        .panel-projects .panel-content {
-            color: #00ff00;
-        }
-
-        .panel-contact {
-            border-color: #ffd700;
-            box-shadow: 0 0 15px #ffd700;
-        }
-
-        .panel-contact .panel-header {
-            color: #ffd700;
-            text-shadow: 0 0 5px #ffd700;
-        }
-
-        .panel-contact .panel-content {
-            color: #ffd700;
-        }
-
-        /* Skills grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .skill-box {
-            border: 2px solid #00f7ff;
-            padding: 8px;
-            text-align: center;
-            font-size: 9px;
-            background: rgba(0, 247, 255, 0.1);
-            box-shadow: 0 0 8px rgba(0, 247, 255, 0.3);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            border: 3px solid;
-            padding: 8px 16px;
-            margin: 5px 5px 5px 0;
-            font-family: 'Press Start 2P', monospace;
-            font-size: 9px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
-            box-shadow: 0 4px 0;
-            text-transform: uppercase;
-        }
-
-        .btn:active {
-            transform: translateY(4px);
-            box-shadow: 0 0 0;
-        }
-
-        .btn-primary {
-            background: #00f7ff;
-            color: #0a0e27;
-            border-color: #00f7ff;
-            box-shadow: 0 4px 0 #00a3cc;
-        }
-
-        .btn-secondary {
-            background: #ff00ff;
-            color: #fff;
-            border-color: #ff00ff;
-            box-shadow: 0 4px 0 #cc00cc;
-        }
-
-        /* Projects grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .project-card {
-            border: 3px solid #00ff00;
-            padding: 10px;
-            background: rgba(0, 255, 0, 0.05);
-            font-size: 10px;
-            box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
-        }
-
-        .project-title {
-            color: #00ff00;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        /* Bottom section */
-        .bottom-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        /* Navigation bar at bottom */
-        .footer-nav {
-            background: linear-gradient(90deg, #ff00ff, #9d00ff);
-            color: #fff;
-            padding: 10px 20px;
-            border-top: 4px solid #00f7ff;
-            text-align: center;
-            font-family: 'Press Start 2P', monospace;
-            font-size: 10px;
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            flex-wrap: wrap;
-            text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
-        }
-
-        .nav-item {
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .nav-item:hover {
-            color: #ffd700;
-            text-shadow: 0 0 10px #ffd700;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .game-content {
-                flex-direction: column;
-            }
-
-            .character-box {
-                flex: 1;
-                margin: 0 auto;
-            }
-
-            .header {
-                font-size: 10px;
-            }
-
-            .header-left {
-                gap: 15px;
-            }
-
-            .panel {
-                font-size: 10px;
-            }
-
-            .footer-nav {
-                font-size: 9px;
-                gap: 10px;
-            }
-        }
-
-        /* Retro corner decoration */
-        .corner-deco {
-            position: absolute;
-            font-size: 30px;
-            opacity: 0.3;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.5; }
-        }
-
-        .corner-tl { top: 20px; left: 20px; color: #00f7ff; }
-        .corner-tr { top: 20px; right: 20px; color: #ff00ff; }
-        .corner-bl { bottom: 20px; left: 20px; color: #9d00ff; }
-        .corner-br { bottom: 20px; right: 20px; color: #00ff00; }
-    </style>
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .stage{grid-template-columns:1fr 1fr;grid-template-areas:"head head" "console hello" "weapons skills" "training training"}
+  .stage .training{margin-top:0}
+  .save-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .hero{min-height:640px}
+  .hud{font-size:8px;flex-wrap:wrap}
+  .hud-clouds{display:none}
+  .hp{width:60px}
+  .screen-frame{min-height:320px;padding:36px 16px 120px}
+  .hero .lamp,.hero .c1,.hero .c2{display:none}
+  .hero .player{--px:6px;left:14px}
+  .hero .tree{--px:4px}
+  .hero .cat{--px:4px;right:110px}
+  .stage{grid-template-columns:1fr;grid-template-areas:"head" "console" "hello" "weapons" "training" "skills";gap:36px}
+  .stage .hello{margin-top:0}
+  .scene .cat2,.scene .bat.b3{display:none}
+  .mission-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
 </head>
 <body>
-    <div class="starfield" id="starfield"></div>
 
-    <div class="content-wrapper">
-        <div class="game-screen">
-            <!-- Header -->
-            <div class="header">
-                <div class="header-left">
-                    <div class="level-display">◆ UI/UX LEVEL 03</div>
-                    <div class="player-status">
-                        <span>◆</span>
-                        <div class="hp-bar"><div class="hp-fill"></div></div>
-                        <span>PLAYER 01</span>
-                    </div>
-                </div>
-            </div>
+<!-- ================= TITLE SCREEN ================= -->
+<header class="hero" id="top">
+  <div class="hud">
+    <p class="hud-xp">XP: WEB DEV LEVEL 03</p>
+    <div class="hud-clouds" aria-hidden="true">
+      <canvas class="spr drift" data-s="cloud" style="--px:4px"></canvas>
+      <canvas class="spr drift" data-s="cloud" style="--px:3px;animation-delay:-3s"></canvas>
+    </div>
+    <div class="hud-player">
+      <canvas class="spr" data-s="heart" style="--px:3px" aria-hidden="true"></canvas>
+      <div class="hp" role="img" aria-label="HP 74%"><span></span></div>
+      <span>PLAYER 01</span>
+    </div>
+  </div>
 
-            <!-- Main game content -->
-            <div class="game-content">
-                <!-- Character Portrait (Game Boy style) -->
-                <div class="character-box">
-                    <div class="character-title">★ IMANINA ★</div>
-                    <div class="character-portrait">
-                        <img src="assets/img1.jpeg" alt="Imanina Ramly">
-                    </div>
-                    <div class="character-status">
-                        <div>Status: Ready 🎮</div>
-                        <div>Level: Designer</div>
-                        <div>EXP: Growing</div>
-                    </div>
-                </div>
+  <div class="screen-frame">
+    <p class="year">2026</p>
+    <h1 class="title">PORTFOLIO</h1>
+    <a class="start" href="#level-01">START</a>
+    <nav class="stage-select" aria-label="Pages">
+      <span>SELECT STAGE:</span>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="assets/NUR IMANINA RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Resume</a>
+    </nav>
+  </div>
 
-                <!-- Info Panels -->
-                <div class="info-panels">
-                    <!-- Hero Panel -->
-                    <div class="panel panel-hero">
-                        <div class="panel-header">>>> MISSION BRIEF</div>
-                        <div class="panel-content">
-                            <p style="margin-bottom: 8px;">Hi! I'm Imanina Ramly</p>
-                            <p>Computer Science Undergrad | UI/UX Designer | Full-Stack Developer</p>
-                            <p style="margin-top: 8px; color: #00ff00;">Building web experiences from front to back!</p>
-                        </div>
-                        <div style="margin-top: 12px;">
-                            <a href="contact.html" class="btn btn-primary">CONTACT ME</a>
-                            <a href="projects.html" class="btn btn-secondary">VIEW WORKS</a>
-                        </div>
-                    </div>
+  <canvas class="spr abs lamp" data-s="lamp" aria-hidden="true"></canvas>
+  <canvas class="spr abs player idle" data-s="player" role="img" aria-label="Pixel-art Imanina in a lilac hijab and teal puffer jacket"></canvas>
+  <canvas class="spr abs cat" data-s="cat" aria-hidden="true"></canvas>
+  <canvas class="spr abs tree" data-s="tree" aria-hidden="true"></canvas>
+  <canvas class="spr abs drift c1" data-s="cloud" aria-hidden="true"></canvas>
+  <canvas class="spr abs drift c2" data-s="cloud" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;left:3%;top:120px" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;left:5%;top:330px;animation-delay:-.7s" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;right:4%;top:130px;animation-delay:-1.2s" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:6%;top:210px;animation-delay:-.4s" aria-hidden="true"></canvas>
+  <div class="ground" aria-hidden="true"></div>
+</header>
 
-                    <!-- Skills Panel -->
-                    <div class="panel panel-skills">
-                        <div class="panel-header">⚡ SKILL MASTERY</div>
-                        <div class="panel-content">
-                            <div class="skills-grid">
-                                <div class="skill-box">HTML</div>
-                                <div class="skill-box">CSS</div>
-                                <div class="skill-box">JS</div>
-                                <div class="skill-box">React</div>
-                                <div class="skill-box">Tailwind</div>
-                                <div class="skill-box">Laravel</div>
-                                <div class="skill-box">Node.js</div>
-                                <div class="skill-box">MySQL</div>
-                                <div class="skill-box">Git</div>
-                                <div class="skill-box">Firebase</div>
-                                <div class="skill-box">Figma</div>
-                                <div class="skill-box">UI/UX</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="ribbon" data-text="About Me" aria-hidden="true"></div>
 
-            <!-- Bottom sections -->
-            <div style="padding: 0 20px 20px 20px;">
-                <div class="bottom-section">
-                    <!-- Projects -->
-                    <div class="panel panel-projects">
-                        <div class="panel-header">🎮 RECENT QUESTS</div>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="project-title">Pomodoro Timer</div>
-                                <div style="color: #00ff00; font-size: 9px;">React · Study Tool</div>
-                            </div>
-                            <div class="project-card">
-                                <div class="project-title">LunaraWear</div>
-                                <div style="color: #00ff00; font-size: 9px;">E-Commerce Platform</div>
-                            </div>
-                        </div>
-                    </div>
+<!-- ================= LEVEL 01 ================= -->
+<main>
+<section class="level" id="level-01" aria-labelledby="l1">
+  <canvas class="spr abs drift" data-s="cloud" style="--px:5px;right:-20px;top:40px" aria-hidden="true"></canvas>
+  <canvas class="spr abs drift" data-s="cloud" style="--px:4px;left:-16px;top:52%;animation-delay:-5s" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:6px;left:4%;top:60%" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;right:10%;top:56%;animation-delay:-1s" aria-hidden="true"></canvas>
 
-                    <!-- Contact -->
-                    <div class="panel panel-contact">
-                        <div class="panel-header">📡 CONNECT LINK</div>
-                        <div class="panel-content" style="line-height: 2;">
-                            <div>Github · LinkedIn</div>
-                            <div>Email · Twitter</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="stage">
+    <svg class="wires" aria-hidden="true"></svg>
 
-            <!-- Footer navigation -->
-            <div class="footer-nav">
-                <a href="index.html" class="nav-item">◆ ME ◆</a>
-                <a href="about.html" class="nav-item">✦ ABOUT ✦</a>
-                <a href="projects.html" class="nav-item">★ WORKS ★</a>
-                <a href="contact.html" class="nav-item">◇ CONTACT ◇</a>
-            </div>
-        </div>
+    <div class="lvl-head">
+      <h2 class="lvl" id="l1">Level<br/>01</h2>
+      <p class="sub">Meet the<br/>player</p>
+      <p class="name">Imanina<br/>Ramly</p>
     </div>
 
-    <!-- Decorative corners -->
-    <div class="corner-deco corner-tl">⬉</div>
-    <div class="corner-deco corner-tr">⬈</div>
-    <div class="corner-deco corner-bl">⬋</div>
-    <div class="corner-deco corner-br">⬊</div>
+    <div class="console">
+      <div class="c-top">
+        <span class="cam"></span>
+        <div class="bezel">
+          <span class="spk l"></span>
+          <div class="screen">
+            <canvas class="photo" id="photo" role="img" aria-label="Pixelated photo of Imanina"></canvas>
+            <canvas class="spr abs twinkle s1" data-s="star" aria-hidden="true"></canvas>
+            <canvas class="spr abs twinkle s2" data-s="star" aria-hidden="true"></canvas>
+          </div>
+          <span class="spk r"></span>
+        </div>
+      </div>
+      <div class="hinge"></div>
+      <div class="c-bot" aria-hidden="true">
+        <div class="c-left"><span class="stick"></span><span class="dpad"></span></div>
+        <div class="touch"><span>AVAILABLE<br/>FOR<br/>INTERNSHIP</span></div>
+        <div class="abxy"><i>X</i><i>Y</i><i>A</i><i>B</i></div>
+        <div class="c-foot"><i></i><i></i><i></i></div>
+      </div>
+    </div>
 
-    <script>
-        // Generate random stars
-        const starfield = document.getElementById('starfield');
-        for (let i = 0; i < 100; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.animationDelay = Math.random() * 3 + 's';
-            starfield.appendChild(star);
-        }
+    <article class="win hello" data-wire>
+      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+      <div class="win-body">
+        <div class="win-main">
+          <h3 class="chip">Hello !!</h3>
+          <p><span class="k">Player:</span> Imanina Ramly</p>
+          <p><span class="k">Class:</span> Computer Science (Internet Computing) undergrad &amp; web developer</p>
+          <p><span class="k">Mission:</span> Build web apps from front to back that work well and feel simple to use.</p>
+          <p><span class="k">Status:</span> Available for internship.</p>
+          <p>Let's start the game!</p>
+        </div>
+        <aside class="win-side" aria-hidden="true"></aside>
+      </div>
+    </article>
 
-        // Add pixel clouds
-        const clouds = ['☁️', '☁️', '☁️'];
-        clouds.forEach((cloud, i) => {
-            const cloudEl = document.createElement('div');
-            cloudEl.className = 'cloud';
-            cloudEl.textContent = cloud;
-            cloudEl.style.left = Math.random() * 80 + 10 + '%';
-            cloudEl.style.top = Math.random() * 30 + 5 + '%';
-            cloudEl.style.animationDelay = (i * 6) + 's';
-            cloudEl.style.fontSize = (15 + Math.random() * 15) + 'px';
-            document.body.appendChild(cloudEl);
-        });
-    </script>
+    <article class="win weapons" data-wire>
+      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+      <div class="win-body">
+        <aside class="win-side" aria-hidden="true"></aside>
+        <div class="win-main">
+          <h3 class="chip">Weapons Mastery</h3>
+          <div class="tiles">
+            <span class="tile" tabindex="0" data-name="HTML" style="--b:#e96a3c">&lt;/&gt;</span>
+            <span class="tile" tabindex="0" data-name="CSS" style="--b:#3b73d9">#</span>
+            <span class="tile" tabindex="0" data-name="JavaScript" style="--b:#f5d547;--t:#1b1433">JS</span>
+            <span class="tile" tabindex="0" data-name="React" style="--b:#1b1433;--t:#61dafb">⚛</span>
+            <span class="tile" tabindex="0" data-name="Tailwind CSS" style="--b:#1fb6c9">TW</span>
+            <span class="tile" tabindex="0" data-name="Bootstrap" style="--b:#7a3fe0">B</span>
+            <span class="tile" tabindex="0" data-name="Laravel" style="--b:#f0473a">LV</span>
+            <span class="tile" tabindex="0" data-name="CodeIgniter" style="--b:#e56a2b">CI</span>
+            <span class="tile" tabindex="0" data-name="Node.js" style="--b:#4a9e4a">JS</span>
+            <span class="tile" tabindex="0" data-name="MySQL" style="--b:#2f6d91">SQL</span>
+            <span class="tile" tabindex="0" data-name="Supabase" style="--b:#2f2f3a;--t:#4fd1a5">SB</span>
+            <span class="tile" tabindex="0" data-name="Firebase" style="--b:#ffb52e;--t:#1b1433">FB</span>
+            <span class="tile" tabindex="0" data-name="Python (Pandas)" style="--b:#3b6fb0;--t:#ffd36e">PY</span>
+            <span class="tile" tabindex="0" data-name="Git &amp; GitHub" style="--b:#1b1433;--t:#ff8f70">GIT</span>
+            <span class="tile" tabindex="0" data-name="Docker" style="--b:#2496ed">DK</span>
+            <span class="tile" tabindex="0" data-name="VS Code" style="--b:#1d7cc9">VS</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="win training" data-wire>
+      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+      <div class="win-body">
+        <div class="win-main">
+          <h3 class="chip">Training Log</h3>
+          <p><span class="k">Bachelor of Computer Science (Internet Computing) with Honours</span><br/>Universiti Sultan Zainal Abidin<br/>Oct 2023 – Present · CGPA 3.84</p>
+          <p><span class="k">Jurusan Sains (Sains Komputer)</span><br/>Kolej Matrikulasi Pulau Pinang<br/>2021 – 2023 · PNGK 3.29</p>
+        </div>
+        <aside class="win-side" aria-hidden="true"></aside>
+      </div>
+    </article>
+
+    <article class="win skills" data-wire>
+      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+      <div class="win-body">
+        <aside class="win-side" aria-hidden="true"></aside>
+        <div class="win-main">
+          <h3 class="chip">Skills Mastery</h3>
+          <ul>
+            <li>Frontend development (responsive UI)</li>
+            <li>Backend with Laravel &amp; CodeIgniter</li>
+            <li>REST APIs</li>
+            <li>CRUD &amp; basic authentication</li>
+            <li>Database design (MySQL)</li>
+            <li>Data analysis with Pandas</li>
+            <li>Cloud deploys (Vercel / Netlify)</li>
+            <li>CI/CD with GitHub Actions</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="scene" aria-hidden="true">
+    <canvas class="spr bob coin" data-s="coin" style="left:6%;bottom:120px"></canvas>
+    <canvas class="spr bob coin" data-s="coin" style="left:12%;bottom:90px;animation-delay:-.6s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" style="left:18%;bottom:120px;animation-delay:-1.2s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" style="left:36%;bottom:100px;animation-delay:-.3s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" style="left:63%;bottom:100px;animation-delay:-.9s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" style="left:70%;bottom:130px;animation-delay:-1.5s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" style="left:77%;bottom:100px;animation-delay:-.2s"></canvas>
+    <canvas class="spr flap bat" data-s="bat" style="left:28%;top:20px"></canvas>
+    <canvas class="spr flap bat" data-s="bat" style="left:62%;top:10px;animation-delay:-.3s"></canvas>
+    <canvas class="spr flap bat b3" data-s="bat" style="left:88%;top:44px;animation-delay:-.15s"></canvas>
+    <canvas class="spr drift cl" data-s="cloud" style="left:-10px;top:0"></canvas>
+    <canvas class="spr drift cl" data-s="cloud" style="right:-10px;top:30px;animation-delay:-4s"></canvas>
+    <canvas class="spr bob key" data-s="key"></canvas>
+    <canvas class="spr pipe" data-s="pipe"></canvas>
+    <canvas class="spr cat2" data-s="cat"></canvas>
+    <canvas class="spr flag" data-s="flag"></canvas>
+    <canvas class="spr door" data-s="door"></canvas>
+    <div class="ground"></div>
+  </div>
+</section>
+
+<div class="ribbon" data-text="Missions" aria-hidden="true"></div>
+
+<!-- ================= LEVEL 02 ================= -->
+<section class="missions" id="missions" aria-labelledby="l2">
+  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:6%;top:80px" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="lvl-head">
+      <h2 class="lvl" id="l2">Level 02</h2>
+      <p class="sub">Missions cleared</p>
+    </div>
+    <div class="mission-grid">
+      <article class="win mission">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-main">
+          <span class="chip">Quest 01</span>
+          <div class="cover"><img src="assets/project1cover.png" alt="Pomodoro Timer app screenshot" loading="lazy"/></div>
+          <h3>Pomodoro Timer</h3>
+          <p>A focus timer for studying, with a little pet to keep you company.</p>
+          <div class="tags"><span>React.js</span><span>Netlify</span></div>
+          <a class="btn" href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener noreferrer">PLAY ▶</a>
+        </div>
+      </article>
+      <article class="win mission">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-main">
+          <span class="chip">Quest 02</span>
+          <div class="cover"><img src="assets/project2cover.png" alt="LunaraWear e-commerce website screenshot" loading="lazy"/></div>
+          <h3>E-Commerce: LunaraWear</h3>
+          <p>A modest-fashion shop for bawal, shawls and inner wear, with a clean interface and easy product browsing.</p>
+          <div class="tags"><span>CodeIgniter</span><span>MySQL</span></div>
+          <a class="btn alt" href="projects.html">DETAILS ▶</a>
+        </div>
+      </article>
+    </div>
+    <p class="more"><a class="btn" href="projects.html">ALL MISSIONS ▶</a></p>
+  </div>
+</section>
+
+<!-- ================= LEVEL 03 ================= -->
+<section class="save" id="save-point" aria-labelledby="l3">
+  <div class="wrap">
+    <div class="lvl-head">
+      <h2 class="lvl" id="l3">Level 03</h2>
+      <p class="sub">Save point</p>
+    </div>
+    <div class="save-grid">
+      <article class="win">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-body">
+          <aside class="win-side" aria-hidden="true"></aside>
+          <div class="win-main">
+            <h3 class="chip">Send a Message</h3>
+            <div class="links">
+              <a href="mailto:nurimanina234@gmail.com">nurimanina234@gmail.com <b>EMAIL</b></a>
+              <a href="https://www.linkedin.com/in/imaninaramly" target="_blank" rel="noopener noreferrer">in/imaninaramly <b>LINKEDIN</b></a>
+              <a href="https://github.com/imaninaramly" target="_blank" rel="noopener noreferrer">github.com/imaninaramly <b>GITHUB</b></a>
+              <a href="https://wa.me/60164411644" target="_blank" rel="noopener noreferrer">+60 16-441 1644 <b>WHATSAPP</b></a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="win">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-main">
+          <h3 class="chip">Inventory</h3>
+          <p>Grab a copy of my resume — it has the full stats.</p>
+          <p style="margin-top:16px"><a class="btn" href="assets/NUR IMANINA RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">DOWNLOAD RESUME ▼</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="gameover">
+  <h2>THANKS FOR PLAYING</h2>
+  <a class="start" href="#top">CONTINUE?</a>
+  <small>© 2026 IMANINA RAMLY</small>
+  <canvas class="spr abs idle" data-s="player" style="--px:4px;left:8%;bottom:52px" aria-hidden="true"></canvas>
+  <canvas class="spr abs bob coin" data-s="coin" style="left:22%;bottom:110px" aria-hidden="true"></canvas>
+  <canvas class="spr abs" data-s="flag" style="--px:4px;right:10%;bottom:52px" aria-hidden="true"></canvas>
+  <div class="ground" aria-hidden="true"></div>
+</footer>
+
+<script>
+(() => {
+  const PAL = {
+    k:'#1b1433', w:'#ffffff',
+    h:'#dcb8f2', H:'#b48ad9', e:'#8a5a3c', E:'#b98556',
+    s:'#f0bb94', S:'#d39a74', b:'#f38c9a', m:'#b3474f',
+    j:'#1f8f9c', J:'#146270', g:'#5d3fb0', G:'#3f2a80',
+    p:'#2a3478', P:'#1c2456', o:'#3b2f55',
+    y:'#ffd36e', Y:'#e8a93c', l:'#dcd0ff', L:'#b9a3ff',
+    c:'#f6a667', C:'#d9803f', v:'#5b4a86', r:'#ff5a6e',
+    n:'#8f88d6', N:'#5f589e', t:'#6b3f5c', T:'#4c2a42',
+    f:'#ff9ec7', F:'#e0689f', q:'#ffd3e8',
+    x:'#4fd1a5', X:'#2b8f76', u:'#52e0c4', U:'#2a9c86',
+    z:'#a9a6c9', Z:'#77749c', d:'#c27a45', D:'#8f5330', O:'#ff8f70'
+  };
+
+  const mirror = (rows, odd) => rows.map(r => r + [...(odd ? r.slice(0, -1) : r)].reverse().join(''));
+  const grid = (w, h) => Array.from({length: h}, () => Array(w).fill('.'));
+  const outline = g => {
+    const o = g.map(r => r.slice());
+    for (let y = 0; y < g.length; y++) for (let x = 0; x < g[0].length; x++) {
+      if (g[y][x] !== '.') continue;
+      if ([[1,0],[-1,0],[0,1],[0,-1]].some(([dx,dy]) => { const c = g[y+dy]?.[x+dx]; return c && c !== '.' && c !== 'k'; })) o[y][x] = 'k';
+    }
+    return o.map(r => r.join(''));
+  };
+  const rect = (g, x0, y0, x1, y1, ch) => { for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) g[y][x] = typeof ch === 'function' ? ch(x, y) : ch; };
+
+  const tree = () => {
+    const g = grid(40, 44);
+    rect(g, 17, 24, 22, 41, x => x >= 21 ? 'T' : 't');
+    rect(g, 14, 41, 25, 42, 't');
+    for (let i = 0; i < 7; i++) { g[27-i][16-i] = g[27-i][17-i] = 't'; g[26-i][23+i] = g[26-i][24+i] = 't'; }
+    const blobs = [[20,13,11],[9,18,7],[31,18,7],[13,8,7],[27,8,7],[20,21,8]];
+    for (let y = 1; y < 43; y++) for (let x = 1; x < 39; x++) {
+      const b = blobs.find(([cx,cy,r]) => (x-cx)**2 + (y-cy)**2 <= r*r);
+      if (!b) continue;
+      const rel = (y - b[1]) / b[2];
+      let ch = rel > .4 ? 'F' : (rel < -.45 && x < b[0]) ? 'q' : 'f';
+      if ((x*7 + y*11) % 19 === 0) ch = 'w';
+      g[y][x] = ch;
+    }
+    return outline(g);
+  };
+  const lamp = () => {
+    const g = grid(18, 46);
+    rect(g, 3, 6, 4, 41, x => x === 4 ? 'N' : 'n');
+    rect(g, 3, 5, 12, 6, 'n');
+    rect(g, 9, 7, 15, 8, 'N');
+    rect(g, 10, 9, 14, 11, 'y');
+    rect(g, 1, 40, 6, 44, 'N');
+    rect(g, 2, 38, 5, 39, 'n');
+    return outline(g);
+  };
+  const pipe = () => {
+    const g = grid(20, 30);
+    for (let y = 1; y < 12; y++) for (let x = 4; x < 16; x++) if ((x-9.5)**2 + (y-6)**2 <= 26) g[y][x] = 'r';
+    rect(g, 6, 6, 13, 7, 'k');
+    [[7,3],[12,3],[9,9],[13,9],[6,9]].forEach(([x,y]) => g[y][x] = 'w');
+    rect(g, 9, 11, 10, 17, 'x');
+    rect(g, 5, 13, 8, 14, 'x'); rect(g, 11, 13, 14, 14, 'x');
+    rect(g, 1, 17, 18, 20, x => x >= 15 ? 'U' : x === 3 ? 'l' : 'u');
+    rect(g, 3, 21, 16, 28, x => x >= 13 ? 'U' : x === 5 ? 'l' : 'u');
+    return outline(g);
+  };
+  const door = () => {
+    const g = grid(22, 30);
+    for (let y = 1; y < 29; y++) for (let x = 1; x < 21; x++) {
+      if (y >= 10 || (x-10.5)**2 + (y-10)**2 <= 90) g[y][x] = (y % 4 === 0 || (x + (Math.floor(y/4) % 2) * 3) % 6 === 0) ? 'Z' : 'z';
+    }
+    for (let y = 5; y < 29; y++) for (let x = 5; x < 17; x++) {
+      if (y >= 12 || (x-10.5)**2 + (y-12)**2 <= 34) g[y][x] = x % 3 === 0 ? 'D' : 'd';
+    }
+    rect(g, 5, 15, 16, 15, 'D'); rect(g, 5, 23, 16, 23, 'D');
+    g[19][14] = g[19][13] = 'y';
+    return outline(g);
+  };
+  const flag = () => {
+    const g = grid(16, 32);
+    rect(g, 2, 3, 2, 28, 'n');
+    rect(g, 1, 1, 3, 2, 'y');
+    for (let y = 3; y <= 11; y++) rect(g, 3, y, 3 + 10 - Math.abs(y - 7) * 2, y, 'O');
+    rect(g, 1, 29, 3, 30, 'N');
+    return outline(g);
+  };
+
+  const SPRITES = {
+    player: mirror([
+      ".......kkkk", ".....kkhhhh", "....khhhhhh", "...khhhhhhh",
+      "..kEhhhhhhh", ".kEEEhhhhhh", ".kEeEhhssss", ".kEeEhsssss",
+      ".kEeEhskwss", ".kEEEhskkss", "..kEhsbbsss", "...khgGssms",
+      "...khgGsssm", "...kwwhSsss", "..kjjjhhhhh", "..kjjjjjhhh",
+      ".kjJjjjjjjh", ".kjJjjjjjjj", ".kjJjjjjjjj", ".kjJjjjjjjw",
+      ".kJJjjjjjjw", "..kJJJJJJJw", "...kppppppp", "...kpppPppk",
+      "...kpppPppk", "...kpppPppk", "..koooooook", "..kkkkkkkk."
+    ]),
+    star: mirror(["....k", "...ky", "...ky", "kkkky", "kyyyy", ".kyyy", "..kyy", ".kyyk", ".kyk.", "kk..."], true),
+    heart: [".kk.kk.", "krrkrrk", "krwrrrk", "krrrrrk", ".krrrk.", "..krk..", "...k..."],
+    coin: ["..kkkk..", ".kyyyyk.", "kyywyyYk", "kywyyyYk", "kyyyyyYk", "kyyyyYYk", ".kYYYYk.", "..kkkk.."],
+    cloud: [
+      "....kkkk........", "..kkwwwwkk.kkk..", ".kwwwwwwwwkwwwk.", "kwwwwwwwwwwwwwwk",
+      "kwwllwwwwwwllwwk", "kLLLLLLLLLLLLLLk", ".kkkkkkkkkkkkkk."
+    ],
+    cat: [
+      "k...k.........", "kkkkk.........", "kckck.........", "kcbck.........",
+      ".kcckkkkkk....", ".kcccccccck..k", ".kcCcccCcck.kc", ".kcccccccckkck",
+      ".kcCcccCccckck", ".kccccccccck..", ".kckkckkkckk..", ".kk..kk..kk..."
+    ],
+    bat: ["k.........k", "kk..k.k..kk", "kvvkvvvkvvk", ".kvvrvrvvk.", "..kvvvvvk..", "....kvk...."],
+    key: [".kkk......", "kyyyk.....", "ky.yykkkkk", "kyyyyyyyyk", ".kkk.kykyk", ".....k.k.k"],
+    tree: tree(), lamp: lamp(), pipe: pipe(), door: door(), flag: flag()
+  };
+
+  document.querySelectorAll('canvas[data-s]').forEach(c => {
+    const rows = SPRITES[c.dataset.s];
+    const w = rows[0].length, h = rows.length;
+    c.width = w; c.height = h;
+    c.style.setProperty('--w', w); c.style.setProperty('--h', h);
+    const ctx = c.getContext('2d');
+    rows.forEach((row, y) => [...row].forEach((ch, x) => {
+      if (PAL[ch]) { ctx.fillStyle = PAL[ch]; ctx.fillRect(x, y, 1, 1); }
+    }));
+  });
+
+  document.querySelectorAll('.ribbon[data-text]').forEach(r => {
+    const track = document.createElement('div');
+    track.className = 'ribbon-track';
+    track.innerHTML = Array(16).fill(`<span>${r.dataset.text}<b>★</b></span>`).join('');
+    r.appendChild(track);
+  });
+
+  const photo = document.getElementById('photo');
+  const img = new Image();
+  img.onload = () => {
+    const N = 64;
+    photo.width = N; photo.height = N;
+    const ctx = photo.getContext('2d');
+    ctx.drawImage(img, 225, 280, 360, 360, 0, 0, N, N);
+    try {
+      const d = ctx.getImageData(0, 0, N, N), a = d.data;
+      for (let i = 0; i < a.length; i += 4) for (let k = 0; k < 3; k++) a[i+k] = Math.min(255, Math.round(a[i+k] / 36) * 36);
+      ctx.putImageData(d, 0, 0);
+    } catch (e) {}
+  };
+  img.src = 'assets/img1.jpeg';
+
+  const stage = document.querySelector('.stage');
+  const wires = stage.querySelector('.wires');
+  const con = stage.querySelector('.console');
+  const drawWires = () => {
+    if (innerWidth <= 720) { wires.innerHTML = ''; return; }
+    const s = stage.getBoundingClientRect(), c = con.getBoundingClientRect();
+    const cx = c.left + c.width / 2, cy = c.top + c.height / 2;
+    wires.setAttribute('viewBox', `0 0 ${s.width} ${s.height}`);
+    wires.innerHTML = [...stage.querySelectorAll('[data-wire]')].map(el => {
+      const r = el.getBoundingClientRect();
+      const x = Math.max(r.left, Math.min(cx, r.right)), y = Math.max(r.top, Math.min(cy, r.bottom));
+      return `<line x1="${cx - s.left}" y1="${cy - s.top}" x2="${x - s.left}" y2="${y - s.top}"/>`;
+    }).join('');
+  };
+  addEventListener('resize', drawWires);
+  addEventListener('load', drawWires);
+  document.fonts?.ready.then(drawWires);
+  drawWires();
+})();
+</script>
 </body>
 </html>
