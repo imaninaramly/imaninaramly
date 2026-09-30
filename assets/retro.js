@@ -250,6 +250,10 @@
     addCoin();
   }));
 
+  /* --- dialogs --- */
+  document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.open)?.showModal()));
+  document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => { if (e.target === d) d.close(); }));
+
   /* --- jumping --- */
   const jump = (c, h, d) => {
     if (c.classList.contains('jump')) return false;
