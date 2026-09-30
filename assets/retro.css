@@ -315,9 +315,9 @@ body::after{
   background:linear-gradient(transparent 0 42%,rgba(255,255,255,.12) 50%,transparent 58%);
   animation:scan 3.2s linear infinite;
 }
-.photo{width:74%;height:auto;aspect-ratio:1;image-rendering:pixelated;display:block}
-.screen .s1{left:10%;top:16%;--px:3px}
-.screen .s2{right:9%;top:48%;--px:3px;animation-delay:-1s}
+.photo{width:74%;height:auto;aspect-ratio:1;display:block;position:relative;z-index:1}
+.screen .s1{left:10%;top:16%;--px:3px;z-index:2}
+.screen .s2{right:9%;top:48%;--px:3px;animation-delay:-1s;z-index:2}
 .hinge{height:18px;margin:0 16px;background:var(--shell-dark);border-left:4px solid var(--ink);border-right:4px solid var(--ink);position:relative}
 .hinge::after{content:"";position:absolute;left:50%;bottom:-4px;width:18px;height:8px;margin-left:-9px;background:var(--ink)}
 .c-bot{
@@ -382,7 +382,7 @@ body::after{
 .scene .bat{--px:4px}
 
 /* ---------- content sections ---------- */
-.section{position:relative;padding:90px clamp(16px,4vw,48px) 40px}
+.section{position:relative;padding:90px clamp(16px,4vw,48px) 40px;overflow-x:clip}
 .wrap{max-width:1160px;margin:0 auto}
 .section .lvl-head{margin-bottom:44px}
 .mission-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
@@ -430,7 +430,7 @@ body::after{
 /* profile / about */
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px;align-items:start}
 .four{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
-.portrait{width:100%;max-width:260px;aspect-ratio:1;image-rendering:pixelated;border:4px solid var(--ink);background:#1d5a55;margin:0 auto 16px;display:block}
+.portrait{width:100%;max-width:260px;aspect-ratio:1;border:4px solid var(--ink);background:#1d5a55;margin:0 auto 16px;display:block}
 .stats{display:grid;gap:8px;font-size:17px}
 .stats div{display:flex;gap:8px;align-items:baseline}
 .stats dt{font:400 10px var(--pixel);color:var(--coral-2);white-space:nowrap}
@@ -506,3 +506,31 @@ body::after{
   html{scroll-behavior:auto}
   .js .reveal{opacity:1}
 }
+
+/* ---------- blog ---------- */
+.posts{display:grid;gap:32px;max-width:860px}
+.post .win-main{display:grid;gap:10px}
+.post .meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.post .meta .chip{margin:0}
+.post .date{font:400 10px var(--pixel);color:var(--aqua-2)}
+.post h3{font:400 clamp(14px,2vw,18px)/1.5 var(--pixel);color:var(--plum)}
+.post .read{justify-self:start;background:none;border:0;padding:0;cursor:pointer;font:400 11px var(--pixel);color:var(--coral-2)}
+.post .read::before{content:"";position:absolute;inset:0;z-index:1}
+.post .read:focus-visible{outline:none}
+.post:hover .win,.post:has(.read:focus-visible) .win{box-shadow:12px 12px 0 rgba(0,0,0,.45);background:#fffbe9}
+.post:has(.read:focus-visible) .win{outline:3px solid var(--butter);outline-offset:4px}
+.post:hover .read::after,.post .read:focus-visible::after{content:" ▶";animation:blink .6s steps(1) infinite}
+.save-slot{font:400 10px var(--pixel);color:var(--muted);margin-bottom:10px}
+dialog.win{padding:0;margin:auto;width:min(760px,calc(100% - 32px));max-height:86vh;overflow:auto;color:var(--ink)}
+dialog.win[open]{animation:pop .4s steps(5) both}
+dialog::backdrop{background:rgba(17,13,43,.82)}
+dialog .win-bar{position:sticky;top:0;z-index:2}
+dialog .close{font:400 10px var(--pixel);background:var(--coral);color:var(--ink);border:2px solid var(--ink);padding:3px 6px;cursor:pointer}
+dialog .close:hover,dialog .close:focus-visible{background:var(--butter);outline:none}
+.article h2{font:400 clamp(16px,2.6vw,24px)/1.5 var(--pixel);color:var(--plum);margin:10px 0 18px}
+.article .date{font:400 10px var(--pixel);color:var(--aqua-2)}
+.article p{font-size:18px}
+.article code{font-family:ui-monospace,monospace;font-size:15px;background:var(--ink);color:var(--aqua);padding:2px 6px;overflow-wrap:anywhere}
+.article pre{background:var(--ink);color:var(--aqua);padding:12px 14px;border:3px solid var(--plum);overflow:auto;margin-bottom:12px}
+.article pre code{padding:0;background:none}
+.article .last{color:var(--coral-2);font-weight:700}
