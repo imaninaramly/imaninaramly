@@ -1,316 +1,568 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImaninaRamly | 2025 Retro Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ImaninaRamly | Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#fdd0ea",
-                        "surface": "#f9f9ff",
-                        "primary-fixed-dim": "#ffaeda",
-                        "tertiary": "#41682c",
-                        "surface-container-highest": "#d9e3f7",
-                        "on-surface": "#121c2a",
-                        "primary-fixed": "#ffd8ea",
-                        "on-background": "#121c2a",
-                        "on-tertiary-fixed-variant": "#2a5016",
-                        "on-primary-fixed": "#3a0329",
-                        "surface-container-low": "#eff3ff",
-                        "on-secondary": "#ffffff",
-                        "secondary-fixed": "#ffd8ed",
-                        "on-secondary-fixed": "#2c1325",
-                        "on-error-container": "#93000a",
-                        "surface-dim": "#d0daef",
-                        "error": "#ba1a1a",
-                        "primary-container": "#f9a8d4",
-                        "secondary": "#765469",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#e6eeff",
-                        "surface-variant": "#d9e3f7",
-                        "on-primary": "#ffffff",
-                        "on-surface-variant": "#514349",
-                        "on-secondary-container": "#79576c",
-                        "on-primary-fixed-variant": "#6f3157",
-                        "tertiary-fixed": "#c1f0a4",
-                        "on-secondary-fixed-variant": "#5c3d51",
-                        "primary": "#8a486f",
-                        "surface-container-high": "#dee9fd",
-                        "inverse-on-surface": "#ebf1ff",
-                        "error-container": "#ffdad6",
-                        "on-error": "#ffffff",
-                        "inverse-primary": "#ffaeda",
-                        "outline": "#83737a",
-                        "inverse-surface": "#273140",
-                        "surface-bright": "#f9f9ff",
-                        "secondary-fixed-dim": "#e5bad3",
-                        "tertiary-fixed-dim": "#a6d38b",
-                        "on-tertiary-fixed": "#072100",
-                        "on-tertiary-container": "#31581d",
-                        "on-primary-container": "#78395f",
-                        "surface-tint": "#8a486f",
-                        "background": "#f9f9ff",
-                        "tertiary-container": "#a0cd85",
-                        "outline-variant": "#d5c1c9"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "64px",
-                        "max-width": "1280px",
-                        "gutter": "24px",
-                        "margin-mobile": "20px",
-                        "base": "8px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Playfair Display"],
-                        "label-md": ["Inter"],
-                        "headline-md": ["Playfair Display"],
-                        "body-md": ["Inter"],
-                        "headline-lg": ["Playfair Display"],
-                        "display-lg": ["Playfair Display"],
-                        "body-lg": ["Inter"],
-                        "code-sm": ["Courier Prime"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "code-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
-                    }
-                }
+        body {
+            font-family: 'VT323', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a0033 50%, #0f0a1f 100%);
+            color: #00f7ff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Animated starfield background */
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Pixel clouds */
+        .cloud {
+            position: absolute;
+            font-size: 20px;
+            color: #ff69b4;
+            opacity: 0.6;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Main container */
+        .game-screen {
+            border: 8px solid #00f7ff;
+            background: #0a0e27;
+            margin: 20px auto;
+            position: relative;
+            box-shadow:
+                0 0 20px #9d00ff,
+                0 0 40px #ff00ff,
+                inset 0 0 20px rgba(157, 0, 255, 0.2);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(90deg, #9d00ff, #ff00ff);
+            color: #fff;
+            padding: 15px 20px;
+            border-bottom: 4px solid #00f7ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .header-left {
+            display: flex;
+            gap: 30px;
+        }
+
+        .level-display {
+            text-shadow: 0 0 10px #00f7ff;
+        }
+
+        .player-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hp-bar {
+            width: 60px;
+            height: 8px;
+            background: #330033;
+            border: 2px solid #00f7ff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hp-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00f7ff, #00ff00);
+            width: 100%;
+            box-shadow: 0 0 10px #00f7ff;
+        }
+
+        /* Main content area - two column */
+        .game-content {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Character portrait - Game Boy style */
+        .character-box {
+            flex: 0 0 300px;
+            border: 6px solid #ff00ff;
+            background: linear-gradient(135deg, #2d2d4f, #1a0033);
+            padding: 15px;
+            text-align: center;
+            box-shadow:
+                0 0 15px #ff00ff,
+                inset 0 0 15px rgba(255, 0, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .character-title {
+            font-family: 'Press Start 2P', monospace;
+            color: #9d00ff;
+            margin-bottom: 10px;
+            font-size: 11px;
+            text-shadow: 0 0 5px #ff00ff;
+        }
+
+        .character-portrait {
+            width: 200px;
+            height: 200px;
+            border: 4px solid #00f7ff;
+            margin: 10px auto;
+            overflow: hidden;
+            background: #1a0a33;
+            box-shadow: 0 0 10px #00f7ff;
+        }
+
+        .character-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .character-status {
+            font-size: 10px;
+            color: #00f7ff;
+            line-height: 1.8;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        /* Info panels */
+        .info-panels {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .panel {
+            border: 4px solid;
+            padding: 15px;
+            background: #1a0a33;
+            font-size: 11px;
+            box-shadow: 0 0 15px;
+        }
+
+        .panel-header {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed currentColor;
+        }
+
+        .panel-content {
+            line-height: 1.6;
+        }
+
+        /* Color variants for different panels */
+        .panel-hero {
+            border-color: #00f7ff;
+            box-shadow: 0 0 15px #00f7ff;
+        }
+
+        .panel-hero .panel-header {
+            color: #00f7ff;
+            text-shadow: 0 0 5px #00f7ff;
+        }
+
+        .panel-hero .panel-content {
+            color: #00f7ff;
+        }
+
+        .panel-skills {
+            border-color: #9d00ff;
+            box-shadow: 0 0 15px #9d00ff;
+        }
+
+        .panel-skills .panel-header {
+            color: #9d00ff;
+            text-shadow: 0 0 5px #9d00ff;
+        }
+
+        .panel-skills .panel-content {
+            color: #ff00ff;
+        }
+
+        .panel-projects {
+            border-color: #00ff00;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .panel-projects .panel-header {
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .panel-projects .panel-content {
+            color: #00ff00;
+        }
+
+        .panel-contact {
+            border-color: #ffd700;
+            box-shadow: 0 0 15px #ffd700;
+        }
+
+        .panel-contact .panel-header {
+            color: #ffd700;
+            text-shadow: 0 0 5px #ffd700;
+        }
+
+        .panel-contact .panel-content {
+            color: #ffd700;
+        }
+
+        /* Skills grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .skill-box {
+            border: 2px solid #00f7ff;
+            padding: 8px;
+            text-align: center;
+            font-size: 9px;
+            background: rgba(0, 247, 255, 0.1);
+            box-shadow: 0 0 8px rgba(0, 247, 255, 0.3);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            border: 3px solid;
+            padding: 8px 16px;
+            margin: 5px 5px 5px 0;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 9px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 0;
+            text-transform: uppercase;
+        }
+
+        .btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0;
+        }
+
+        .btn-primary {
+            background: #00f7ff;
+            color: #0a0e27;
+            border-color: #00f7ff;
+            box-shadow: 0 4px 0 #00a3cc;
+        }
+
+        .btn-secondary {
+            background: #ff00ff;
+            color: #fff;
+            border-color: #ff00ff;
+            box-shadow: 0 4px 0 #cc00cc;
+        }
+
+        /* Projects grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .project-card {
+            border: 3px solid #00ff00;
+            padding: 10px;
+            background: rgba(0, 255, 0, 0.05);
+            font-size: 10px;
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+        }
+
+        .project-title {
+            color: #00ff00;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Bottom section */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Navigation bar at bottom */
+        .footer-nav {
+            background: linear-gradient(90deg, #ff00ff, #9d00ff);
+            color: #fff;
+            padding: 10px 20px;
+            border-top: 4px solid #00f7ff;
+            text-align: center;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+        }
+
+        .nav-item {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-item:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .game-content {
+                flex-direction: column;
+            }
+
+            .character-box {
+                flex: 1;
+                margin: 0 auto;
+            }
+
+            .header {
+                font-size: 10px;
+            }
+
+            .header-left {
+                gap: 15px;
+            }
+
+            .panel {
+                font-size: 10px;
+            }
+
+            .footer-nav {
+                font-size: 9px;
+                gap: 10px;
             }
         }
-    </script>
-<style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid theme('colors.secondary-container');
+
+        /* Retro corner decoration */
+        .corner-deco {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
         }
-        .soft-glow-hover:hover {
-            box-shadow: 0 0 20px rgba(249, 168, 212, 0.4);
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.5; }
         }
+
+        .corner-tl { top: 20px; left: 20px; color: #00f7ff; }
+        .corner-tr { top: 20px; right: 20px; color: #ff00ff; }
+        .corner-bl { bottom: 20px; left: 20px; color: #9d00ff; }
+        .corner-br { bottom: 20px; right: 20px; color: #00ff00; }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<div id="navbar"></div>
-<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto space-y-32">
-<!-- Hero Section -->
-<section class="flex flex-col-reverse md:flex-row items-center justify-between gap-16">
-<div class="flex-1 space-y-8">
-<div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-secondary-container/30 border border-secondary-container text-primary font-label-md text-label-md">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span>Available for Internship</span>
-</div>
-<h1 class="font-display-lg text-display-lg text-on-surface md:text-display-lg text-headline-lg-mobile">
-                    Hi, I'm Imanina Ramly. <br/>
-<span class="text-primary italic">Science Computer Internet Computing Undergraduate.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-                    I enjoy building web applications from front to back, focusing on making them work well and feel simple for users to use.
-                </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<a class="px-8 py-4 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:shadow-[0_0_20px_rgba(249,168,212,0.5)] transition-all duration-300 flex items-center gap-2" href="projects.html">
-                        View Projects
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-<a class="px-8 py-4 rounded-full border border-primary text-primary font-label-md text-label-md hover:bg-primary/5 transition-all duration-300" href="contact.html">
-                        Get in Touch
-                    </a>
-</div>
-</div>
-<div class="flex-1 relative flex justify-center">
-<div class="relative w-72 h-[400px] md:w-96 md:h-[500px] rounded-full overflow-hidden border-4 border-surface p-2 shadow-[0_0_40px_rgba(249,168,212,0.3)] bg-gradient-to-b from-primary-container/20 to-transparent">
-<img alt="Imanina Ramly Portrait" class="w-full h-full object-cover rounded-full" src="assets/img1.jpeg"/>
-</div>
-<!-- Decorative Elements -->
-<div class="absolute top-10 -left-10 w-24 h-24 bg-primary-container/30 rounded-full blur-2xl"></div>
-<div class="absolute bottom-10 -right-10 w-32 h-32 bg-secondary-container/40 rounded-full blur-2xl"></div>
-</div>
-</section>
-<!-- Skills -->
-<section class="space-y-12">
-<div class="text-center space-y-4">
-<h2 class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">Skills</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Tools and technologies I use to bring ideas to life.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Frontend -->
-<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
-<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">code_blocks</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Frontend</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">HTML</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">CSS</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">JavaScript</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">React</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Bootstrap</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Tailwind CSS</span>
-</div>
-</div>
-<!-- Backend -->
-<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
-<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">dns</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Backend</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Laravel</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">CodeIgniter</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Node.js</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Basic authentication</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">CRUD operations</span>
-</div>
-</div>
-<!-- Database & Ops -->
-<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
-<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">database</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Data &amp; Cloud</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">MySQL</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Git & GitHub</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Supabase</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Python (Pandas)</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Firebase</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Cloud Deployment (Vercel / Netlify)</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Data Analysis</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">REST APIs</span>
-</div>
-</div>
-<!-- Dev Tools / Workflow -->
-<div class="glass-card p-8 rounded-[24px] soft-glow-hover group">
-<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">dns</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Dev Tools / Workflow</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Git / GitHub</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">VS Code</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">Docker</span>
-<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-surface-variant font-label-md text-label-md text-xs">CI/CD (GitHub Actions basic)</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Education & Journey -->
-<section class="space-y-12 max-w-4xl mx-auto">
-<div class="text-center space-y-4">
-<h2 class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">Journey</h2>
-</div>
-<div class="relative border-l-2 border-primary-container/30 ml-4 md:ml-8 space-y-12">
-<!-- Timeline Item 1 -->
-<div class="relative pl-8">
-<div class="absolute w-4 h-4 rounded-full bg-primary -left-[9px] top-1.5 shadow-[0_0_10px_rgba(138,72,111,0.5)]"></div>
-<div class="glass-card p-6 rounded-[24px]">
-<span class="font-code-sm text-code-sm text-primary mb-2 block">Oct 2023 - Present</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Universiti Sultan Zainal Abidin</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Bachelor of Computer Science (Internet Computing) with Honours</p>
-<p class="font-body-md text-body-md text-on-surface-variant mt-4 text-sm">Current GPA: 3.84</p>
-</div>
-</div>
-<!-- Timeline Item 2 -->
-<div class="relative pl-8">
-<div class="absolute w-4 h-4 rounded-full bg-secondary-container border-2 border-primary -left-[9px] top-1.5"></div>
-<div class="glass-card p-6 rounded-[24px]">
-<span class="font-code-sm text-code-sm text-primary mb-2 block">2021 - 2023</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Kolej Matrikulasi Pulau Pinang</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Jurusan Sains (Sains Komputer)</p>
-<p class="font-body-md text-body-md text-on-surface-variant mt-4 text-sm">PNGK: 3.29</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Quick Glimpse (Projects) -->
-<section class="space-y-12" id="projects">
-<div class="flex items-end justify-between mb-8">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">Selected Works</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">A curated glimpse into my recent projects.</p>
-</div>
-<a class="hidden md:inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors font-label-md text-label-md" href="projects.html">
-                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Project 1 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden rounded-[24px] mb-6 aspect-video bg-surface-variant">
-<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
-<img alt="Pomodoro Timer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Pomodoro Timer" src="assets/project1cover.png"/>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-2">Pomodoro Timer</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">Timer for studying.</p>
-<div class="flex gap-2">
-<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">React.js</span>
-<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">Netlify</span>
-</div>
-</div>
-<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
-<a href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener noreferrer">
-  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
-    arrow_outward
-  </span>
-</a>
-</div>
-</div>
-</div>
-<!-- Project 2 -->
-<div class="group cursor-pointer md:mt-16">
-<div class="relative overflow-hidden rounded-[24px] mb-6 aspect-video bg-surface-variant">
-<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
-<img alt="Studio Bloom Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A minimalist, high-end e-commerce website design for a boutique floral studio. The interface is clean with lots of whitespace, featuring elegant serif typography and soft, romantic photography of floral arrangements. The color scheme is predominantly cream, soft sage green, and dusty rose. The overall mood is serene and editorial." src="assets/project2cover.png"/>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-2">E-Commerce Website: LunaraWear</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">LunaraWear is a modern modest fashion e-commerce platform specializing in bawal, shawl, and inner wear. It is designed to provide a smooth shopping experience with a clean interface and easy product browsing.</p>
-<div class="flex gap-2">
-<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">CodeIgniter</span>
-<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-surface-variant font-code-sm text-code-sm text-xs">MySQL</span>
-</div>
-</div>
-<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_outward</span>
-</div>
-</div>
-</div>
-</div>
-<div class="md:hidden flex justify-center mt-8">
-<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary font-label-md text-label-md" href="projects.html">
-                    View All Works
-                </a>
-</div>
-</section>
-</main>
-<!-- FOOTER -->
-<div id="footer"></div>
-<script src="includes.js"></script>
-</body></html>
+<body>
+    <div class="starfield" id="starfield"></div>
+
+    <div class="content-wrapper">
+        <div class="game-screen">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <div class="level-display">◆ UI/UX LEVEL 03</div>
+                    <div class="player-status">
+                        <span>◆</span>
+                        <div class="hp-bar"><div class="hp-fill"></div></div>
+                        <span>PLAYER 01</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main game content -->
+            <div class="game-content">
+                <!-- Character Portrait (Game Boy style) -->
+                <div class="character-box">
+                    <div class="character-title">★ IMANINA ★</div>
+                    <div class="character-portrait">
+                        <img src="assets/img1.jpeg" alt="Imanina Ramly">
+                    </div>
+                    <div class="character-status">
+                        <div>Status: Ready 🎮</div>
+                        <div>Level: Designer</div>
+                        <div>EXP: Growing</div>
+                    </div>
+                </div>
+
+                <!-- Info Panels -->
+                <div class="info-panels">
+                    <!-- Hero Panel -->
+                    <div class="panel panel-hero">
+                        <div class="panel-header">>>> MISSION BRIEF</div>
+                        <div class="panel-content">
+                            <p style="margin-bottom: 8px;">Hi! I'm Imanina Ramly</p>
+                            <p>Computer Science Undergrad | UI/UX Designer | Full-Stack Developer</p>
+                            <p style="margin-top: 8px; color: #00ff00;">Building web experiences from front to back!</p>
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <a href="contact.html" class="btn btn-primary">CONTACT ME</a>
+                            <a href="projects.html" class="btn btn-secondary">VIEW WORKS</a>
+                        </div>
+                    </div>
+
+                    <!-- Skills Panel -->
+                    <div class="panel panel-skills">
+                        <div class="panel-header">⚡ SKILL MASTERY</div>
+                        <div class="panel-content">
+                            <div class="skills-grid">
+                                <div class="skill-box">HTML</div>
+                                <div class="skill-box">CSS</div>
+                                <div class="skill-box">JS</div>
+                                <div class="skill-box">React</div>
+                                <div class="skill-box">Tailwind</div>
+                                <div class="skill-box">Laravel</div>
+                                <div class="skill-box">Node.js</div>
+                                <div class="skill-box">MySQL</div>
+                                <div class="skill-box">Git</div>
+                                <div class="skill-box">Firebase</div>
+                                <div class="skill-box">Figma</div>
+                                <div class="skill-box">UI/UX</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom sections -->
+            <div style="padding: 0 20px 20px 20px;">
+                <div class="bottom-section">
+                    <!-- Projects -->
+                    <div class="panel panel-projects">
+                        <div class="panel-header">🎮 RECENT QUESTS</div>
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="project-title">Pomodoro Timer</div>
+                                <div style="color: #00ff00; font-size: 9px;">React · Study Tool</div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-title">LunaraWear</div>
+                                <div style="color: #00ff00; font-size: 9px;">E-Commerce Platform</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="panel panel-contact">
+                        <div class="panel-header">📡 CONNECT LINK</div>
+                        <div class="panel-content" style="line-height: 2;">
+                            <div>Github · LinkedIn</div>
+                            <div>Email · Twitter</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer navigation -->
+            <div class="footer-nav">
+                <a href="index.html" class="nav-item">◆ ME ◆</a>
+                <a href="about.html" class="nav-item">✦ ABOUT ✦</a>
+                <a href="projects.html" class="nav-item">★ WORKS ★</a>
+                <a href="contact.html" class="nav-item">◇ CONTACT ◇</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative corners -->
+    <div class="corner-deco corner-tl">⬉</div>
+    <div class="corner-deco corner-tr">⬈</div>
+    <div class="corner-deco corner-bl">⬋</div>
+    <div class="corner-deco corner-br">⬊</div>
+
+    <script>
+        // Generate random stars
+        const starfield = document.getElementById('starfield');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starfield.appendChild(star);
+        }
+
+        // Add pixel clouds
+        const clouds = ['☁️', '☁️', '☁️'];
+        clouds.forEach((cloud, i) => {
+            const cloudEl = document.createElement('div');
+            cloudEl.className = 'cloud';
+            cloudEl.textContent = cloud;
+            cloudEl.style.left = Math.random() * 80 + 10 + '%';
+            cloudEl.style.top = Math.random() * 30 + 5 + '%';
+            cloudEl.style.animationDelay = (i * 6) + 's';
+            cloudEl.style.fontSize = (15 + Math.random() * 15) + 'px';
+            document.body.appendChild(cloudEl);
+        });
+    </script>
+</body>
+</html>
