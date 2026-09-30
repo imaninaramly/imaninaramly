@@ -1,261 +1,134 @@
 <!DOCTYPE html>
-
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ImaninaRamly | Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#fdd0ea",
-                        "surface": "#f9f9ff",
-                        "primary-fixed-dim": "#ffaeda",
-                        "tertiary": "#41682c",
-                        "surface-container-highest": "#d9e3f7",
-                        "on-surface": "#121c2a",
-                        "primary-fixed": "#ffd8ea",
-                        "on-background": "#121c2a",
-                        "on-tertiary-fixed-variant": "#2a5016",
-                        "on-primary-fixed": "#3a0329",
-                        "surface-container-low": "#eff3ff",
-                        "on-secondary": "#ffffff",
-                        "secondary-fixed": "#ffd8ed",
-                        "on-secondary-fixed": "#2c1325",
-                        "on-error-container": "#93000a",
-                        "surface-dim": "#d0daef",
-                        "error": "#ba1a1a",
-                        "primary-container": "#f9a8d4",
-                        "secondary": "#765469",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#e6eeff",
-                        "surface-variant": "#d9e3f7",
-                        "on-primary": "#ffffff",
-                        "on-surface-variant": "#514349",
-                        "on-secondary-container": "#79576c",
-                        "on-primary-fixed-variant": "#6f3157",
-                        "tertiary-fixed": "#c1f0a4",
-                        "on-secondary-fixed-variant": "#5c3d51",
-                        "primary": "#8a486f",
-                        "surface-container-high": "#dee9fd",
-                        "inverse-on-surface": "#ebf1ff",
-                        "error-container": "#ffdad6",
-                        "on-error": "#ffffff",
-                        "inverse-primary": "#ffaeda",
-                        "outline": "#83737a",
-                        "inverse-surface": "#273140",
-                        "surface-bright": "#f9f9ff",
-                        "secondary-fixed-dim": "#e5bad3",
-                        "tertiary-fixed-dim": "#a6d38b",
-                        "on-tertiary-fixed": "#072100",
-                        "on-tertiary-container": "#31581d",
-                        "on-primary-container": "#78395f",
-                        "surface-tint": "#8a486f",
-                        "background": "#f9f9ff",
-                        "tertiary-container": "#a0cd85",
-                        "outline-variant": "#d5c1c9"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "64px",
-                        "max-width": "1280px",
-                        "gutter": "24px",
-                        "margin-mobile": "20px",
-                        "base": "8px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Playfair Display"],
-                        "label-md": ["Inter"],
-                        "headline-md": ["Playfair Display"],
-                        "body-md": ["Inter"],
-                        "headline-lg": ["Playfair Display"],
-                        "display-lg": ["Playfair Display"],
-                        "body-lg": ["Inter"],
-                        "code-sm": ["Courier Prime"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "code-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid theme('colors.secondary-container');
-        }
-        .soft-glow-hover:hover {
-            box-shadow: 0 0 20px rgba(249, 168, 212, 0.4);
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects | Imanina Ramly</title>
+<meta name="description" content="Projects by Imanina Ramly — missions built through continuous learning and experimentation."/>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/retro.css"/>
 </head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<div id="navbar"></div>
-      
-<main class="pt-32 pb-24 px-6 md:px-16 max-w-7xl mx-auto space-y-14">
+<body>
 
-<!-- HERO -->
-
-<section class="text-center space-y-4">
-
-  <h1 class="font-headline-lg text-4xl md:text-5xl">
-
-    My <span class="text-primary">Projects</span>
-
-  </h1>
-
-  <p class="text-on-surface-variant max-w-xl mx-auto">
-
-    A showcase of projects built through continuous learning and experimentation.
-
-  </p>
-
-</section>
-
-<!-- GRID -->
-
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-  <!-- CARD 1 -->
-
-  <a href="https://pomodoro-pet-timer.netlify.app" target="_blank"
-
-     class="glass-card soft-glow-hover rounded-3xl overflow-hidden block">
-
-    <img src="assets/project1cover.png"
-
-         class="h-52 w-full object-cover"/>
-
-    <div class="p-6 space-y-3">
-
-      <div class="flex flex-wrap gap-2">
-
-        <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
-
-          React
-
-        </span>
-
-        <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
-
-          Netlify
-
-        </span>
-
-      </div>
-
-      <h3 class="font-headline-lg text-xl">
-
-        Pomodoro Pet Timer
-
-      </h3>
-
-      <p class="text-on-surface-variant text-sm">
-
-        React productivity timer for focus sessions.
-
-      </p>
-
-      <div class="text-primary font-medium flex items-center gap-2 pt-2">
-
-        View Project
-
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-
-      </div>
-
+<header class="hero sub" id="top">
+  <div class="hud">
+    <p class="hud-xp"><a href="index.html">◀ STAGE: PROJECTS</a></p>
+    <div class="hud-clouds" aria-hidden="true">
+      <canvas class="spr" data-s="cloud" style="--px:4px"></canvas>
+      <canvas class="spr" data-s="cloud" style="--px:3px;animation-delay:-1.5s"></canvas>
     </div>
-
-  </a>
-
-<!-- CARD 2 -->
-
-  <a href="https://lunarawear.onrender.com" target="_blank"
-
-     class="glass-card soft-glow-hover rounded-3xl overflow-hidden block">
-
-    <img src="assets/project2cover.png"
-
-         class="h-52 w-full object-cover"/>
-
-    <div class="p-6 space-y-3">
-
-      <div class="flex flex-wrap gap-2">
-
-        <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
-
-          Render
-
-        </span>
-
-        <span class="px-3 py-1 text-xs rounded-full bg-secondary-container">
-
-          Supabase
-
-        </span>
-
-      </div>
-
-      <h3 class="font-headline-lg text-xl">
-
-        LunaraWear E-Commerce Website
-
-      </h3>
-
-      <p class="text-on-surface-variant text-sm">
-
-        LunaraWear offers a range of high-quality Muslimah innerwear, including inner tops, inner skirts, and inner scarves, designed to provide comfort, confidence, and a polished look throughout the day.
-
-      </p>
-
-      <div class="text-primary font-medium flex items-center gap-2 pt-2">
-
-        View Project
-
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-
-      </div>
-
+    <div class="hud-player">
+      <span class="hud-coins" title="Coins collected"><canvas class="spr" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="6" style="--px:2px" aria-hidden="true"></canvas>×<b id="coins">00</b></span>
+      <canvas class="spr heart" data-s="heart" style="--px:3px" aria-hidden="true"></canvas>
+      <div class="hp" role="img" aria-label="HP bar"><span></span></div>
+      <span>PLAYER 01</span>
     </div>
+  </div>
 
-  </a>
+  <div class="screen-frame">
+    <p class="year">STAGE 02</p>
+    <h1 class="title wave">MY PROJECTS</h1>
+    <p class="tagline">A showcase of missions built through continuous learning and experimentation.</p>
+    <nav class="stage-select" aria-label="Pages">
+      <span>SELECT STAGE:</span>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 
+  <canvas class="spr sky" data-s="cloud" style="--px:5px;top:200px;--t:80s;animation-delay:-20s" aria-hidden="true"></canvas>
+  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:280px;--t:95s;animation-delay:-65s" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;left:3%;top:110px" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:5%;top:150px;animation-delay:-.6s" aria-hidden="true"></canvas>
+  <canvas class="spr abs lamp" data-s="lamp" aria-hidden="true"></canvas>
+  <canvas class="spr abs tree" data-s="tree" aria-hidden="true"></canvas>
+  <div class="walker" data-walk="cat,catW" data-face="left" data-min="50" data-max="82" data-speed="32" data-jh="40" style="--px:5px" aria-hidden="true"><canvas class="spr" data-s="cat"></canvas></div>
+  <div class="walker player" data-walk="playerW1,playerW2" data-min="5" data-max="46" data-speed="48" style="--px:7px" title="Click me to jump!"><canvas class="spr" data-s="player" role="img" aria-label="Pixel-art Imanina"></canvas></div>
+  <div class="ground" aria-hidden="true"></div>
+</header>
+
+<div class="ribbon" data-text="Missions" aria-hidden="true"></div>
+
+<main>
+<section class="section" aria-labelledby="quests">
+  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:40px;--t:85s;animation-delay:-30s" aria-hidden="true"></canvas>
+  <canvas class="spr abs twinkle" data-s="star" style="--px:5px;right:5%;top:100px" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="lvl-head reveal">
+      <h2 class="lvl" id="quests">Quest<br/>Board</h2>
+      <p class="sub">Pick a mission to play</p>
+    </div>
+    <div class="mission-grid">
+      <article class="win mission reveal float" style="--ft:3.6s">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-main">
+          <span class="chip">Quest 01</span>
+          <div class="cover"><img src="assets/project1cover.png" alt="Pomodoro Pet Timer app screenshot" loading="lazy"/></div>
+          <h3>Pomodoro Pet Timer</h3>
+          <p>React productivity timer for focus sessions.</p>
+          <div class="tags"><span>React</span><span>Netlify</span></div>
+          <a class="btn" href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener noreferrer">VIEW PROJECT ▶</a>
+        </div>
+      </article>
+      <article class="win mission reveal float" style="--ft:3.2s">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-main">
+          <span class="chip">Quest 02</span>
+          <div class="cover"><img src="assets/project2cover.png" alt="LunaraWear e-commerce website screenshot" loading="lazy"/></div>
+          <h3>LunaraWear E-Commerce Website</h3>
+          <p>LunaraWear offers a range of high-quality Muslimah innerwear, including inner tops, inner skirts, and inner scarves, designed to provide comfort, confidence, and a polished look throughout the day.</p>
+          <div class="tags"><span>Render</span><span>Supabase</span></div>
+          <a class="btn alt" href="https://lunarawear.onrender.com" target="_blank" rel="noopener noreferrer">VIEW PROJECT ▶</a>
+        </div>
+      </article>
+      <article class="win mission soon reveal float" style="--ft:3.9s">
+        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
+        <div class="win-main">
+          <div class="qblock" role="button" tabindex="0" aria-label="Bonus block">?</div>
+          <h3>Next Quest Loading…</h3>
+          <p>New missions are in the works. Hit the block for a bonus coin while you wait!</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="scene" aria-hidden="true">
+    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:8%;bottom:110px"></canvas>
+    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:16%;bottom:130px;animation-delay:-.6s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:34%;bottom:100px;animation-delay:-1.2s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:64%;bottom:110px;animation-delay:-.3s"></canvas>
+    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:74%;bottom:130px;animation-delay:-.9s"></canvas>
+    <div class="flyer" style="left:28%;top:16px;--t:8s"><canvas class="spr bat" data-s="bat" data-anim="bat,bat2" data-fps="6"></canvas></div>
+    <canvas class="spr key" data-s="key"></canvas>
+    <div class="piranha" data-obstacle>
+      <div class="clip"><div><canvas class="spr" data-s="plant" data-anim="plant,plantOpen" data-fps="3"></canvas></div></div>
+      <canvas class="spr pipe" data-s="pipe"></canvas>
+    </div>
+    <canvas class="spr flag" data-s="flag" data-anim="flag,flag2" data-fps="3"></canvas>
+    <canvas class="spr door" data-s="door"></canvas>
+    <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="1" data-max="82" data-speed="95" data-jh="150" style="--px:3px"><canvas class="spr" data-s="player"></canvas></div>
+    <div class="ground"></div>
+  </div>
 </section>
 </main>
-      
-<!-- FOOTER -->
-<div id="footer"></div>
-      
-<!-- FAB -->
-<button class="fixed bottom-container-margin right-container-margin w-16 h-16 bg-primary text-on-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 z-40">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
-</button>
-  
-<script src="includes.js"></script>
-  
-</body></html>
+
+<footer class="gameover">
+  <h2 class="wave">NEXT STAGE?</h2>
+  <a class="start" href="contact.html">CONTACT</a>
+  <small>© 2026 IMANINA RAMLY</small>
+  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:24%;bottom:110px" aria-hidden="true"></canvas>
+  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:72%;bottom:100px;animation-delay:-.8s" aria-hidden="true"></canvas>
+  <canvas class="spr abs" data-s="door" style="--px:4px;right:5%;bottom:52px" aria-hidden="true"></canvas>
+  <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="2" data-max="86" data-speed="70" style="--px:4px" aria-hidden="true"><canvas class="spr" data-s="player"></canvas></div>
+  <div class="ground" aria-hidden="true"></div>
+</footer>
+
+<script src="assets/retro.js"></script>
+</body>
+</html>
