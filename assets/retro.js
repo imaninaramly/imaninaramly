@@ -190,20 +190,16 @@
   /* --- tiles stagger --- */
   document.querySelectorAll('.tiles').forEach(t => [...t.children].forEach((el, i) => el.style.setProperty('--i', i)));
 
-  /* --- pixelated photo --- */
+  /* --- photo crop --- */
   const photos = document.querySelectorAll('canvas[data-photo]');
   if (photos.length) {
     const img = new Image();
     img.onload = () => photos.forEach(c => {
-      const N = +c.dataset.res || 64;
+      const N = 720;
       c.width = N; c.height = N;
       const ctx = c.getContext('2d');
+      ctx.imageSmoothingQuality = 'high';
       ctx.drawImage(img, 225, 280, 360, 360, 0, 0, N, N);
-      try {
-        const d = ctx.getImageData(0, 0, N, N), a = d.data;
-        for (let i = 0; i < a.length; i += 4) for (let k = 0; k < 3; k++) a[i+k] = Math.min(255, Math.round(a[i+k] / 36) * 36);
-        ctx.putImageData(d, 0, 0);
-      } catch (e) {}
     });
     img.src = photos[0].dataset.photo;
   }
@@ -249,6 +245,10 @@
     plus(host, q.offsetLeft + q.offsetWidth / 2 - 12, q.offsetTop - 16, '+1');
     addCoin();
   }));
+
+  /* --- dialogs --- */
+  document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.open)?.showModal()));
+  document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => { if (e.target === d) d.close(); }));
 
   /* --- jumping --- */
   const jump = (c, h, d) => {
