@@ -2,286 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Imanina Ramly | 2026 Portfolio</title>
-<meta name="description" content="Imanina Ramly — Computer Science (Internet Computing) undergraduate and web developer. Press START."/>
-<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Imanina Ramly — Web Developer</title>
+<meta name="description" content="Imanina Ramly is a Computer Science (Internet Computing) student at UniSZA who builds web applications end to end."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/retro.css"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
 </head>
 <body>
-
-<!-- ================= TITLE SCREEN ================= -->
-<header class="hero" id="top">
-  <div class="hud">
-    <p class="hud-xp"><a href="index.html">XP: WEB DEV LEVEL 03</a></p>
-    <div class="hud-clouds" aria-hidden="true">
-      <canvas class="spr" data-s="cloud" style="--px:4px"></canvas>
-      <canvas class="spr" data-s="cloud" style="--px:3px;animation-delay:-1.5s"></canvas>
-    </div>
-    <div class="hud-player">
-      <span class="hud-coins" title="Coins collected"><canvas class="spr" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="6" style="--px:2px" aria-hidden="true"></canvas>×<b id="coins">00</b></span>
-      <canvas class="spr heart" data-s="heart" style="--px:3px" aria-hidden="true"></canvas>
-      <div class="hp" role="img" aria-label="HP bar"><span></span></div>
-      <span>PLAYER 01</span>
-    </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Imanina Ramly</a>
+    <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="projects.html">Work</a><a href="about.html">About</a><a href="blog.html">Writing</a><a href="contact.html">Contact</a><a href="assets/NUR%20IMANINA%20RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Résumé</a></nav>
   </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="intro">
+      <div>
+        <h1 id="intro">Web developer building applications from the database to the interface.</h1>
+        <p class="lead">I’m Imanina, a Computer Science (Internet Computing) student at Universiti Sultan Zainal Abidin. I care about systems that work reliably and feel simple to use.</p>
+        <p class="status">Open to internship opportunities</p>
+        <div class="actions">
+          <a class="btn" href="projects.html">View my work</a>
+          <a class="btn ghost" href="assets/NUR%20IMANINA%20RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Download résumé</a>
+        </div>
+      </div>
+      <figure class="portrait"><img src="assets/img1.jpeg" alt="Portrait of Imanina Ramly" width="810" height="1080"/></figure>
+    </section>
 
-  <div class="screen-frame">
-    <p class="year">2026</p>
-    <h1 class="title wave">PORTFOLIO</h1>
-    <a class="start" href="#level-01">START</a>
-    <nav class="stage-select" aria-label="Pages">
-      <span>SELECT STAGE:</span>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="assets/NUR IMANINA RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Resume</a>
+    <section class="section split" aria-labelledby="work">
+      <h2 id="work">Selected work</h2>
+      <div class="work">
+      <article class="work-item">
+        <a class="shot" href="https://pomodoro-pet-timer.netlify.app" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="assets/project1cover.png" alt="" loading="lazy" width="1200" height="750"/></a>
+        <div>
+          <h3>Pomodoro Pet Timer</h3>
+          <p>A focus timer for study sessions, with a small pet that keeps you company while the clock runs.</p>
+          <ul class="meta" aria-label="Built with"><li>React</li><li>Netlify</li></ul>
+          <a class="link" href="https://pomodoro-pet-timer.netlify.app" rel="noopener noreferrer">Visit site ↗</a>
+        </div>
+      </article>
+      <article class="work-item">
+        <a class="shot" href="https://lunarawear.onrender.com" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="assets/project2cover.png" alt="" loading="lazy" width="1200" height="750"/></a>
+        <div>
+          <h3>LunaraWear</h3>
+          <p>An online store for Muslimah innerwear — inner tops, inner skirts and inner scarves — built around clean product browsing.</p>
+          <ul class="meta" aria-label="Built with"><li>Supabase</li><li>Render</li></ul>
+          <a class="link" href="https://lunarawear.onrender.com" rel="noopener noreferrer">Visit site ↗</a>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section split" aria-labelledby="edu">
+      <h2 id="edu">Education</h2>
+      <div class="rows">
+        <div class="row">
+          <p class="when">Oct 2023 – present</p>
+          <div>
+            <h3>Universiti Sultan Zainal Abidin</h3>
+            <p>Bachelor of Computer Science (Internet Computing) with Honours · CGPA 3.84</p>
+          </div>
+        </div>
+        <div class="row">
+          <p class="when">2021 – 2023</p>
+          <div>
+            <h3>Kolej Matrikulasi Pulau Pinang</h3>
+            <p>Science, Computer Science stream · PNGK 3.29</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <div class="skills">
+        <div><h3>Frontend</h3><ul><li>HTML &amp; CSS</li><li>JavaScript</li><li>React</li><li>Tailwind CSS</li><li>Bootstrap</li></ul></div>
+        <div><h3>Backend</h3><ul><li>Laravel</li><li>CodeIgniter</li><li>Node.js</li><li>REST APIs</li><li>Authentication &amp; CRUD</li></ul></div>
+        <div><h3>Data</h3><ul><li>MySQL</li><li>Supabase</li><li>Firebase</li><li>Python &amp; Pandas</li></ul></div>
+        <div><h3>Tools</h3><ul><li>Git &amp; GitHub</li><li>VS Code</li><li>Docker</li><li>GitHub Actions</li><li>Vercel &amp; Netlify</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section split" aria-labelledby="writing">
+      <h2 id="writing">Writing</h2>
+      <div class="rows">
+        <a class="row title" href="blog-laravel-routes.html">
+          <p class="when">16 May 2026</p>
+          <div><h3>Learning Laravel routes</h3><p>How routes/web.php went from confusing to the part of Laravel I understand best.</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="hire">
+      <h2 id="hire">Looking for an intern?</h2>
+      <p class="muted">The fastest way to reach me is by email.</p>
+      <a class="email" href="mailto:nurimanina234@gmail.com">nurimanina234@gmail.com</a>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Imanina Ramly</span>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:nurimanina234@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/imaninaramly" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/imaninaramly" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
-
-  <canvas class="spr sky" data-s="cloud" style="--px:5px;top:230px;--t:80s;animation-delay:-20s" aria-hidden="true"></canvas>
-  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:310px;--t:95s;animation-delay:-65s" aria-hidden="true"></canvas>
-  <canvas class="spr sky" data-s="cloud" style="--px:3px;top:150px;--t:120s;animation-delay:-40s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;left:3%;top:120px" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;left:5%;top:330px;animation-delay:-.7s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;right:4%;top:130px;animation-delay:-1.2s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:6%;top:210px;animation-delay:-.4s" aria-hidden="true"></canvas>
-  <canvas class="spr abs lamp" data-s="lamp" aria-hidden="true"></canvas>
-  <canvas class="spr abs tree" data-s="tree" aria-hidden="true"></canvas>
-  <div class="walker" data-walk="cat,catW" data-face="left" data-min="52" data-max="82" data-speed="32" data-jh="40" style="--px:5px" aria-hidden="true"><canvas class="spr" data-s="cat"></canvas></div>
-  <div class="walker player" data-walk="playerW1,playerW2" data-min="5" data-max="46" data-speed="48" style="--px:8px" title="Click me to jump!"><canvas class="spr" data-s="player" role="img" aria-label="Pixel-art Imanina in a lilac hijab and teal puffer jacket"></canvas></div>
-  <div class="ground" aria-hidden="true"></div>
-</header>
-
-<div class="ribbon" data-text="About Me" aria-hidden="true"></div>
-
-<!-- ================= LEVEL 01 ================= -->
-<main>
-<section class="level" id="level-01" aria-labelledby="l1">
-  <canvas class="spr sky" data-s="cloud" style="--px:5px;top:40px;--t:90s;animation-delay:-30s" aria-hidden="true"></canvas>
-  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:52%;--t:75s;animation-delay:-5s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:6px;left:4%;top:60%" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;right:10%;top:56%;animation-delay:-1s" aria-hidden="true"></canvas>
-
-  <div class="stage">
-    <svg class="wires" aria-hidden="true"></svg>
-
-    <div class="lvl-head reveal">
-      <h2 class="lvl" id="l1">Level<br/>01</h2>
-      <p class="sub">Meet the<br/>player</p>
-      <p class="name">Imanina<br/>Ramly</p>
-    </div>
-
-    <div class="console reveal float" style="--ft:4s">
-      <div class="c-top">
-        <span class="cam"></span>
-        <div class="bezel">
-          <span class="spk l"></span>
-          <div class="screen">
-            <canvas class="photo" data-photo="assets/img1.jpeg" role="img" aria-label="Photo of Imanina"></canvas>
-            <canvas class="spr abs twinkle s1" data-s="star" aria-hidden="true"></canvas>
-            <canvas class="spr abs twinkle s2" data-s="star" aria-hidden="true"></canvas>
-          </div>
-          <span class="spk r"></span>
-        </div>
-      </div>
-      <div class="hinge"></div>
-      <div class="c-bot" aria-hidden="true">
-        <div class="c-left"><span class="stick"></span><span class="dpad"></span></div>
-        <div class="touch"><span>AVAILABLE<br/>FOR<br/>INTERNSHIP</span></div>
-        <div class="abxy"><i>X</i><i>Y</i><i>A</i><i>B</i></div>
-        <div class="c-foot"><i></i><i></i><i></i></div>
-      </div>
-    </div>
-
-    <article class="win hello reveal float" data-wire style="--ft:3.2s">
-      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-      <div class="win-body">
-        <div class="win-main">
-          <h3 class="chip">Hello !!</h3>
-          <p><span class="k">Player:</span> Imanina Ramly</p>
-          <p><span class="k">Class:</span> Computer Science (Internet Computing) undergrad &amp; web developer</p>
-          <p><span class="k">Mission:</span> Build web apps from front to back that work well and feel simple to use.</p>
-          <p><span class="k">Status:</span> Available for internship.</p>
-          <p>Let's start the game!</p>
-        </div>
-        <aside class="win-side" aria-hidden="true"></aside>
-      </div>
-    </article>
-
-    <article class="win weapons reveal float" data-wire style="--ft:3.6s">
-      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-      <div class="win-body">
-        <aside class="win-side" aria-hidden="true"></aside>
-        <div class="win-main">
-          <h3 class="chip">Weapons Mastery</h3>
-          <div class="tiles">
-            <span class="tile" tabindex="0" data-name="HTML" style="--b:#e96a3c">&lt;/&gt;</span>
-            <span class="tile" tabindex="0" data-name="CSS" style="--b:#3b73d9">#</span>
-            <span class="tile" tabindex="0" data-name="JavaScript" style="--b:#f5d547;--t:#1b1433">JS</span>
-            <span class="tile" tabindex="0" data-name="React" style="--b:#1b1433;--t:#61dafb">⚛</span>
-            <span class="tile" tabindex="0" data-name="Tailwind CSS" style="--b:#1fb6c9">TW</span>
-            <span class="tile" tabindex="0" data-name="Bootstrap" style="--b:#7a3fe0">B</span>
-            <span class="tile" tabindex="0" data-name="Laravel" style="--b:#f0473a">LV</span>
-            <span class="tile" tabindex="0" data-name="CodeIgniter" style="--b:#e56a2b">CI</span>
-            <span class="tile" tabindex="0" data-name="Node.js" style="--b:#4a9e4a">JS</span>
-            <span class="tile" tabindex="0" data-name="MySQL" style="--b:#2f6d91">SQL</span>
-            <span class="tile" tabindex="0" data-name="Supabase" style="--b:#2f2f3a;--t:#4fd1a5">SB</span>
-            <span class="tile" tabindex="0" data-name="Firebase" style="--b:#ffb52e;--t:#1b1433">FB</span>
-            <span class="tile" tabindex="0" data-name="Python (Pandas)" style="--b:#3b6fb0;--t:#ffd36e">PY</span>
-            <span class="tile" tabindex="0" data-name="Git &amp; GitHub" style="--b:#1b1433;--t:#ff8f70">GIT</span>
-            <span class="tile" tabindex="0" data-name="Docker" style="--b:#2496ed">DK</span>
-            <span class="tile" tabindex="0" data-name="VS Code" style="--b:#1d7cc9">VS</span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="win training reveal float" data-wire style="--ft:3s">
-      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-      <div class="win-body">
-        <div class="win-main">
-          <h3 class="chip">Training Log</h3>
-          <p><span class="k">Bachelor of Computer Science (Internet Computing) with Honours</span><br/>Universiti Sultan Zainal Abidin<br/>Oct 2023 – Present · CGPA 3.84</p>
-          <p><span class="k">Jurusan Sains (Sains Komputer)</span><br/>Kolej Matrikulasi Pulau Pinang<br/>2021 – 2023 · PNGK 3.29</p>
-        </div>
-        <aside class="win-side" aria-hidden="true"></aside>
-      </div>
-    </article>
-
-    <article class="win skills reveal float" data-wire style="--ft:3.8s">
-      <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-      <div class="win-body">
-        <aside class="win-side" aria-hidden="true"></aside>
-        <div class="win-main">
-          <h3 class="chip">Skills Mastery</h3>
-          <ul>
-            <li>Frontend development (responsive UI)</li>
-            <li>Backend with Laravel &amp; CodeIgniter</li>
-            <li>REST APIs</li>
-            <li>CRUD &amp; basic authentication</li>
-            <li>Database design (MySQL)</li>
-            <li>Data analysis with Pandas</li>
-            <li>Cloud deploys (Vercel / Netlify)</li>
-            <li>CI/CD with GitHub Actions</li>
-          </ul>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div class="scene" aria-hidden="true">
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:6%;bottom:120px"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:12%;bottom:90px;animation-delay:-.6s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:18%;bottom:120px;animation-delay:-1.2s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:36%;bottom:100px;animation-delay:-.3s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:63%;bottom:100px;animation-delay:-.9s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:70%;bottom:130px;animation-delay:-1.5s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:77%;bottom:100px;animation-delay:-.2s"></canvas>
-    <div class="flyer" style="left:22%;top:20px;--t:7s"><canvas class="spr bat" data-s="bat" data-anim="bat,bat2" data-fps="6"></canvas></div>
-    <div class="flyer" style="left:60%;top:10px;--t:9s;animation-delay:-3s"><canvas class="spr bat" data-s="bat" data-anim="bat,bat2" data-fps="7"></canvas></div>
-    <canvas class="spr sky" data-s="cloud" style="--px:4px;top:0;--t:60s;animation-delay:-10s"></canvas>
-    <canvas class="spr key" data-s="key"></canvas>
-    <div class="piranha" data-obstacle>
-      <div class="clip"><div><canvas class="spr" data-s="plant" data-anim="plant,plantOpen" data-fps="3"></canvas></div></div>
-      <canvas class="spr pipe" data-s="pipe"></canvas>
-    </div>
-    <canvas class="spr flag" data-s="flag" data-anim="flag,flag2" data-fps="3"></canvas>
-    <canvas class="spr door" data-s="door"></canvas>
-    <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="1" data-max="82" data-speed="95" data-jh="150" style="--px:3px"><canvas class="spr" data-s="player"></canvas></div>
-    <div class="ground"></div>
-  </div>
-</section>
-
-<div class="ribbon" data-text="Missions" aria-hidden="true"></div>
-
-<!-- ================= LEVEL 02 ================= -->
-<section class="section" id="missions" aria-labelledby="l2">
-  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:6%;top:80px" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="lvl-head reveal">
-      <h2 class="lvl" id="l2">Level 02</h2>
-      <p class="sub">Missions cleared</p>
-    </div>
-    <div class="mission-grid">
-      <article class="win mission reveal">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-main">
-          <span class="chip">Quest 01</span>
-          <div class="cover"><img src="assets/project1cover.png" alt="Pomodoro Timer app screenshot" loading="lazy"/></div>
-          <h3>Pomodoro Timer</h3>
-          <p>A focus timer for studying, with a little pet to keep you company.</p>
-          <div class="tags"><span>React.js</span><span>Netlify</span></div>
-          <a class="btn" href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener noreferrer">PLAY ▶</a>
-        </div>
-      </article>
-      <article class="win mission reveal">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-main">
-          <span class="chip">Quest 02</span>
-          <div class="cover"><img src="assets/project2cover.png" alt="LunaraWear e-commerce website screenshot" loading="lazy"/></div>
-          <h3>E-Commerce: LunaraWear</h3>
-          <p>A modest-fashion shop for bawal, shawls and inner wear, with a clean interface and easy product browsing.</p>
-          <div class="tags"><span>CodeIgniter</span><span>MySQL</span></div>
-          <a class="btn alt" href="https://lunarawear.onrender.com" target="_blank" rel="noopener noreferrer">PLAY ▶</a>
-        </div>
-      </article>
-    </div>
-    <p class="more"><a class="btn" href="projects.html">ALL MISSIONS ▶</a></p>
-  </div>
-</section>
-
-<!-- ================= LEVEL 03 ================= -->
-<section class="section" id="save-point" aria-labelledby="l3">
-  <div class="wrap">
-    <div class="lvl-head reveal">
-      <h2 class="lvl" id="l3">Level 03</h2>
-      <p class="sub">Save point</p>
-    </div>
-    <div class="save-grid">
-      <article class="win reveal">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-body">
-          <aside class="win-side" aria-hidden="true"></aside>
-          <div class="win-main">
-            <h3 class="chip">Send a Message</h3>
-            <div class="links">
-              <a href="mailto:nurimanina234@gmail.com">nurimanina234@gmail.com <b>EMAIL</b></a>
-              <a href="https://www.linkedin.com/in/imaninaramly" target="_blank" rel="noopener noreferrer">in/imaninaramly <b>LINKEDIN</b></a>
-              <a href="https://github.com/imaninaramly" target="_blank" rel="noopener noreferrer">github.com/imaninaramly <b>GITHUB</b></a>
-              <a href="https://wa.me/60164411644" target="_blank" rel="noopener noreferrer">+60 16-441 1644 <b>WHATSAPP</b></a>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class="win reveal">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-main">
-          <h3 class="chip">Inventory</h3>
-          <p>Grab a copy of my resume — it has the full stats.</p>
-          <p style="margin-top:16px"><a class="btn" href="assets/NUR IMANINA RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">DOWNLOAD RESUME ▼</a></p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer class="gameover">
-  <h2 class="wave">THANKS FOR PLAYING</h2>
-  <a class="start" href="#top">CONTINUE?</a>
-  <small>© 2026 IMANINA RAMLY</small>
-  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:30%;bottom:110px" aria-hidden="true"></canvas>
-  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:66%;bottom:100px;animation-delay:-.8s" aria-hidden="true"></canvas>
-  <canvas class="spr abs" data-s="flag" data-anim="flag,flag2" data-fps="3" style="--px:4px;right:6%;bottom:52px" aria-hidden="true"></canvas>
-  <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="2" data-max="88" data-speed="70" style="--px:4px" aria-hidden="true"><canvas class="spr" data-s="player"></canvas></div>
-  <div class="ground" aria-hidden="true"></div>
 </footer>
-
-<script src="assets/retro.js"></script>
 </body>
 </html>
