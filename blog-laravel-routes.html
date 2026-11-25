@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Learning Laravel routes — Imanina Ramly</title>
+<meta name="description" content="How routes/web.php went from confusing to the part of Laravel I understand best."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Imanina Ramly</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html">Work</a><a href="about.html">About</a><a href="blog.html" aria-current="page">Writing</a><a href="contact.html">Contact</a><a href="assets/NUR%20IMANINA%20RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Résumé</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <article class="article">
+      <a class="back" href="blog.html">← All writing</a>
+      <h1>Learning Laravel routes</h1>
+      <p class="byline">16 May 2026 · Imanina Ramly</p>
+      <p>When I first started learning Laravel, I didn’t understand anything about the <code>routes/web.php</code> file.</p>
+      <p>I remember seeing something like this for the first time:</p>
+      <pre><code>Route::get('/', function () {
+    return view('welcome');
+});</code></pre>
+      <p>And I thought: “Okay… but how does this actually work?”</p>
+      <p>At the time the whole thing felt a bit unreal. I typed a URL into the address bar, and Laravel showed me the right page automatically.</p>
+      <p>Then I decided to try it myself and create my first route, <code>/about</code>.</p>
+      <p>It worked, and I realised that every URL on my site corresponds to something inside <code>web.php</code>.</p>
+      <p>The other thing I discovered was controllers. They let me organise my code better instead of putting everything in <code>web.php</code>.</p>
+      <p>Today, when I look at <code>routes/web.php</code>, I see a map of my application — very simple, but extremely powerful.</p>
+      <p>Such a small part of a framework can turn out to be very important.</p>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Imanina Ramly</span>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:nurimanina234@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/imaninaramly" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/imaninaramly" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

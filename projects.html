@@ -2,133 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Projects | Imanina Ramly</title>
-<meta name="description" content="Projects by Imanina Ramly — missions built through continuous learning and experimentation."/>
-<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Work — Imanina Ramly</title>
+<meta name="description" content="Projects built by Imanina Ramly."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/retro.css"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
 </head>
 <body>
-
-<header class="hero sub" id="top">
-  <div class="hud">
-    <p class="hud-xp"><a href="index.html">◀ STAGE: PROJECTS</a></p>
-    <div class="hud-clouds" aria-hidden="true">
-      <canvas class="spr" data-s="cloud" style="--px:4px"></canvas>
-      <canvas class="spr" data-s="cloud" style="--px:3px;animation-delay:-1.5s"></canvas>
-    </div>
-    <div class="hud-player">
-      <span class="hud-coins" title="Coins collected"><canvas class="spr" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="6" style="--px:2px" aria-hidden="true"></canvas>×<b id="coins">00</b></span>
-      <canvas class="spr heart" data-s="heart" style="--px:3px" aria-hidden="true"></canvas>
-      <div class="hp" role="img" aria-label="HP bar"><span></span></div>
-      <span>PLAYER 01</span>
-    </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Imanina Ramly</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html" aria-current="page">Work</a><a href="about.html">About</a><a href="blog.html">Writing</a><a href="contact.html">Contact</a><a href="assets/NUR%20IMANINA%20RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Résumé</a></nav>
   </div>
-
-  <div class="screen-frame">
-    <p class="year">STAGE 02</p>
-    <h1 class="title wave">MY PROJECTS</h1>
-    <p class="tagline">A showcase of missions built through continuous learning and experimentation.</p>
-    <nav class="stage-select" aria-label="Pages">
-      <span>SELECT STAGE:</span>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html" aria-current="page">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+</header>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Work</h1>
+      <p>Projects I’ve built while learning — each one taught me something about shipping a real application.</p>
+    </header>
+    <article class="case" aria-labelledby="p1">
+      <a class="shot" href="https://pomodoro-pet-timer.netlify.app" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="assets/project1cover.png" alt="" loading="lazy" width="1600" height="900"/></a>
+      <h2 id="p1">Pomodoro Pet Timer</h2>
+      <p class="desc">A React productivity timer for focused study sessions. A small pet sits beside the timer and keeps you company while you work through each Pomodoro.</p>
+      <dl class="facts">
+        <div><dt>Built with</dt><dd>React, Netlify</dd></div>
+        <div><dt>Live site</dt><dd><a class="link" href="https://pomodoro-pet-timer.netlify.app" rel="noopener noreferrer">pomodoro-pet-timer.netlify.app ↗</a></dd></div>
+      </dl>
+    </article>
+    <article class="case" aria-labelledby="p2">
+      <a class="shot" href="https://lunarawear.onrender.com" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="assets/project2cover.png" alt="" loading="lazy" width="1600" height="900"/></a>
+      <h2 id="p2">LunaraWear</h2>
+      <p class="desc">LunaraWear sells high-quality Muslimah innerwear, including inner tops, inner skirts and inner scarves, designed for comfort, confidence and a polished look throughout the day. The site is built around clear product browsing and a simple path to checkout.</p>
+      <dl class="facts">
+        <div><dt>Built with</dt><dd>Supabase, Render</dd></div>
+        <div><dt>Live site</dt><dd><a class="link" href="https://lunarawear.onrender.com" rel="noopener noreferrer">lunarawear.onrender.com ↗</a></dd></div>
+      </dl>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Imanina Ramly</span>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:nurimanina234@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/imaninaramly" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/imaninaramly" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
-
-  <canvas class="spr sky" data-s="cloud" style="--px:5px;top:200px;--t:80s;animation-delay:-20s" aria-hidden="true"></canvas>
-  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:280px;--t:95s;animation-delay:-65s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;left:3%;top:110px" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:5%;top:150px;animation-delay:-.6s" aria-hidden="true"></canvas>
-  <canvas class="spr abs lamp" data-s="lamp" aria-hidden="true"></canvas>
-  <canvas class="spr abs tree" data-s="tree" aria-hidden="true"></canvas>
-  <div class="walker" data-walk="cat,catW" data-face="left" data-min="50" data-max="82" data-speed="32" data-jh="40" style="--px:5px" aria-hidden="true"><canvas class="spr" data-s="cat"></canvas></div>
-  <div class="walker player" data-walk="playerW1,playerW2" data-min="5" data-max="46" data-speed="48" style="--px:7px" title="Click me to jump!"><canvas class="spr" data-s="player" role="img" aria-label="Pixel-art Imanina"></canvas></div>
-  <div class="ground" aria-hidden="true"></div>
-</header>
-
-<div class="ribbon" data-text="Missions" aria-hidden="true"></div>
-
-<main>
-<section class="section" aria-labelledby="quests">
-  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:40px;--t:85s;animation-delay:-30s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:5px;right:5%;top:100px" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="lvl-head reveal">
-      <h2 class="lvl" id="quests">Quest<br/>Board</h2>
-      <p class="sub">Pick a mission to play</p>
-    </div>
-    <div class="mission-grid">
-      <article class="win mission reveal float" style="--ft:3.6s">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-main">
-          <span class="chip">Quest 01</span>
-          <div class="cover"><img src="assets/project1cover.png" alt="Pomodoro Pet Timer app screenshot" loading="lazy"/></div>
-          <h3>Pomodoro Pet Timer</h3>
-          <p>React productivity timer for focus sessions.</p>
-          <div class="tags"><span>React</span><span>Netlify</span></div>
-          <a class="btn" href="https://pomodoro-pet-timer.netlify.app" target="_blank" rel="noopener noreferrer">VIEW PROJECT ▶</a>
-        </div>
-      </article>
-      <article class="win mission reveal float" style="--ft:3.2s">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-main">
-          <span class="chip">Quest 02</span>
-          <div class="cover"><img src="assets/project2cover.png" alt="LunaraWear e-commerce website screenshot" loading="lazy"/></div>
-          <h3>LunaraWear E-Commerce Website</h3>
-          <p>LunaraWear offers a range of high-quality Muslimah innerwear, including inner tops, inner skirts, and inner scarves, designed to provide comfort, confidence, and a polished look throughout the day.</p>
-          <div class="tags"><span>Render</span><span>Supabase</span></div>
-          <a class="btn alt" href="https://lunarawear.onrender.com" target="_blank" rel="noopener noreferrer">VIEW PROJECT ▶</a>
-        </div>
-      </article>
-      <article class="win mission soon reveal float" style="--ft:3.9s">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-main">
-          <div class="qblock" role="button" tabindex="0" aria-label="Bonus block">?</div>
-          <h3>Next Quest Loading…</h3>
-          <p>New missions are in the works. Hit the block for a bonus coin while you wait!</p>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="scene" aria-hidden="true">
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:8%;bottom:110px"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:16%;bottom:130px;animation-delay:-.6s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:34%;bottom:100px;animation-delay:-1.2s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:64%;bottom:110px;animation-delay:-.3s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:74%;bottom:130px;animation-delay:-.9s"></canvas>
-    <div class="flyer" style="left:28%;top:16px;--t:8s"><canvas class="spr bat" data-s="bat" data-anim="bat,bat2" data-fps="6"></canvas></div>
-    <canvas class="spr key" data-s="key"></canvas>
-    <div class="piranha" data-obstacle>
-      <div class="clip"><div><canvas class="spr" data-s="plant" data-anim="plant,plantOpen" data-fps="3"></canvas></div></div>
-      <canvas class="spr pipe" data-s="pipe"></canvas>
-    </div>
-    <canvas class="spr flag" data-s="flag" data-anim="flag,flag2" data-fps="3"></canvas>
-    <canvas class="spr door" data-s="door"></canvas>
-    <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="1" data-max="82" data-speed="95" data-jh="150" style="--px:3px"><canvas class="spr" data-s="player"></canvas></div>
-    <div class="ground"></div>
-  </div>
-</section>
-</main>
-
-<footer class="gameover">
-  <h2 class="wave">NEXT STAGE?</h2>
-  <a class="start" href="contact.html">CONTACT</a>
-  <small>© 2026 IMANINA RAMLY</small>
-  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:24%;bottom:110px" aria-hidden="true"></canvas>
-  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:72%;bottom:100px;animation-delay:-.8s" aria-hidden="true"></canvas>
-  <canvas class="spr abs" data-s="door" style="--px:4px;right:5%;bottom:52px" aria-hidden="true"></canvas>
-  <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="2" data-max="86" data-speed="70" style="--px:4px" aria-hidden="true"><canvas class="spr" data-s="player"></canvas></div>
-  <div class="ground" aria-hidden="true"></div>
 </footer>
-
-<script src="assets/retro.js"></script>
 </body>
 </html>

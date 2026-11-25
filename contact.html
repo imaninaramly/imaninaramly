@@ -2,148 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact | Imanina Ramly</title>
-<meta name="description" content="Contact Imanina Ramly — share a message, idea, or collaboration request."/>
-<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contact — Imanina Ramly</title>
+<meta name="description" content="Get in touch with Imanina Ramly."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/retro.css"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
 </head>
 <body>
-
-<header class="hero sub" id="top">
-  <div class="hud">
-    <p class="hud-xp"><a href="index.html">◀ STAGE: CONTACT</a></p>
-    <div class="hud-clouds" aria-hidden="true">
-      <canvas class="spr" data-s="cloud" style="--px:4px"></canvas>
-      <canvas class="spr" data-s="cloud" style="--px:3px;animation-delay:-1.5s"></canvas>
-    </div>
-    <div class="hud-player">
-      <span class="hud-coins" title="Coins collected"><canvas class="spr" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="6" style="--px:2px" aria-hidden="true"></canvas>×<b id="coins">00</b></span>
-      <canvas class="spr heart" data-s="heart" style="--px:3px" aria-hidden="true"></canvas>
-      <div class="hp" role="img" aria-label="HP bar"><span></span></div>
-      <span>PLAYER 01</span>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Imanina Ramly</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html">Work</a><a href="about.html">About</a><a href="blog.html">Writing</a><a href="contact.html" aria-current="page">Contact</a><a href="assets/NUR%20IMANINA%20RESUME.pdf" download="NUR_IMANINA_RESUME.pdf">Résumé</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Contact</h1>
+      <p>Share a message, an idea or a collaboration request.</p>
+    </header>
+    <div class="contact-grid">
+      <div class="prose">
+        <p>I’m looking for a six-month internship in software development, web development or full-stack development, starting September 2026. I’m open to roles involving frontend, backend, UI/UX and modern web technologies.</p>
+        <ul class="channels">
+          <li><span>Email</span><a href="mailto:nurimanina234@gmail.com">nurimanina234@gmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/imaninaramly" rel="noopener noreferrer">in/imaninaramly</a></li>
+          <li><span>GitHub</span><a href="https://github.com/imaninaramly" rel="noopener noreferrer">github.com/imaninaramly</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/60164411644" rel="noopener noreferrer">+60 16-441 1644</a></li>
+        </ul>
+      </div>
+      <form action="https://formspree.io/f/xpqbgnop" method="POST">
+        <div class="form-row">
+          <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required/></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required/></div>
+        </div>
+        <div><label for="subject">Subject</label><input id="subject" name="subject"/></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+        <div><button class="btn" type="submit">Send message</button></div>
+      </form>
     </div>
   </div>
-
-  <div class="screen-frame">
-    <p class="year">STAGE 03</p>
-    <h1 class="title wave">LET'S CONNECT</h1>
-    <p class="tagline">Share your message, idea, or collaboration request.</p>
-    <nav class="stage-select" aria-label="Pages">
-      <span>SELECT STAGE:</span>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html" aria-current="page">Contact</a>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Imanina Ramly</span>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:nurimanina234@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/imaninaramly" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/imaninaramly" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
-
-  <canvas class="spr sky" data-s="cloud" style="--px:5px;top:200px;--t:80s;animation-delay:-20s" aria-hidden="true"></canvas>
-  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:280px;--t:95s;animation-delay:-65s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:3px;left:3%;top:110px" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:4px;right:5%;top:150px;animation-delay:-.6s" aria-hidden="true"></canvas>
-  <canvas class="spr abs lamp" data-s="lamp" aria-hidden="true"></canvas>
-  <canvas class="spr abs tree" data-s="tree" aria-hidden="true"></canvas>
-  <div class="walker" data-walk="cat,catW" data-face="left" data-min="50" data-max="82" data-speed="32" data-jh="40" style="--px:5px" aria-hidden="true"><canvas class="spr" data-s="cat"></canvas></div>
-  <div class="walker player" data-walk="playerW1,playerW2" data-min="5" data-max="46" data-speed="48" style="--px:7px" title="Click me to jump!"><canvas class="spr" data-s="player" role="img" aria-label="Pixel-art Imanina"></canvas></div>
-  <div class="ground" aria-hidden="true"></div>
-</header>
-
-<div class="ribbon" data-text="Save Point" aria-hidden="true"></div>
-
-<main>
-<section class="section" aria-labelledby="talk">
-  <canvas class="spr sky" data-s="cloud" style="--px:4px;top:40px;--t:85s;animation-delay:-30s" aria-hidden="true"></canvas>
-  <canvas class="spr abs twinkle" data-s="star" style="--px:5px;left:4%;top:60%" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="lvl-head reveal">
-      <h2 class="lvl" id="talk">Talk to<br/>the NPC</h2>
-      <p class="sub">Press A to send a message</p>
-    </div>
-    <div class="save-grid">
-      <div style="display:grid;gap:40px">
-        <article class="win reveal float" style="--ft:3.6s">
-          <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-          <div class="win-main">
-            <h3 class="chip">Hi 👋</h3>
-            <div class="dialog">
-              <canvas class="portrait" data-photo="assets/img1.jpeg" role="img" aria-label="Photo of Imanina"></canvas>
-              <div>
-                <p class="say" data-type>Currently seeking a 6-month internship in software development, web development, or full-stack development starting September 2026. Open to opportunities involving frontend, backend, UI/UX, and modern web technologies.</p>
-                <p class="status">Available for opportunities</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="win reveal float" style="--ft:3.2s">
-          <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-          <div class="win-body">
-            <aside class="win-side" aria-hidden="true"></aside>
-            <div class="win-main">
-              <h3 class="chip">Warp Pipes</h3>
-              <div class="links">
-                <a href="mailto:nurimanina234@gmail.com">nurimanina234@gmail.com <b>EMAIL</b></a>
-                <a href="https://www.linkedin.com/in/imaninaramly" target="_blank" rel="noopener noreferrer">in/imaninaramly <b>LINKEDIN</b></a>
-                <a href="https://github.com/imaninaramly" target="_blank" rel="noopener noreferrer">github.com/imaninaramly <b>GITHUB</b></a>
-                <a href="https://wa.me/60164411644" target="_blank" rel="noopener noreferrer">+60 16-441 1644 <b>WHATSAPP</b></a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <article class="win reveal float" style="--ft:3.9s">
-        <div class="win-bar"><span class="win-dots"><i></i><i></i><i></i></span></div>
-        <div class="win-body">
-          <div class="win-main">
-            <h3 class="chip">Send Message</h3>
-            <form action="https://formspree.io/f/xpqbgnop" method="POST">
-              <div class="field"><label for="f-name">NAME</label><input id="f-name" name="name" autocomplete="name" placeholder="Full name" required/></div>
-              <div class="field"><label for="f-email">EMAIL</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required/></div>
-              <div class="field"><label for="f-subject">SUBJECT</label><input id="f-subject" name="subject" placeholder="Subject"/></div>
-              <div class="field"><label for="f-message">MESSAGE</label><textarea id="f-message" name="message" placeholder="Type your message…" required></textarea></div>
-              <button class="btn" type="submit">SEND MESSAGE ▶</button>
-            </form>
-          </div>
-          <aside class="win-side" aria-hidden="true"></aside>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="scene" aria-hidden="true">
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:10%;bottom:110px"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:30%;bottom:130px;animation-delay:-.6s"></canvas>
-    <canvas class="spr bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:66%;bottom:110px;animation-delay:-1.2s"></canvas>
-    <div class="flyer" style="left:40%;top:16px;--t:8s"><canvas class="spr bat" data-s="bat" data-anim="bat,bat2" data-fps="6"></canvas></div>
-    <canvas class="spr key" data-s="key"></canvas>
-    <div class="piranha" data-obstacle>
-      <div class="clip"><div><canvas class="spr" data-s="plant" data-anim="plant,plantOpen" data-fps="3"></canvas></div></div>
-      <canvas class="spr pipe" data-s="pipe"></canvas>
-    </div>
-    <canvas class="spr flag" data-s="flag" data-anim="flag,flag2" data-fps="3"></canvas>
-    <canvas class="spr door" data-s="door"></canvas>
-    <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="1" data-max="82" data-speed="95" data-jh="150" style="--px:3px"><canvas class="spr" data-s="player"></canvas></div>
-    <div class="ground"></div>
-  </div>
-</section>
-</main>
-
-<footer class="gameover">
-  <h2 class="wave">THANKS FOR PLAYING</h2>
-  <a class="start" href="index.html">BACK TO TITLE</a>
-  <small>© 2026 IMANINA RAMLY</small>
-  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:24%;bottom:110px" aria-hidden="true"></canvas>
-  <canvas class="spr abs bob coin" data-s="coin" data-anim="coin,coin2,coin3,coin2" data-fps="8" style="left:72%;bottom:100px;animation-delay:-.8s" aria-hidden="true"></canvas>
-  <canvas class="spr abs" data-s="flag" data-anim="flag,flag2" data-fps="3" style="--px:4px;right:6%;bottom:52px" aria-hidden="true"></canvas>
-  <div class="walker" data-walk="playerW1,playerW2" data-auto data-min="2" data-max="86" data-speed="70" style="--px:4px" aria-hidden="true"><canvas class="spr" data-s="player"></canvas></div>
-  <div class="ground" aria-hidden="true"></div>
 </footer>
-
-<script src="assets/retro.js"></script>
 </body>
 </html>
